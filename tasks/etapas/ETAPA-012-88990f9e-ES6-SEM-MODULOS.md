@@ -49,3 +49,14 @@ JavaScript ES6 (`let`/`const`, arrow, template string) carregado por `<script>` 
 - **Nível:** LEVE — aceite.
 - **Descrição:** usuário abre a página e confirma que IMC, lâmpada, tema e loja funcionam.
 - **Entrega:** — · **Verificação:** —
+
+### ES6.4 — Criar `js/imc.test.js` comentado
+
+**Próximo passo:** escrever o arquivo explicando cada função da aula (AULA-03-SLIDES.md).
+
+- **Nível:** MEDIO — 1 arquivo, com lógica.
+- **Descrição:** testes de `calcularImc` e `classificarImc`, com comentários explicando `describe`, `it`, `expect`, AAA e matchers.
+- **Exceção à regra "nunca escrever testes":** autorizada pelo usuário no chat em 2026-10-15
+  ("faca isso", depois de perguntado). Vale só para este arquivo.
+- **Entrega:** — · **Verificação:** — (Vitest não instalado: não executado)
+
