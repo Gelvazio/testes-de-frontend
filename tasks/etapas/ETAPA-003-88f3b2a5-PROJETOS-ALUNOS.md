@@ -24,3 +24,13 @@ explica cada projeto publicado no GitHub do aluno.
 - **Anotação:** o usuário `marcosxz447I` (com "I" maiúsculo) não existe no GitHub; o correto é
   `marcosxz447l` (com "L" minúsculo) — foi esse o usado. Repositórios vazios aparecem no modal
   marcados como "vazio".
+
+### ALUN.2 — Tema claro e escuro com botão
+
+**Próximo passo:** adicionar o botão de tema e os tokens do tema escuro forçado em `css/estilo.css`.
+
+- **Pedido:** "deve ter tema claro e escuro tambem" (2026-10-15 08:41).
+- **Descrição:** botão no cabeçalho alterna entre claro e escuro; começa pela preferência do
+  sistema e lembra a escolha no navegador (`localStorage`). Script próprio `js/tema.js`.
+- **Critérios de Aceitação:** botão acessível (rótulo muda conforme o tema); cores só por tokens
+  no `:root`; modal e cards seguem o tema escolhido.
