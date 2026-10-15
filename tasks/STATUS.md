@@ -15,6 +15,8 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 
 | Tarefa | Título | Prioridade | Depende de | Status | Em uso por | Etapa |
 |---|---|---|---|---|---|---|
+| **LEGI** | **Legibilidade dos títulos da página das aulas** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-009](etapas/ETAPA-009-b17d4e60-LEGIBILIDADE-TITULOS.md) |
+| LEGI.1 | Trocar cor/brilho dos H2 em aulas/css/estilo.css | 🟡 Média | Nenhuma | 🔄 Em execução | Claude Code (Sonnet 5.5) (local · main) (desde 2026-10-15 10:25) | [ETAPA-009](etapas/ETAPA-009-b17d4e60-LEGIBILIDADE-TITULOS.md) |
 
 ## Escopo do projeto
 
@@ -34,6 +36,7 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | 006-d7b25e41 | ORIE: orientação da Aula 03 (testes com Vitest) | [ETAPA-006-d7b25e41-ORIENTACAO-AULA-03.md](etapas/ETAPA-006-d7b25e41-ORIENTACAO-AULA-03.md) |
 | 007-e93a6b15 | AULAS: index.html futurista que lê a orientação | [ETAPA-007-e93a6b15-INDEX-AULAS.md](etapas/ETAPA-007-e93a6b15-INDEX-AULAS.md) |
 | 008-f26c8d03 | CARD: card da Aula 03 na vitrine dos alunos | [ETAPA-008-f26c8d03-CARD-AULA.md](etapas/ETAPA-008-f26c8d03-CARD-AULA.md) |
+| 009-b17d4e60 | LEGI: legibilidade dos títulos da página das aulas | [ETAPA-009-b17d4e60-LEGIBILIDADE-TITULOS.md](etapas/ETAPA-009-b17d4e60-LEGIBILIDADE-TITULOS.md) |
 
 ## Riscos
 
