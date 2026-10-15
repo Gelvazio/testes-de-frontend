@@ -9,7 +9,6 @@
 
 | Tarefa | Título | Prioridade | Depende de | Status | Em uso por | Etapa |
 |---|---|---|---|---|---|---|
-| TEMPLATE | **Criar o esqueleto de projeto com IA a partir do Dashboard AI** | 🟠 Alta | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-001](etapas/ETAPA-001-db7a9bca-CRIAR-TEMPLATE.md) |
-| TEMPLATE.1 | Copiar e generalizar regras, quadro, skills, agentes, hooks e visualizador | 🟠 Alta | Nenhuma | ✅ Concluído | — | [ETAPA-001](etapas/ETAPA-001-db7a9bca-CRIAR-TEMPLATE.md) |
-| GUIA | **Página `index.html` explicando a estrutura inicial de projetos de IA** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-002](etapas/ETAPA-002-bd7434ed-GUIA-INDEX.md) |
-| GUIA.1 | Criar o `index.html` e o estilo da página-guia | 🟡 Média | Nenhuma | ✅ Concluído | — | [ETAPA-002](etapas/ETAPA-002-bd7434ed-GUIA-INDEX.md) |
+| SETUP | **Aplicar o template inicial de tarefas com IA** | 🟠 Alta | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-001](etapas/ETAPA-001-edb58c7f-APLICAR-TEMPLATE.md) |
+| SETUP.1 | Copiar o template e adaptar nome, quadro e visualizador ao projeto | 🟠 Alta | Nenhuma | ✅ Concluído | — | [ETAPA-001](etapas/ETAPA-001-edb58c7f-APLICAR-TEMPLATE.md) |
+| DASH.1 | Configurar o Vite e mover o guia para `guia/index.html` | 🟠 Alta | Nenhuma | ✅ Concluído | — | [ETAPA-002](etapas/ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md) |

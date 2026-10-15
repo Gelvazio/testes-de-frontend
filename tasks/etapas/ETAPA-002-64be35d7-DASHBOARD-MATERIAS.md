@@ -41,12 +41,14 @@ conferido pelo usuário no navegador (`npm run dev`).
 
 ### DASH.1 — Configurar o Vite e mover o guia para `guia/index.html`
 
-**Próximo passo:** instalar o Vite, criar `vite.config.js` e mover o guia.
+**Próximo passo:** nenhum — concluída.
 
 - **Descrição:** `vite` como devDependency; scripts `dev`, `build` e `preview`; `vite.config.js`
   com as entradas `index.html` e `guia/index.html`; guia movido com links ajustados.
 - **Critérios de Aceitação:** `npm run build` gera `dist/` com as duas páginas.
-- **Entrega:** — · **Verificação:** —
+- **Entrega:** commit `feat(DASH.1)` (Vite 8.3.4, `vite.config.js`, guia em `guia/`, `index.html`
+  provisório que a DASH.2 preenche) · **Verificação:** `npm run build` sem erro, gerando
+  `dist/index.html` e `dist/guia/index.html`.
 
 ### DASH.2 — Criar o dashboard de matérias (cards, efeitos e tema claro/escuro)
 
