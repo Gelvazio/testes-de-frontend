@@ -15,19 +15,23 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 
 | Tarefa | Título | Prioridade | Depende de | Status | Em uso por | Etapa |
 |---|---|---|---|---|---|---|
+| DASH | **Dashboard inicial das matérias com Vite** | 🟠 Alta | Nenhuma | 👀 Aguardando aprovação | — (não reservável) | [ETAPA-002](etapas/ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md) |
+| DASH.1 | Configurar o Vite e mover o guia para `guia/index.html` | 🟠 Alta | Nenhuma | 👀 Aguardando aprovação | — | [ETAPA-002](etapas/ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md) |
+| DASH.2 | Criar o dashboard de matérias (cards, efeitos e tema claro/escuro) | 🟠 Alta | DASH.1 | ⬜ Pendente | — | [ETAPA-002](etapas/ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md) |
+| DASH.3 | Aceite do usuário | 🟠 Alta | DASH.2 | ⬜ Pendente | — | [ETAPA-002](etapas/ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md) |
 
 ## Escopo do projeto
 
-- **Entra:** regras em `.claude/rules/`, quadro em `tasks/`, skills e agentes em `.agents/` (com as
-  cópias por IA), hooks do Claude Code e do Git, visualizador de regras e tarefas.
-- **Não entra:** código de aplicação. Ao criar um projeto a partir deste template, troque este
-  objetivo e este escopo pelos do projeto.
+- **Entra:** projetos de frontend (HTML, CSS e JavaScript) das matérias do Técnico em
+  Informática, e as regras, o quadro, as skills, os agentes e os hooks herdados do template.
+- **Não entra:** a definir com o usuário a cada nova tarefa.
 
 ## 🗂️ Etapas
 
 | Etapa | Assunto | Arquivo |
 |---|---|---|
 | 001-edb58c7f | SETUP: aplicar o template inicial de tarefas com IA | [ETAPA-001-edb58c7f-APLICAR-TEMPLATE.md](etapas/ETAPA-001-edb58c7f-APLICAR-TEMPLATE.md) |
+| 002-64be35d7 | DASH: dashboard inicial das matérias com Vite | [ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md](etapas/ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md) |
 
 ## Riscos
 
