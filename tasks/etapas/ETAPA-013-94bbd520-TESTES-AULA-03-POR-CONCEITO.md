@@ -182,13 +182,13 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.16 — Criar a função assíncrona obterImcDaPessoa (código novo)
 
-**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
+**Próximo passo:** nenhum — entregue.
 
 - **Nível:** MEDIO — um conceito por vez.
 - **Descrição:** Criar `js/imc-servico.js` com `async function obterImcDaPessoa(buscarPessoa, id)`: busca `{ peso, altura }` pela dependência injetada, calcula com `calcularImc` e lança erro se a pessoa não existir. ES6 sem módulos, `module.exports` condicional, JSDoc, sem rede. Não entra no `index.html`.
 - **Origem:** slide(s) 32 e 33 (preparação) de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** a função existe, está documentada e funciona no Node.
-- **Entrega:** — · **Verificação:** —
+- **Entrega:** commit feat(TEST.16) · **Verificação:** node --check; no Node devolveu 25, erro de pessoa nao encontrada e TypeError; teste-sonda no Vitest passou (apagado)
 
 ### TEST.17 — Mock de função assíncrona: obterImcDaPessoa
 

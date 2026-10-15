@@ -50,3 +50,4 @@
 | TEST.13 | beforeEach() e afterEach(): testes isolados | 🟡 Média | TEST.1 | ✅ Concluído | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | TEST.14 | vi.fn(): função simulada | 🟡 Média | TEST.1 | ✅ Concluído | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | TEST.15 | vi.spyOn() e vi.restoreAllMocks() | 🟡 Média | TEST.1 | ✅ Concluído | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.16 | Criar a função assíncrona obterImcDaPessoa (código novo) | 🟡 Média | TEST.1 | ✅ Concluído | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
