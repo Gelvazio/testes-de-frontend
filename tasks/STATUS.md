@@ -30,7 +30,7 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | **ES6** | **Projeto frontend com testes em ES6 sem módulos** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-012](etapas/ETAPA-012-88990f9e-ES6-SEM-MODULOS.md) |
 | ES6.3 | Aceite do usuário | 🟡 Média | ES6.2 | 👀 Aguardando o usuário | — | [ETAPA-012](etapas/ETAPA-012-88990f9e-ES6-SEM-MODULOS.md) |
 | **TEST** | **Testes da Aula 03 por conceito (imc.js)** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
-| TEST.5 | Padrão AAA: Arrange, Act, Assert | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.5 | Padrão AAA: Arrange, Act, Assert | 🟡 Média | TEST.1 | 🔄 Em execução | Claude Code (Opus 5.5) (local · main) (desde 2026-10-15 10:15) | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | TEST.6 | toBe(): igualdade estrita | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | TEST.7 | toBeCloseTo(): números decimais | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | TEST.8 | toBeNull(): entrada inválida | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |

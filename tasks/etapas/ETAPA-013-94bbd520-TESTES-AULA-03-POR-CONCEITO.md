@@ -72,7 +72,7 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.5 — Padrão AAA: Arrange, Act, Assert
 
-**Próximo passo:** aguardando o usuário mandar executar esta subtarefa.
+**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
 
 - **Nível:** MEDIO — um conceito por vez.
 - **Descrição:** Separar as 3 fases nos casos de `calcularImc`, com a fase Act em uma linha.
