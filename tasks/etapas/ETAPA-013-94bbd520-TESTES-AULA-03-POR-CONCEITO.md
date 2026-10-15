@@ -42,7 +42,7 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.2 — describe(): agrupar as suites do IMC
 
-**Próximo passo:** aguardando o usuário mandar executar esta subtarefa.
+**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
 
 - **Nível:** LEVE — um conceito por vez.
 - **Descrição:** Criar `js/imc.test.js` com `describe('calcularImc')` e `describe('classificarImc')`, explicando o que é uma suite.
