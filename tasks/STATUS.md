@@ -1,4 +1,3 @@
-# STATUS — Testes de Frontend
 
 **Objetivo:** projetos de frontend, organizados pelo quadro de tarefas com IA.
 **Partes interessadas:** Gelvazio (decide, aprova e usa) · agentes de IA executam pelo quadro.

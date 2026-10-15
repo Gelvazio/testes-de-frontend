@@ -33,11 +33,11 @@ documento `aulas/SUGESTAO-PROJETO.md` e um card na vitrine `projetos-alunos/inde
 
 ### PROJ.1 — Escrever `aulas/SUGESTAO-PROJETO.md`
 
-**Próximo passo:** aguardando aprovação.
+**Próximo passo:** nenhum — entregue.
 
 - **Nível:** LEVE — 1 documento.
 - **Descrição:** mapa "aluno → módulo do projeto", o que foi aproveitado e o que foi corrigido.
-- **Entrega:** a preencher · **Verificação:** a preencher
+- **Entrega:** commit `docs(PROJ.1)` · **Verificação:** documento escrito com base no código lido dos repositórios dos alunos; caminhos conferidos.
 
 ### PROJ.2 — Criar `aulas/projeto-frontend-com-testes/`
 
