@@ -31,6 +31,8 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | ES6.3 | Aceite do usuário | 🟡 Média | ES6.2 | 👀 Aguardando o usuário | — | [ETAPA-012](etapas/ETAPA-012-88990f9e-ES6-SEM-MODULOS.md) |
 | **TEST** | **Testes da Aula 03 por conceito (imc.js)** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | TEST.18 | Aceite do usuário | 🟡 Média | TEST.2 a TEST.17 | 👀 Aguardando o usuário | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| **REL** | **Relatório HTML dos testes com cobertura** | 🟡 Média | Nenhuma | ⬜ Pendente | — (não reservável) | [ETAPA-014](etapas/ETAPA-014-191f595d-RELATORIO-HTML-COBERTURA.md) |
+| REL.1 | Configurar os relatórios HTML de testes e de cobertura | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-014](etapas/ETAPA-014-191f595d-RELATORIO-HTML-COBERTURA.md) |
 
 ## Escopo do projeto
 
@@ -55,6 +57,7 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | 011-7f2a90bc | JSON: quadro de tarefas em JSON (plano, não executar) | [ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md](etapas/ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md) |
 | 012-88990f9e | ES6: projeto-frontend-com-testes em ES6 sem módulos | [ETAPA-012-88990f9e-ES6-SEM-MODULOS.md](etapas/ETAPA-012-88990f9e-ES6-SEM-MODULOS.md) |
 | 013-94bbd520 | TEST: testes da Aula 03 por conceito | [ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| 014-191f595d | REL: relatório HTML dos testes com cobertura | [ETAPA-014-191f595d-RELATORIO-HTML-COBERTURA.md](etapas/ETAPA-014-191f595d-RELATORIO-HTML-COBERTURA.md) |
 
 ## Riscos
 
