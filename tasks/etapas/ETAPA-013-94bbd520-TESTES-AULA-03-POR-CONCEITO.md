@@ -192,7 +192,7 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.17 — Mock de função assíncrona: obterImcDaPessoa
 
-**Próximo passo:** aguardando o usuário mandar executar esta subtarefa.
+**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
 
 - **Nível:** PESADO — um conceito por vez.
 - **Descrição:** Testar `obterImcDaPessoa` com `vi.fn()` e `mockResolvedValue` (caminho feliz) e `mockRejectedValue` (servidor recusa), conferindo o erro com `rejects`. Nenhuma chamada de rede.
