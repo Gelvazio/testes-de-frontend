@@ -122,7 +122,7 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.10 — toBeGreaterThan(): limites numéricos
 
-**Próximo passo:** aguardando o usuário mandar executar esta subtarefa.
+**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
 
 - **Nível:** LEVE — um conceito por vez.
 - **Descrição:** Um IMC de 100 kg e 1,70 m é maior que `IMC_LIMITE_OBESIDADE_II`; os limites estão em ordem crescente.
