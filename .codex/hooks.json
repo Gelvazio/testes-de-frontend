@@ -1,0 +1,39 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|MultiEdit|Write|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node 'C:\\fontes\\template-inicial-tasks-ia\\.codex\\hooks\\exigir-reserva.mjs'",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash 'C:\\fontes\\template-inicial-tasks-ia\\.codex\\hooks\\sincronizar-main.sh'",
+            "timeout": 60
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node 'C:\\fontes\\template-inicial-tasks-ia\\.codex\\hooks\\lembrar-task.mjs'",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

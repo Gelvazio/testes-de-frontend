@@ -147,3 +147,13 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Claude Code: configurações pessoais (fora do Git)
+.claude/settings.local.json
+.claude/launch.json
+# Claude Code: instruções pessoais de cada um
+CLAUDE.local.md
+
+# graphify: grafo e cache gerados
+graphify-out/
+graphify-output/
