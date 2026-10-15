@@ -112,7 +112,7 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.9 — toBeDefined(): valor inicializado
 
-**Próximo passo:** aguardando o usuário mandar executar esta subtarefa.
+**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
 
 - **Nível:** LEVE — um conceito por vez.
 - **Descrição:** Conferir que as constantes de limite e o retorno de `classificarImc` estão definidos.
