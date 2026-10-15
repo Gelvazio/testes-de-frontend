@@ -44,3 +44,4 @@
 | TEST.7 | toBeCloseTo(): números decimais | 🟡 Média | TEST.1 | ✅ Concluído | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | TEST.8 | toBeNull(): entrada inválida | 🟡 Média | TEST.1 | ✅ Concluído | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | TEST.9 | toBeDefined(): valor inicializado | 🟡 Média | TEST.1 | ✅ Concluído | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.10 | toBeGreaterThan(): limites numéricos | 🟡 Média | TEST.1 | ✅ Concluído | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
