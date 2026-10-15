@@ -29,8 +29,8 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | JSON.9 | Verificação ponta a ponta e aceite (SUB-TASK-11.9) | 🟡 Média | JSON.5, JSON.6, JSON.7, JSON.8 | ⬜ Pendente | — | [ETAPA-011](etapas/ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md) |
 | **ES6** | **Projeto frontend com testes em ES6 sem módulos** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-012](etapas/ETAPA-012-88990f9e-ES6-SEM-MODULOS.md) |
 | ES6.3 | Aceite do usuário | 🟡 Média | ES6.2 | 👀 Aguardando o usuário | — | [ETAPA-012](etapas/ETAPA-012-88990f9e-ES6-SEM-MODULOS.md) |
-| **TEST** | **Testes da Aula 03 por conceito (imc.js)** | 🟡 Média | Nenhuma | ⬜ Pendente | — (não reservável) | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
-| TEST.1 | Configurar o Vitest (instalar, scripts test e test:run) | 🟡 Média | Nenhuma | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| **TEST** | **Testes da Aula 03 por conceito (imc.js)** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.1 | Configurar o Vitest (instalar, scripts test e test:run) | 🟡 Média | Nenhuma | 🔄 Em execução | Claude Code (Opus 5.5) (local · main) (desde 2026-10-15 10:12) | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | TEST.2 | describe(): agrupar as suites do IMC | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | TEST.3 | it() e test() com BDD Given/When/Then | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | TEST.4 | expect(): a asserção | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |

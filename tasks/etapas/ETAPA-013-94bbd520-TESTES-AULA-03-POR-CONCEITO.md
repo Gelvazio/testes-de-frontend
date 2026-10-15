@@ -32,7 +32,7 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.1 — Configurar o Vitest (instalar, scripts test e test:run)
 
-**Próximo passo:** aguardando o usuário mandar executar esta subtarefa.
+**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
 
 - **Nível:** MEDIO — configuração do projeto.
 - **Descrição:** Instalar `vitest` como dependência de desenvolvimento, criar os scripts `test` (watch) e `test:run` (uma vez, para CI) e deixar os testes importarem `imc.js`. Explicar cada passo.
