@@ -132,13 +132,13 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.11 — toEqual(): comparação profunda e a armadilha da referência
 
-**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
+**Próximo passo:** nenhum — entregue.
 
 - **Nível:** MEDIO — um conceito por vez.
 - **Descrição:** `[17, 22, 27].map(classificarImc)` é igual a `['Abaixo do peso', 'Peso normal', 'Sobrepeso']`; mostrar por que `toBe` falharia.
 - **Origem:** slide(s) 20 e 21 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
-- **Entrega:** — · **Verificação:** —
+- **Entrega:** commit feat(TEST.11) · **Verificação:** npm run test:run: 21 testes passam
 
 ### TEST.12 — toContain(): item numa lista
 
