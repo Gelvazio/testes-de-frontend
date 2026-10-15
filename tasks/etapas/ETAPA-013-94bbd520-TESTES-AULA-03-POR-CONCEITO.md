@@ -210,9 +210,9 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.19 — Explicação detalhada de cada exemplo (TEST.2 a TEST.11)
 
-**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
+**Próximo passo:** nenhum — entregue.
 
 - **Nível:** LEVE — só comentários.
 - **Descrição:** pedido do usuário no meio da execução ("criasse 1 explicacao detalhada de cada exemplo, na descricao do uso?"): cada `it` das TEST.2 a TEST.11 ganha comentário com O que faz, Por quê e Esperado, no padrão adotado a partir da TEST.12.
 - **Critérios de Aceitação:** todos os exemplos comentados; suíte continua verde.
-- **Entrega:** — · **Verificação:** —
+- **Entrega:** commit feat(TEST.19) · **Verificação:** 23 exemplos comentados (O que faz, Por que, Esperado); npm run test:run: 39 passam
