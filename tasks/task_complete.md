@@ -13,3 +13,5 @@
 | SETUP.1 | Copiar o template e adaptar nome, quadro e visualizador ao projeto | 🟠 Alta | Nenhuma | ✅ Concluído | — | [ETAPA-001](etapas/ETAPA-001-edb58c7f-APLICAR-TEMPLATE.md) |
 | DASH.1 | Configurar o Vite e mover o guia para `guia/index.html` | 🟠 Alta | Nenhuma | ✅ Concluído | — | [ETAPA-002](etapas/ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md) |
 | DASH.2 | Criar o dashboard de matérias (cards, efeitos e tema claro/escuro) | 🟠 Alta | DASH.1 | ✅ Concluído | — | [ETAPA-002](etapas/ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md) |
+| ALUN | **Vitrine dos projetos dos alunos (GitHub)** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-003](etapas/ETAPA-003-88f3b2a5-PROJETOS-ALUNOS.md) |
+| ALUN.1 | Criar `projetos-alunos/index.html` com um card por aluno e modal dos projetos | 🟡 Média | Nenhuma | ✅ Concluído | — | [ETAPA-003](etapas/ETAPA-003-88f3b2a5-PROJETOS-ALUNOS.md) |

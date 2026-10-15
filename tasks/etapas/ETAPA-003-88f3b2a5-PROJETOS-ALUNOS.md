@@ -10,7 +10,7 @@ explica cada projeto publicado no GitHub do aluno.
 
 ### ALUN.1 — Criar `projetos-alunos/index.html` com cards e modal
 
-**Próximo passo:** aceite visual do usuário (abrir `projetos-alunos/index.html` no navegador).
+**Próximo passo:** nenhum — entregue. O visual fica para o usuário conferir abrindo `projetos-alunos/index.html` no navegador.
 
 - **Descrição:** ler perfis e repositórios dos 5 alunos (API do GitHub via `gh`), resumir o que
   cada projeto faz e montar a página estática: `index.html` (estrutura), `css/estilo.css`
