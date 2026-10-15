@@ -92,13 +92,13 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.7 — toBeCloseTo(): números decimais
 
-**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
+**Próximo passo:** nenhum — entregue.
 
 - **Nível:** LEVE — um conceito por vez.
 - **Descrição:** `calcularImc(70, 1.75)` ≈ `22.86`; explicar por que `toBe` falha em decimais.
 - **Origem:** slide(s) 20 e 22 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
-- **Entrega:** — · **Verificação:** —
+- **Entrega:** commit feat(TEST.7) · **Verificação:** npm run test:run: 10 testes passam
 
 ### TEST.8 — toBeNull(): entrada inválida
 
