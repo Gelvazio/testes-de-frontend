@@ -32,13 +32,13 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.1 — Configurar o Vitest (instalar, scripts test e test:run)
 
-**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
+**Próximo passo:** nenhum — entregue.
 
 - **Nível:** MEDIO — configuração do projeto.
 - **Descrição:** Instalar `vitest` como dependência de desenvolvimento, criar os scripts `test` (watch) e `test:run` (uma vez, para CI) e deixar os testes importarem `imc.js`. Explicar cada passo.
 - **Origem:** slide(s) 11 e 12 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
-- **Entrega:** — · **Verificação:** —
+- **Entrega:** commit `feat(TEST.1)` · **Verificação:** `npx vitest --version` = 5.0.4; teste-sonda temporário com `import` de `imc.js` passou (apagado depois)
 
 ### TEST.2 — describe(): agrupar as suites do IMC
 
