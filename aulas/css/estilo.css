@@ -7,6 +7,7 @@
   --cor-texto-suave: #8a97c4;
   --cor-ciano: #00f0ff;
   --cor-magenta: #ff2bd6;
+  --cor-titulo-secundario: #ffe3fa;
   --cor-verde: #39ff88;
   --cor-amarelo: #ffe14d;
   --cor-borda: rgba(0, 240, 255, 0.28);
@@ -166,9 +167,9 @@ body {
 .documento h2 {
   margin-top: 2.2rem;
   padding-bottom: 0.4rem;
-  color: var(--cor-magenta);
-  border-bottom: 1px solid var(--cor-magenta);
-  text-shadow: var(--brilho-magenta);
+  color: var(--cor-titulo-secundario);
+  border-bottom: 2px solid var(--cor-magenta);
+  box-shadow: 0 6px 14px -8px var(--cor-magenta);
 }
 
 .documento h3 {

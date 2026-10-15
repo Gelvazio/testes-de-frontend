@@ -15,8 +15,6 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 
 | Tarefa | Título | Prioridade | Depende de | Status | Em uso por | Etapa |
 |---|---|---|---|---|---|---|
-| **LEGI** | **Legibilidade dos títulos da página das aulas** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-009](etapas/ETAPA-009-b17d4e60-LEGIBILIDADE-TITULOS.md) |
-| LEGI.1 | Trocar cor/brilho dos H2 em aulas/css/estilo.css | 🟡 Média | Nenhuma | 🔄 Em execução | Claude Code (Sonnet 5.5) (local · main) (desde 2026-10-15 10:25) | [ETAPA-009](etapas/ETAPA-009-b17d4e60-LEGIBILIDADE-TITULOS.md) |
 
 ## Escopo do projeto
 
