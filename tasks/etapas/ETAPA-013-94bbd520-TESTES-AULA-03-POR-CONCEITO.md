@@ -52,13 +52,13 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.3 — it() e test() com BDD Given/When/Then
 
-**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
+**Próximo passo:** nenhum — entregue.
 
 - **Nível:** LEVE — um conceito por vez.
 - **Descrição:** Escrever os casos de `calcularImc` como `it`, ligados a Given/When/Then, explicando `it` × `test`.
 - **Origem:** slide(s) 6 e 14 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
-- **Entrega:** — · **Verificação:** —
+- **Entrega:** commit feat(TEST.3) · **Verificação:** npm run test:run: 2 testes passam
 
 ### TEST.4 — expect(): a asserção
 
