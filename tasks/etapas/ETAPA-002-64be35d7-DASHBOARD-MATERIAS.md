@@ -52,7 +52,7 @@ conferido pelo usuário no navegador (`npm run dev`).
 
 ### DASH.2 — Criar o dashboard de matérias (cards, efeitos e tema claro/escuro)
 
-**Próximo passo:** aguardar DASH.1.
+**Próximo passo:** criar `src/` (estilos e scripts) e preencher o `index.html`.
 
 - **Descrição:** `index.html` + `src/estilos/` (tokens, base, cards) + `src/js/` (lista de
   matérias, montagem dos cards, troca de tema).
