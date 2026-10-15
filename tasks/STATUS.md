@@ -15,8 +15,6 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 
 | Tarefa | Título | Prioridade | Depende de | Status | Em uso por | Etapa |
 |---|---|---|---|---|---|---|
-| **LOCAL** | **Botão Acessar Localmente no modal dos alunos** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-005](etapas/ETAPA-005-c41e9d27-ACESSAR-LOCALMENTE.md) |
-| LOCAL.1 | Criar o botão Acessar Localmente em js/app.js | 🟡 Média | Nenhuma | 🔄 Em execução | Claude Code (Sonnet 5.5) (local · main) (desde 2026-10-15 09:05) | [ETAPA-005](etapas/ETAPA-005-c41e9d27-ACESSAR-LOCALMENTE.md) |
 
 ## Escopo do projeto
 

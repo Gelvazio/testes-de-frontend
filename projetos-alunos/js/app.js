@@ -11,6 +11,8 @@ const ROTULO_FORK = 'cópia (fork)';
 const ROTULO_VAZIO = 'vazio';
 const ROTULO_SITE = 'Abrir site';
 const ROTULO_REPOSITORIO = 'Repositório';
+const ROTULO_LOCAL = 'Acessar Localmente';
+const PASTA_REPOSITORIOS = 'repositorios';
 
 /**
  * Cria um elemento com classe e texto opcionais.
@@ -57,6 +59,17 @@ function obterUrlAvatar(usuario) {
  */
 function obterUrlPages(usuario, repositorio) {
   return `https://${usuario.toLowerCase()}${SUFIXO_PAGES}${repositorio}/`;
+}
+
+/**
+ * Monta o endereço relativo da pasta do repositório baixado.
+ * @param {string} usuario - Nome de usuário no GitHub.
+ * @param {string} repositorio - Nome do repositório.
+ * @returns {string} Caminho relativo da pasta local.
+ */
+function obterUrlLocal(usuario, repositorio) {
+  const partes = [PASTA_REPOSITORIOS, usuario, repositorio].map(encodeURIComponent);
+  return `${partes.join('/')}/`;
 }
 
 /**
@@ -143,6 +156,12 @@ function criarLinksProjeto(usuario, projeto) {
   const links = criarElemento('div', { classe: 'item-projeto__links' });
   const urlRepositorio = `${URL_GITHUB}${usuario}/${projeto.nome}`;
   links.append(criarLinkExterno(urlRepositorio, ROTULO_REPOSITORIO, 'botao-link'));
+
+  const estaBaixado = !projeto.eFork && !projeto.estaVazio;
+  if (estaBaixado) {
+    const urlLocal = obterUrlLocal(usuario, projeto.nome);
+    links.append(criarLinkExterno(urlLocal, ROTULO_LOCAL, 'botao-link'));
+  }
 
   if (!projeto.temSite) return links;
 

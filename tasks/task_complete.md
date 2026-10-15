@@ -20,3 +20,5 @@
 | DASH | **Dashboard inicial das matérias com Vite** | 🟠 Alta | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-002](etapas/ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md) |
 | BAIX.1 | Baixar os repositórios dos alunos (sem forks, sem .git) | 🟡 Média | Nenhuma | ✅ Concluído | — | [ETAPA-004](etapas/ETAPA-004-a8f31c7e-BAIXAR-PROJETOS-ALUNOS.md) |
 | **BAIX** | **Baixar os projetos dos alunos** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-004](etapas/ETAPA-004-a8f31c7e-BAIXAR-PROJETOS-ALUNOS.md) |
+| LOCAL.1 | Criar o botão Acessar Localmente em js/app.js | 🟡 Média | Nenhuma | ✅ Concluído | — | [ETAPA-005](etapas/ETAPA-005-c41e9d27-ACESSAR-LOCALMENTE.md) |
+| **LOCAL** | **Botão Acessar Localmente no modal dos alunos** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-005](etapas/ETAPA-005-c41e9d27-ACESSAR-LOCALMENTE.md) |
