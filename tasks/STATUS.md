@@ -15,6 +15,8 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 
 | Tarefa | Título | Prioridade | Depende de | Status | Em uso por | Etapa |
 |---|---|---|---|---|---|---|
+| **CARD** | **Card da Aula 03 na vitrine dos alunos** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-008](etapas/ETAPA-008-f26c8d03-CARD-AULA.md) |
+| CARD.1 | Adicionar o card de redirecionamento em projetos-alunos | 🟡 Média | Nenhuma | 🔄 Em execução | Claude Code (Sonnet 5.5) (local · main) (desde 2026-10-15 10:10) | [ETAPA-008](etapas/ETAPA-008-f26c8d03-CARD-AULA.md) |
 
 ## Escopo do projeto
 
@@ -33,6 +35,7 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | 005-c41e9d27 | LOCAL: botão Acessar Localmente no modal | [ETAPA-005-c41e9d27-ACESSAR-LOCALMENTE.md](etapas/ETAPA-005-c41e9d27-ACESSAR-LOCALMENTE.md) |
 | 006-d7b25e41 | ORIE: orientação da Aula 03 (testes com Vitest) | [ETAPA-006-d7b25e41-ORIENTACAO-AULA-03.md](etapas/ETAPA-006-d7b25e41-ORIENTACAO-AULA-03.md) |
 | 007-e93a6b15 | AULAS: index.html futurista que lê a orientação | [ETAPA-007-e93a6b15-INDEX-AULAS.md](etapas/ETAPA-007-e93a6b15-INDEX-AULAS.md) |
+| 008-f26c8d03 | CARD: card da Aula 03 na vitrine dos alunos | [ETAPA-008-f26c8d03-CARD-AULA.md](etapas/ETAPA-008-f26c8d03-CARD-AULA.md) |
 
 ## Riscos
 
