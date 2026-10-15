@@ -172,7 +172,7 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.15 — vi.spyOn() e vi.restoreAllMocks()
 
-**Próximo passo:** aguardando o usuário mandar executar esta subtarefa.
+**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
 
 - **Nível:** MEDIO — um conceito por vez.
 - **Descrição:** Espiar `Number.isFinite` (usado por `calcularImc`), forçar `false` para provocar `null` e restaurar depois de cada teste.
