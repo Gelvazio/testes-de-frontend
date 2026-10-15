@@ -41,7 +41,7 @@ documento `aulas/SUGESTAO-PROJETO.md` e um card na vitrine `projetos-alunos/inde
 
 ### PROJ.2 — Criar `aulas/projeto-frontend-com-testes/`
 
-**Próximo passo:** conferir os 9 arquivos já criados (sem commit) pela frente anterior, rodar `node --check` e entregar.
+**Próximo passo:** nenhum — entregue.
 
 - **Anotação:** retomada em 2026-10-15 09:20 por Claude Code (Opus 5.5) (local · main), a pedido do usuário ("sim, retome a PROJ.2"); a reserva era de Claude Code (Sonnet 5.5) (local · main), que deixou os arquivos criados sem commit.
 
@@ -51,7 +51,7 @@ documento `aulas/SUGESTAO-PROJETO.md` e um card na vitrine `projetos-alunos/inde
   exportadas (ES modules) para a Aula 03.
 - **Critérios de Aceitação:** os 4 módulos funcionam na mesma página; lógica separada do DOM;
   nenhum arquivo de teste; `node --check` em todos os JS.
-- **Entrega:** a preencher · **Verificação:** a preencher
+- **Entrega:** commit `feat(PROJ.2)` · **Verificação:** `node --check` ok nos 6 JS; leitura dos 9 arquivos; funções ≤ 45 linhas, linhas ≤ 100, todas com JSDoc; CSS só com tokens e sem `!important`; nenhum arquivo de teste. Ajustes na conferência: JSDoc nas funções internas de `app.js`, rótulos do tema em constantes, IMC validado antes de classificar e `preencherLista` extraída (`iniciarLoja` tinha 47 linhas). Funcionamento na tela: confere no aceite (PROJ.4).
 
 ### PROJ.3 — Card na vitrine `projetos-alunos/index.html`
 
