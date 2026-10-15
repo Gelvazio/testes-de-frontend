@@ -172,13 +172,13 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.15 — vi.spyOn() e vi.restoreAllMocks()
 
-**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
+**Próximo passo:** nenhum — entregue.
 
 - **Nível:** MEDIO — um conceito por vez.
 - **Descrição:** Espiar `Number.isFinite` (usado por `calcularImc`), forçar `false` para provocar `null` e restaurar depois de cada teste.
 - **Origem:** slide(s) 27 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
-- **Entrega:** — · **Verificação:** —
+- **Entrega:** commit feat(TEST.15) · **Verificação:** npm run test:run: 33 testes passam
 
 ### TEST.16 — Criar a função assíncrona obterImcDaPessoa (código novo)
 
