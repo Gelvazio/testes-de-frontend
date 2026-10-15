@@ -132,7 +132,7 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.11 — toEqual(): comparação profunda e a armadilha da referência
 
-**Próximo passo:** aguardando o usuário mandar executar esta subtarefa.
+**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
 
 - **Nível:** MEDIO — um conceito por vez.
 - **Descrição:** `[17, 22, 27].map(classificarImc)` é igual a `['Abaixo do peso', 'Peso normal', 'Sobrepeso']`; mostrar por que `toBe` falharia.
