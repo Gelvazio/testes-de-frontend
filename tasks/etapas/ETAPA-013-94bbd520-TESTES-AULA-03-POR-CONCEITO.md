@@ -152,13 +152,13 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.13 — beforeEach() e afterEach(): testes isolados
 
-**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
+**Próximo passo:** nenhum — entregue.
 
 - **Nível:** MEDIO — um conceito por vez.
 - **Descrição:** Recriar `{ peso, altura }` a cada teste e demonstrar a independência entre eles.
 - **Origem:** slide(s) 34 a 37 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
-- **Entrega:** — · **Verificação:** —
+- **Entrega:** commit feat(TEST.13) · **Verificação:** npm run test:run: 27 testes passam
 
 ### TEST.14 — vi.fn(): função simulada
 
