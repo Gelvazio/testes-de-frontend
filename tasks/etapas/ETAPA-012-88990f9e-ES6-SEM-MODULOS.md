@@ -36,15 +36,15 @@ JavaScript ES6 (`let`/`const`, arrow, template string) carregado por `<script>` 
 
 ### ES6.2 — Atualizar o `README.md`
 
-**Próximo passo:** aguardando ES6.1.
+**Próximo passo:** nenhum — entregue.
 
 - **Nível:** LEVE — só `.md`.
 - **Descrição:** sem servidor obrigatório; como os testes acessam as funções.
-- **Entrega:** — · **Verificação:** —
+- **Entrega:** commit `docs(ES6.2)` · **Verificação:** README relido; descreve ES6 sem módulos, abertura sem servidor e `require` nos testes.
 
 ### ES6.3 — Aceite do usuário
 
-**Próximo passo:** aguardando ES6.2.
+**Próximo passo:** usuário abre `aulas/projeto-frontend-com-testes/index.html` e confirma.
 
 - **Nível:** LEVE — aceite.
 - **Descrição:** usuário abre a página e confirma que IMC, lâmpada, tema e loja funcionam.
