@@ -18,6 +18,8 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | DASH | **Dashboard inicial das matérias com Vite** | 🟠 Alta | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-002](etapas/ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md) |
 | DASH.2 | Criar o dashboard de matérias (cards, efeitos e tema claro/escuro) | 🟠 Alta | DASH.1 | 🔄 Em execução | Claude Code (Opus 5.5) (local · main) (desde 2026-10-15 08:40) | [ETAPA-002](etapas/ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md) |
 | DASH.3 | Aceite do usuário | 🟠 Alta | DASH.2 | ⬜ Pendente | — | [ETAPA-002](etapas/ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md) |
+| ALUN | **Vitrine dos projetos dos alunos (GitHub)** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-003](etapas/ETAPA-003-88f3b2a5-PROJETOS-ALUNOS.md) |
+| ALUN.1 | Criar `projetos-alunos/index.html` com um card por aluno e modal dos projetos | 🟡 Média | Nenhuma | 🔄 Em execução | Claude Code (Opus 5.5) (local · main · projetos-alunos) (desde 2026-10-15 08:35) | [ETAPA-003](etapas/ETAPA-003-88f3b2a5-PROJETOS-ALUNOS.md) |
 
 ## Escopo do projeto
 
@@ -31,6 +33,7 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 |---|---|---|
 | 001-edb58c7f | SETUP: aplicar o template inicial de tarefas com IA | [ETAPA-001-edb58c7f-APLICAR-TEMPLATE.md](etapas/ETAPA-001-edb58c7f-APLICAR-TEMPLATE.md) |
 | 002-64be35d7 | DASH: dashboard inicial das matérias com Vite | [ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md](etapas/ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md) |
+| 003-88f3b2a5 | ALUN: vitrine dos projetos dos alunos (GitHub) | [ETAPA-003-88f3b2a5-PROJETOS-ALUNOS.md](etapas/ETAPA-003-88f3b2a5-PROJETOS-ALUNOS.md) |
 
 ## Riscos
 
