@@ -15,6 +15,11 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 
 | Tarefa | Título | Prioridade | Depende de | Status | Em uso por | Etapa |
 |---|---|---|---|---|---|---|
+| **PROJ** | **Projeto frontend com testes (mescla dos alunos)** | 🟡 Média | Nenhuma | 👀 Aguardando aprovação | — (não reservável) | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
+| PROJ.1 | Escrever aulas/SUGESTAO-PROJETO.md | 🟡 Média | Aprovação | ⬜ Pendente | — | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
+| PROJ.2 | Criar aulas/projeto-frontend-com-testes/ | 🟡 Média | PROJ.1 | ⬜ Pendente | — | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
+| PROJ.3 | Card do projeto na vitrine dos alunos | 🟡 Média | PROJ.2 | ⬜ Pendente | — | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
+| PROJ.4 | Aceite do usuário | 🟡 Média | PROJ.3 | ⬜ Pendente | — | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
 
 ## Escopo do projeto
 
@@ -35,6 +40,7 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | 007-e93a6b15 | AULAS: index.html futurista que lê a orientação | [ETAPA-007-e93a6b15-INDEX-AULAS.md](etapas/ETAPA-007-e93a6b15-INDEX-AULAS.md) |
 | 008-f26c8d03 | CARD: card da Aula 03 na vitrine dos alunos | [ETAPA-008-f26c8d03-CARD-AULA.md](etapas/ETAPA-008-f26c8d03-CARD-AULA.md) |
 | 009-b17d4e60 | LEGI: legibilidade dos títulos da página das aulas | [ETAPA-009-b17d4e60-LEGIBILIDADE-TITULOS.md](etapas/ETAPA-009-b17d4e60-LEGIBILIDADE-TITULOS.md) |
+| 010-c58e1f92 | PROJ: projeto-frontend-com-testes (mescla dos alunos) | [ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
 
 ## Riscos
 
