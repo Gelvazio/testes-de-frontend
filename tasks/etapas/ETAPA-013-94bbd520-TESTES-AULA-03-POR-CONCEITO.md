@@ -42,13 +42,13 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.2 — describe(): agrupar as suites do IMC
 
-**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
+**Próximo passo:** nenhum — entregue.
 
 - **Nível:** LEVE — um conceito por vez.
 - **Descrição:** Criar `js/imc.test.js` com `describe('calcularImc')` e `describe('classificarImc')`, explicando o que é uma suite.
 - **Origem:** slide(s) 14 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
-- **Entrega:** — · **Verificação:** —
+- **Entrega:** commit feat(TEST.2) · **Verificação:** npm run test:run sem falhas (casos it.todo listados)
 
 ### TEST.3 — it() e test() com BDD Given/When/Then
 

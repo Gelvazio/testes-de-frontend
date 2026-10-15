@@ -36,3 +36,4 @@
 | ES6.1 | Converter index.html e js/*.js | 🟡 Média | Nenhuma | ✅ Concluído | — | [ETAPA-012](etapas/ETAPA-012-88990f9e-ES6-SEM-MODULOS.md) |
 | ES6.2 | Atualizar o README.md | 🟡 Média | ES6.1 | ✅ Concluído | — | [ETAPA-012](etapas/ETAPA-012-88990f9e-ES6-SEM-MODULOS.md) |
 | TEST.1 | Configurar o Vitest (instalar, scripts test e test:run) | 🟡 Média | Nenhuma | ✅ Concluído | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.2 | describe(): agrupar as suites do IMC | 🟡 Média | TEST.1 | ✅ Concluído | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
