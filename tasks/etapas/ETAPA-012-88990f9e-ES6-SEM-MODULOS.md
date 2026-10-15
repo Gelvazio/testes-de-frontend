@@ -27,12 +27,12 @@ JavaScript ES6 (`let`/`const`, arrow, template string) carregado por `<script>` 
 
 ### ES6.1 — Converter `index.html` e `js/*.js`
 
-**Próximo passo:** remover `import`/`export`, carregar os scripts em ordem no `index.html`.
+**Próximo passo:** nenhum — entregue.
 
 - **Nível:** MEDIO — 7 arquivos pequenos, lógica existente.
 - **Descrição:** sem módulos; globais por `<script>`; ES6 puro; `module.exports` condicional no fim.
 - **Critérios de Aceitação:** nenhum `import`/`export`; `node --check` passa; scripts em ordem.
-- **Entrega:** — · **Verificação:** —
+- **Entrega:** commit `feat(ES6.1)` · **Verificação:** `node --check` nos 6 JS; `require` das funções no Node (IMC, carrinho, lâmpada) devolveu os valores esperados; sem `import`/`export`, sem spread de objeto, sem `Array.includes`, sem vírgula final em chamada. Acrescentado `package.json` (commonjs) na pasta do projeto por causa do `type: module` da raiz.
 
 ### ES6.2 — Atualizar o `README.md`
 

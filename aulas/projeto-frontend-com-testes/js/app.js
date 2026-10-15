@@ -1,27 +1,7 @@
 /**
- * Única parte do projeto que toca o DOM: liga a tela às funções puras dos módulos.
+ * Única parte do projeto que toca o DOM: liga a tela às funções puras dos outros scripts.
+ * Carregado por último no index.html (as funções vêm dos scripts anteriores).
  */
-import { calcularImc, classificarImc } from './imc.js';
-import {
-  ESTADO_APAGADA,
-  EVENTO_LIGAR,
-  EVENTO_DESLIGAR,
-  EVENTO_MOUSE_ENTRAR,
-  EVENTO_MOUSE_SAIR,
-  EVENTO_DUPLO_CLIQUE,
-  proximoEstadoLampada,
-} from './lampada.js';
-import {
-  CATEGORIA_TODAS,
-  adicionarAoCarrinho,
-  removerDoCarrinho,
-  calcularTotal,
-  contarItens,
-  filtrarProdutos,
-  formatarPreco,
-} from './carrinho.js';
-import { PRODUTOS, CATEGORIAS } from './dados-produtos.js';
-import { TEMA_CLARO, TEMA_ESCURO, alternarTema, rotuloBotaoTema } from './tema.js';
 
 const CHAVE_TEMA = 'projeto-frontend-com-testes:tema';
 const MSG_IMC_INVALIDO = 'Digite valores válidos.';
@@ -39,6 +19,14 @@ function criarElemento(tag, opcoes = {}) {
   if (opcoes.classe) elemento.className = opcoes.classe;
   if (opcoes.texto) elemento.textContent = opcoes.texto;
   return elemento;
+}
+
+/**
+ * Remove todos os filhos de um elemento.
+ * @param {HTMLElement} elemento - Elemento a esvaziar.
+ */
+function limparFilhos(elemento) {
+  while (elemento.firstChild) elemento.removeChild(elemento.firstChild);
 }
 
 /** Liga o formulário da calculadora de IMC. */
@@ -103,7 +91,7 @@ function criarCardProduto(produto, aoAdicionar) {
     criarElemento('span', { classe: 'produto__icone', texto: produto.icone }),
     criarElemento('h3', { classe: 'produto__nome', texto: produto.nome }),
     criarElemento('p', { classe: 'produto__preco', texto: formatarPreco(produto.preco) }),
-    botao,
+    botao
   );
   return item;
 }
@@ -136,7 +124,8 @@ function montarSeletorCategorias(seletor) {
     opcao.value = categoria.valor;
     return opcao;
   });
-  seletor.replaceChildren(...opcoes);
+  limparFilhos(seletor);
+  opcoes.forEach((opcao) => seletor.appendChild(opcao));
   seletor.value = CATEGORIA_TODAS;
 }
 
@@ -148,10 +137,12 @@ function montarSeletorCategorias(seletor) {
  */
 function preencherLista(lista, itens, mensagemVazia) {
   if (itens.length === 0) {
-    lista.replaceChildren(criarElemento('li', { texto: mensagemVazia }));
+    limparFilhos(lista);
+    lista.appendChild(criarElemento('li', { texto: mensagemVazia }));
     return;
   }
-  lista.replaceChildren(...itens);
+  limparFilhos(lista);
+  itens.forEach((item) => lista.appendChild(item));
 }
 
 /** Liga a loja: filtros, vitrine e carrinho. */
@@ -170,7 +161,7 @@ function iniciarLoja() {
       criarLinhaCarrinho(item, (id) => {
         carrinho = removerDoCarrinho(carrinho, id);
         desenharCarrinho();
-      }),
+      })
     );
     preencherLista(listaCarrinho, linhas, MSG_CARRINHO_VAZIO);
     total.textContent = formatarPreco(calcularTotal(carrinho));
@@ -187,7 +178,7 @@ function iniciarLoja() {
       criarCardProduto(produto, (escolhido) => {
         carrinho = adicionarAoCarrinho(carrinho, escolhido);
         desenharCarrinho();
-      }),
+      })
     );
     preencherLista(vitrine, cards, MSG_SEM_PRODUTOS);
   }

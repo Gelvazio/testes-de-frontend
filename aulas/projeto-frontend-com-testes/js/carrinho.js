@@ -4,7 +4,7 @@
  * O carrinho é uma lista de { ...produto, quantidade } e nunca é alterado no lugar.
  */
 
-export const CATEGORIA_TODAS = 'todas';
+const CATEGORIA_TODAS = 'todas';
 
 /**
  * Adiciona um produto ao carrinho; se já existir, soma 1 na quantidade.
@@ -12,12 +12,14 @@ export const CATEGORIA_TODAS = 'todas';
  * @param {{id: number}} produto - Produto a adicionar.
  * @returns {Array<object>} Novo carrinho.
  */
-export function adicionarAoCarrinho(carrinho, produto) {
+function adicionarAoCarrinho(carrinho, produto) {
   const jaExiste = carrinho.some((item) => item.id === produto.id);
-  if (!jaExiste) return [...carrinho, { ...produto, quantidade: 1 }];
+  if (!jaExiste) return [...carrinho, Object.assign({}, produto, { quantidade: 1 })];
 
   return carrinho.map((item) =>
-    item.id === produto.id ? { ...item, quantidade: item.quantidade + 1 } : item,
+    item.id === produto.id
+      ? Object.assign({}, item, { quantidade: item.quantidade + 1 })
+      : item
   );
 }
 
@@ -27,7 +29,7 @@ export function adicionarAoCarrinho(carrinho, produto) {
  * @param {number} id - Identificador do produto.
  * @returns {Array<object>} Novo carrinho sem o produto.
  */
-export function removerDoCarrinho(carrinho, id) {
+function removerDoCarrinho(carrinho, id) {
   return carrinho.filter((item) => item.id !== id);
 }
 
@@ -36,7 +38,7 @@ export function removerDoCarrinho(carrinho, id) {
  * @param {Array<{preco: number, quantidade: number}>} carrinho - Carrinho atual.
  * @returns {number} Total em reais; 0 para carrinho vazio.
  */
-export function calcularTotal(carrinho) {
+function calcularTotal(carrinho) {
   return carrinho.reduce((soma, item) => soma + item.preco * item.quantidade, 0);
 }
 
@@ -45,7 +47,7 @@ export function calcularTotal(carrinho) {
  * @param {Array<{quantidade: number}>} carrinho - Carrinho atual.
  * @returns {number} Soma das quantidades.
  */
-export function contarItens(carrinho) {
+function contarItens(carrinho) {
   return carrinho.reduce((soma, item) => soma + item.quantidade, 0);
 }
 
@@ -55,7 +57,7 @@ export function contarItens(carrinho) {
  * @param {{categoria?: string, busca?: string}} [filtro] - Critérios do filtro.
  * @returns {Array<object>} Produtos que atendem aos dois critérios.
  */
-export function filtrarProdutos(produtos, filtro = {}) {
+function filtrarProdutos(produtos, filtro = {}) {
   const { categoria = CATEGORIA_TODAS, busca = '' } = filtro;
   const termo = busca.trim().toLowerCase();
 
@@ -71,6 +73,19 @@ export function filtrarProdutos(produtos, filtro = {}) {
  * @param {number} valor - Valor em reais.
  * @returns {string} Texto como "R$ 1.299,90".
  */
-export function formatarPreco(valor) {
+function formatarPreco(valor) {
   return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+}
+
+/* Permite importar as funções nos testes (Node); no navegador não existe `module`. */
+if (typeof module !== 'undefined') {
+  module.exports = {
+    CATEGORIA_TODAS,
+    adicionarAoCarrinho,
+    removerDoCarrinho,
+    calcularTotal,
+    contarItens,
+    filtrarProdutos,
+    formatarPreco,
+  };
 }

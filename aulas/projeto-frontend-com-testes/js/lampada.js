@@ -3,15 +3,15 @@
  * Origem: lampada de carlosdanielramosleandro43-ctrl e JavaScript de marcosxz447l.
  */
 
-export const ESTADO_APAGADA = 'apagada';
-export const ESTADO_ACESA = 'acesa';
-export const ESTADO_QUEBRADA = 'quebrada';
+const ESTADO_APAGADA = 'apagada';
+const ESTADO_ACESA = 'acesa';
+const ESTADO_QUEBRADA = 'quebrada';
 
-export const EVENTO_LIGAR = 'ligar';
-export const EVENTO_DESLIGAR = 'desligar';
-export const EVENTO_MOUSE_ENTRAR = 'mouse-entrar';
-export const EVENTO_MOUSE_SAIR = 'mouse-sair';
-export const EVENTO_DUPLO_CLIQUE = 'duplo-clique';
+const EVENTO_LIGAR = 'ligar';
+const EVENTO_DESLIGAR = 'desligar';
+const EVENTO_MOUSE_ENTRAR = 'mouse-entrar';
+const EVENTO_MOUSE_SAIR = 'mouse-sair';
+const EVENTO_DUPLO_CLIQUE = 'duplo-clique';
 
 /** Eventos de mouse invertem o estado (comportamento do projeto original). */
 const EVENTOS_QUE_INVERTEM = [EVENTO_MOUSE_ENTRAR, EVENTO_MOUSE_SAIR];
@@ -31,12 +31,27 @@ function inverterEstado(estado) {
  * @param {string} evento - Um dos EVENTO_* exportados.
  * @returns {string} Novo estado. Uma lâmpada quebrada nunca muda.
  */
-export function proximoEstadoLampada(estadoAtual, evento) {
+function proximoEstadoLampada(estadoAtual, evento) {
   if (estadoAtual === ESTADO_QUEBRADA) return ESTADO_QUEBRADA;
   if (evento === EVENTO_DUPLO_CLIQUE) return ESTADO_QUEBRADA;
   if (evento === EVENTO_LIGAR) return ESTADO_ACESA;
   if (evento === EVENTO_DESLIGAR) return ESTADO_APAGADA;
-  if (EVENTOS_QUE_INVERTEM.includes(evento)) return inverterEstado(estadoAtual);
+  if (EVENTOS_QUE_INVERTEM.indexOf(evento) !== -1) return inverterEstado(estadoAtual);
 
   return estadoAtual;
+}
+
+/* Permite importar as funções nos testes (Node); no navegador não existe `module`. */
+if (typeof module !== 'undefined') {
+  module.exports = {
+    ESTADO_APAGADA,
+    ESTADO_ACESA,
+    ESTADO_QUEBRADA,
+    EVENTO_LIGAR,
+    EVENTO_DESLIGAR,
+    EVENTO_MOUSE_ENTRAR,
+    EVENTO_MOUSE_SAIR,
+    EVENTO_DUPLO_CLIQUE,
+    proximoEstadoLampada,
+  };
 }

@@ -3,7 +3,7 @@
  * Usa emoji no lugar de imagens para não depender de arquivos externos.
  */
 
-export const CATEGORIAS = [
+const CATEGORIAS = [
   { valor: 'todas', rotulo: 'Todas' },
   { valor: 'masculino', rotulo: 'Masculino' },
   { valor: 'feminino', rotulo: 'Feminino' },
@@ -11,7 +11,7 @@ export const CATEGORIAS = [
   { valor: 'esportes', rotulo: 'Esportes' },
 ];
 
-export const PRODUTOS = [
+const PRODUTOS = [
   { id: 1, nome: 'Camisa Polo Azul', preco: 129.9, categoria: 'masculino', icone: '👕' },
   { id: 2, nome: 'Camisa do Time', preco: 299, categoria: 'esportes', icone: '⚽' },
   { id: 3, nome: 'Vestido Floral', preco: 189.5, categoria: 'feminino', icone: '👗' },
@@ -21,3 +21,11 @@ export const PRODUTOS = [
   { id: 7, nome: 'Calça Jeans', preco: 159.9, categoria: 'masculino', icone: '👖' },
   { id: 8, nome: 'Bolsa de Couro', preco: 219.9, categoria: 'feminino', icone: '👜' },
 ];
+
+/* Permite importar as funções nos testes (Node); no navegador não existe `module`. */
+if (typeof module !== 'undefined') {
+  module.exports = {
+    CATEGORIAS,
+    PRODUTOS,
+  };
+}
