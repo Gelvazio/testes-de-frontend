@@ -16,7 +16,7 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 |---|---|---|---|---|---|---|
 | **PROJ** | **Projeto frontend com testes (mescla dos alunos)** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
 | PROJ.1 | Escrever aulas/SUGESTAO-PROJETO.md | 🟡 Média | Aprovação | 🔄 Em execução | Claude Code (Sonnet 5.5) (local · main) (desde 2026-10-15 10:50) | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
-| PROJ.2 | Criar aulas/projeto-frontend-com-testes/ | 🟡 Média | PROJ.1 | ⬜ Pendente | — | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
+| PROJ.2 | Criar aulas/projeto-frontend-com-testes/ | 🟡 Média | PROJ.1 | 🔄 Em execução | Claude Code (Sonnet 5.5) (local · main) (desde 2026-10-15 11:00) | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
 | PROJ.3 | Card do projeto na vitrine dos alunos | 🟡 Média | PROJ.2 | ⬜ Pendente | — | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
 | PROJ.4 | Aceite do usuário | 🟡 Média | PROJ.3 | ⬜ Pendente | — | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
 
