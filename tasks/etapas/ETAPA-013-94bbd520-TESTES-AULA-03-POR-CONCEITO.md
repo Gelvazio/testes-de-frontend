@@ -62,7 +62,7 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.4 — expect(): a asserção
 
-**Próximo passo:** aguardando o usuário mandar executar esta subtarefa.
+**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
 
 - **Nível:** LEVE — um conceito por vez.
 - **Descrição:** Usar `expect()` em cada caso e explicar o diff mostrado quando o teste falha.
