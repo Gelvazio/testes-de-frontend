@@ -37,10 +37,11 @@ conferido pelo usuário no navegador (`npm run dev`).
 
 | Data | Decisão | Quem | Por quê |
 |---|---|---|---|
+| 2026-10-15 08:33 | Plano aprovado como está (inclui mover o guia para `guia/index.html`) | Gelvazio | Resposta no chat: "Sim, aprovo o plano da DASH. Pode executar." |
 
 ### DASH.1 — Configurar o Vite e mover o guia para `guia/index.html`
 
-**Próximo passo:** aguardar a aprovação do plano.
+**Próximo passo:** instalar o Vite, criar `vite.config.js` e mover o guia.
 
 - **Descrição:** `vite` como devDependency; scripts `dev`, `build` e `preview`; `vite.config.js`
   com as entradas `index.html` e `guia/index.html`; guia movido com links ajustados.
