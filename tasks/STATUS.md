@@ -15,8 +15,6 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 
 | Tarefa | Título | Prioridade | Depende de | Status | Em uso por | Etapa |
 |---|---|---|---|---|---|---|
-| **CARD** | **Card da Aula 03 na vitrine dos alunos** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-008](etapas/ETAPA-008-f26c8d03-CARD-AULA.md) |
-| CARD.1 | Adicionar o card de redirecionamento em projetos-alunos | 🟡 Média | Nenhuma | 🔄 Em execução | Claude Code (Sonnet 5.5) (local · main) (desde 2026-10-15 10:10) | [ETAPA-008](etapas/ETAPA-008-f26c8d03-CARD-AULA.md) |
 
 ## Escopo do projeto
 

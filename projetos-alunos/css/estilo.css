@@ -147,6 +147,22 @@ body {
   background: var(--cor-etiqueta);
 }
 
+.cartao-aluno--sugestao {
+  justify-content: center;
+  text-decoration: none;
+  border-style: dashed;
+  border-color: var(--cor-destaque);
+}
+
+.cartao-aluno--sugestao .cartao-aluno__usuario {
+  word-break: normal;
+}
+
+.cartao-aluno__icone {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .cartao-aluno__usuario {
   margin: 4px 0 0;
   font-size: 1rem;

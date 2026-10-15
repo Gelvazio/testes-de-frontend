@@ -26,3 +26,5 @@
 | **ORIE** | **Orientação da Aula 03 (testes com Vitest)** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-006](etapas/ETAPA-006-d7b25e41-ORIENTACAO-AULA-03.md) |
 | AULAS.1 | Criar aulas/index.html com CSS e JS separados | 🟡 Média | Nenhuma | ✅ Concluído | — | [ETAPA-007](etapas/ETAPA-007-e93a6b15-INDEX-AULAS.md) |
 | **AULAS** | **Página index.html das aulas (neon)** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-007](etapas/ETAPA-007-e93a6b15-INDEX-AULAS.md) |
+| CARD.1 | Adicionar o card de redirecionamento em projetos-alunos | 🟡 Média | Nenhuma | ✅ Concluído | — | [ETAPA-008](etapas/ETAPA-008-f26c8d03-CARD-AULA.md) |
+| **CARD** | **Card da Aula 03 na vitrine dos alunos** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-008](etapas/ETAPA-008-f26c8d03-CARD-AULA.md) |

@@ -13,6 +13,10 @@ const ROTULO_SITE = 'Abrir site';
 const ROTULO_REPOSITORIO = 'Repositório';
 const ROTULO_LOCAL = 'Acessar Localmente';
 const PASTA_REPOSITORIOS = 'repositorios';
+const URL_PAGINA_AULAS = '../aulas/index.html';
+const TITULO_SUGESTAO = 'Sugestão Testes Frontend';
+const RESUMO_SUGESTAO = 'Orientação da Aula 03: quais projetos dos alunos testar com Vitest.';
+const ICONE_SUGESTAO = '🧪';
 
 /**
  * Cria um elemento com classe e texto opcionais.
@@ -135,6 +139,21 @@ function criarCardAluno(aluno, aoAbrir) {
 }
 
 /**
+ * Cria o card que leva à página de orientação das aulas (mesma aba).
+ * @returns {HTMLAnchorElement} Card-link da sugestão de testes.
+ */
+function criarCardSugestao() {
+  const card = criarElemento('a', { classe: 'cartao-aluno cartao-aluno--sugestao' });
+  card.href = URL_PAGINA_AULAS;
+  card.append(
+    criarElemento('span', { classe: 'cartao-aluno__icone', texto: ICONE_SUGESTAO }),
+    criarElemento('h2', { classe: 'cartao-aluno__usuario', texto: TITULO_SUGESTAO }),
+    criarElemento('p', { classe: 'cartao-aluno__resumo', texto: RESUMO_SUGESTAO }),
+  );
+  return card;
+}
+
+/**
  * Cria as marcações do projeto (linguagem, fork, vazio).
  * @param {{linguagem?: string, eFork?: boolean, estaVazio?: boolean}} projeto - Projeto.
  * @returns {HTMLUListElement} Lista de marcações.
@@ -234,7 +253,8 @@ function iniciarPagina(alunos) {
   if (!grade || !modal) return;
 
   const controlador = criarControladorModal(modal);
-  grade.replaceChildren(...alunos.map((aluno) => criarCardAluno(aluno, controlador.abrir)));
+  const cardsAlunos = alunos.map((aluno) => criarCardAluno(aluno, controlador.abrir));
+  grade.replaceChildren(...cardsAlunos, criarCardSugestao());
 
   const rodape = document.querySelector('#rodape-dados');
   rodape.textContent = `Dados levantados no GitHub em ${DATA_LEVANTAMENTO}.`;

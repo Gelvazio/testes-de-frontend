@@ -7,11 +7,12 @@ REDIRECIONAMENTO PRA ESTE ARQUIVO aulas\index.html"
 
 ### CARD.1 — Adicionar o card de redirecionamento em `projetos-alunos`
 
-**Próximo passo:** editar `js/app.js` e `css/estilo.css` de `projetos-alunos`.
+**Próximo passo:** nenhum — entregue. O visual fica para o usuário conferir no navegador.
 
 - **Nível:** LEVE — 2 arquivos, mudança pontual.
 - **Descrição:** card-link (mesmo estilo dos cards) depois dos alunos, apontando para
   `../aulas/index.html`, na mesma aba.
 - **Critérios de Aceitação:** card visível na grade; clique redireciona; teclado (Enter) funciona
   por ser `<a>`; segue o tema claro/escuro.
-- **Entrega:** a preencher · **Verificação:** a preencher
+- **Entrega:** commit `feat(CARD.1)` · **Verificação:** `node --check js/app.js`; linhas ≤ 100; visual não aberto (regra: sem navegador).
+- **Anotação:** nome do card definido pelo usuário: "Sugestão Testes Frontend".
