@@ -15,8 +15,6 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 
 | Tarefa | Título | Prioridade | Depende de | Status | Em uso por | Etapa |
 |---|---|---|---|---|---|---|
-| DASH | **Dashboard inicial das matérias com Vite** | 🟠 Alta | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-002](etapas/ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md) |
-| DASH.3 | Aceite do usuário | 🟠 Alta | DASH.2 | 👀 Aguardando o usuário | — | [ETAPA-002](etapas/ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md) |
 
 ## Escopo do projeto
 

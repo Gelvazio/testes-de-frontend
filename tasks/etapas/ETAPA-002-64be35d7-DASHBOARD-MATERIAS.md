@@ -68,8 +68,8 @@ conferido pelo usuário no navegador (`npm run dev`).
 
 ### DASH.3 — Aceite do usuário
 
-**Próximo passo:** o usuário roda `npm run dev`, abre o endereço mostrado e confere os cards e a
-troca de tema.
+**Próximo passo:** nenhum — concluída.
 
 - **Descrição:** o usuário roda `npm run dev` e confere o visual e os temas.
-- **Entrega:** — · **Verificação:** —
+- **Entrega:** aceite registrado no quadro · **Verificação:** Gelvazio, 2026-10-15 08:42, no
+  chat: "tarefa dash aceita".
