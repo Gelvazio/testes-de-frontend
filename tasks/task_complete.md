@@ -22,3 +22,5 @@
 | **BAIX** | **Baixar os projetos dos alunos** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-004](etapas/ETAPA-004-a8f31c7e-BAIXAR-PROJETOS-ALUNOS.md) |
 | LOCAL.1 | Criar o botão Acessar Localmente em js/app.js | 🟡 Média | Nenhuma | ✅ Concluído | — | [ETAPA-005](etapas/ETAPA-005-c41e9d27-ACESSAR-LOCALMENTE.md) |
 | **LOCAL** | **Botão Acessar Localmente no modal dos alunos** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-005](etapas/ETAPA-005-c41e9d27-ACESSAR-LOCALMENTE.md) |
+| ORIE.1 | Escrever aulas/ORIENTACAO-AULA-03.md | 🟡 Média | Nenhuma | ✅ Concluído | — | [ETAPA-006](etapas/ETAPA-006-d7b25e41-ORIENTACAO-AULA-03.md) |
+| **ORIE** | **Orientação da Aula 03 (testes com Vitest)** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-006](etapas/ETAPA-006-d7b25e41-ORIENTACAO-AULA-03.md) |

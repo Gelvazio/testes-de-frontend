@@ -15,8 +15,6 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 
 | Tarefa | Título | Prioridade | Depende de | Status | Em uso por | Etapa |
 |---|---|---|---|---|---|---|
-| **ORIE** | **Orientação da Aula 03 (testes com Vitest)** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-006](etapas/ETAPA-006-d7b25e41-ORIENTACAO-AULA-03.md) |
-| ORIE.1 | Escrever aulas/ORIENTACAO-AULA-03.md | 🟡 Média | Nenhuma | 🔄 Em execução | Claude Code (Sonnet 5.5) (local · main) (desde 2026-10-15 09:20) | [ETAPA-006](etapas/ETAPA-006-d7b25e41-ORIENTACAO-AULA-03.md) |
 
 ## Escopo do projeto
 
