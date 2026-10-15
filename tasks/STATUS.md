@@ -17,8 +17,6 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 |---|---|---|---|---|---|---|
 | DASH | **Dashboard inicial das matérias com Vite** | 🟠 Alta | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-002](etapas/ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md) |
 | DASH.3 | Aceite do usuário | 🟠 Alta | DASH.2 | 👀 Aguardando o usuário | — | [ETAPA-002](etapas/ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md) |
-| ALUN | **Vitrine dos projetos dos alunos (GitHub)** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-003](etapas/ETAPA-003-88f3b2a5-PROJETOS-ALUNOS.md) |
-| ALUN.2 | Tema claro e escuro com botão na vitrine dos alunos | 🟡 Média | ALUN.1 | 🔄 Em execução | Claude Code (Opus 5.5) (local · main · projetos-alunos) (desde 2026-10-15 08:41) | [ETAPA-003](etapas/ETAPA-003-88f3b2a5-PROJETOS-ALUNOS.md) |
 
 ## Escopo do projeto
 

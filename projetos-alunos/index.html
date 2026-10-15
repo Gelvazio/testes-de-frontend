@@ -8,7 +8,12 @@
   </head>
   <body>
     <header class="cabecalho">
-      <h1 class="cabecalho__titulo">Projetos dos Alunos</h1>
+      <div class="cabecalho__linha">
+        <h1 class="cabecalho__titulo">Projetos dos Alunos</h1>
+        <button class="botao-tema" id="botao-tema" type="button" aria-label="Trocar tema">
+          🌙
+        </button>
+      </div>
       <p class="cabecalho__subtitulo">
         Repositórios publicados no GitHub. Clique em um aluno para ver os projetos.
       </p>
@@ -35,6 +40,7 @@
       <ul class="lista-projetos" id="lista-projetos"></ul>
     </dialog>
 
+    <script src="js/tema.js"></script>
     <script src="js/dados-alunos.js"></script>
     <script src="js/app.js"></script>
   </body>

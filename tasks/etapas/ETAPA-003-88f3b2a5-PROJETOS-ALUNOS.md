@@ -27,10 +27,12 @@ explica cada projeto publicado no GitHub do aluno.
 
 ### ALUN.2 — Tema claro e escuro com botão
 
-**Próximo passo:** adicionar o botão de tema e os tokens do tema escuro forçado em `css/estilo.css`.
+**Próximo passo:** nenhum — entregue. O visual fica para o usuário conferir no navegador.
 
 - **Pedido:** "deve ter tema claro e escuro tambem" (2026-10-15 08:41).
 - **Descrição:** botão no cabeçalho alterna entre claro e escuro; começa pela preferência do
   sistema e lembra a escolha no navegador (`localStorage`). Script próprio `js/tema.js`.
 - **Critérios de Aceitação:** botão acessível (rótulo muda conforme o tema); cores só por tokens
   no `:root`; modal e cards seguem o tema escolhido.
+- **Entrega:** commit `feat(ALUN.2)` · **Verificação:** `node --check js/tema.js`; linhas ≤ 100;
+  troca visual fica para o usuário conferir (regra: não abrir navegador).
