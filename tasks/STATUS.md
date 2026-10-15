@@ -15,6 +15,8 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 
 | Tarefa | Título | Prioridade | Depende de | Status | Em uso por | Etapa |
 |---|---|---|---|---|---|---|
+| **LOCAL** | **Botão Acessar Localmente no modal dos alunos** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-005](etapas/ETAPA-005-c41e9d27-ACESSAR-LOCALMENTE.md) |
+| LOCAL.1 | Criar o botão Acessar Localmente em js/app.js | 🟡 Média | Nenhuma | 🔄 Em execução | Claude Code (Sonnet 5.5) (local · main) (desde 2026-10-15 09:05) | [ETAPA-005](etapas/ETAPA-005-c41e9d27-ACESSAR-LOCALMENTE.md) |
 
 ## Escopo do projeto
 
@@ -30,6 +32,7 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | 002-64be35d7 | DASH: dashboard inicial das matérias com Vite | [ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md](etapas/ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md) |
 | 003-88f3b2a5 | ALUN: vitrine dos projetos dos alunos (GitHub) | [ETAPA-003-88f3b2a5-PROJETOS-ALUNOS.md](etapas/ETAPA-003-88f3b2a5-PROJETOS-ALUNOS.md) |
 | 004-a8f31c7e | BAIX: baixar os projetos dos alunos | [ETAPA-004-a8f31c7e-BAIXAR-PROJETOS-ALUNOS.md](etapas/ETAPA-004-a8f31c7e-BAIXAR-PROJETOS-ALUNOS.md) |
+| 005-c41e9d27 | LOCAL: botão Acessar Localmente no modal | [ETAPA-005-c41e9d27-ACESSAR-LOCALMENTE.md](etapas/ETAPA-005-c41e9d27-ACESSAR-LOCALMENTE.md) |
 
 ## Riscos
 
