@@ -152,7 +152,7 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.13 — beforeEach() e afterEach(): testes isolados
 
-**Próximo passo:** aguardando o usuário mandar executar esta subtarefa.
+**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
 
 - **Nível:** MEDIO — um conceito por vez.
 - **Descrição:** Recriar `{ peso, altura }` a cada teste e demonstrar a independência entre eles.
