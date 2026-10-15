@@ -162,7 +162,7 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.14 — vi.fn(): função simulada
 
-**Próximo passo:** aguardando o usuário mandar executar esta subtarefa.
+**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
 
 - **Nível:** MEDIO — um conceito por vez.
 - **Descrição:** `const espiao = vi.fn(classificarImc)`, chamar e conferir `toHaveBeenCalled` e `toHaveBeenCalledWith(22.86)`.
