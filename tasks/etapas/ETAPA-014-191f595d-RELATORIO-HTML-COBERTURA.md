@@ -9,7 +9,7 @@ dos testes em HTML (`html/index.html`) do `aulas/projeto-frontend-com-testes/`.
 
 ### REL.1 — Configurar os relatórios HTML de testes e de cobertura
 
-**Próximo passo:** aguardando o usuário mandar executar esta subtarefa.
+**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
 
 - **Nível:** MEDIO — dependências novas e scripts (2 a 4 arquivos).
 - **Descrição:** instalar `@vitest/coverage-v8` e `@vitest/ui` na mesma versão do `vitest`;
