@@ -16,8 +16,7 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | Tarefa | Título | Prioridade | Depende de | Status | Em uso por | Etapa |
 |---|---|---|---|---|---|---|
 | **PROJ** | **Projeto frontend com testes (mescla dos alunos)** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
-| PROJ.3 | Card do projeto na vitrine dos alunos | 🟡 Média | PROJ.2 | 🔄 Em execução | Claude Code (Opus 5.5) (local · main) (desde 2026-10-15 09:21) | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
-| PROJ.4 | Aceite do usuário | 🟡 Média | PROJ.3 | ⬜ Pendente | — | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
+| PROJ.4 | Aceite do usuário | 🟡 Média | PROJ.3 | 👀 Aguardando o usuário | — | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
 
 ## Escopo do projeto
 

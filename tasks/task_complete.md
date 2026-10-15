@@ -32,3 +32,4 @@
 | **LEGI** | **Legibilidade dos títulos da página das aulas** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-009](etapas/ETAPA-009-b17d4e60-LEGIBILIDADE-TITULOS.md) |
 | PROJ.1 | Escrever aulas/SUGESTAO-PROJETO.md | 🟡 Média | Aprovação | ✅ Concluído | — | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
 | PROJ.2 | Criar aulas/projeto-frontend-com-testes/ | 🟡 Média | PROJ.1 | ✅ Concluído | — | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
+| PROJ.3 | Card do projeto na vitrine dos alunos | 🟡 Média | PROJ.2 | ✅ Concluído | — | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |

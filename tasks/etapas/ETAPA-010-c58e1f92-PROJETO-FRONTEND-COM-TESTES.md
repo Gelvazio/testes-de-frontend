@@ -55,10 +55,14 @@ documento `aulas/SUGESTAO-PROJETO.md` e um card na vitrine `projetos-alunos/inde
 
 ### PROJ.3 — Card na vitrine `projetos-alunos/index.html`
 
-**Próximo passo:** aguardando PROJ.2.
+**Próximo passo:** nenhum — entregue. O visual fica para o usuário conferir no navegador (PROJ.4).
 
 - **Nível:** LEVE — reaproveita o card de sugestão.
-- **Entrega:** a preencher · **Verificação:** a preencher
+- **Descrição:** card-link "Projeto Frontend com Testes" (🧩) depois do card da Aula 03, apontando
+  para `../aulas/projeto-frontend-com-testes/index.html`, na mesma aba. Os cards de sugestão viraram
+  a lista `SUGESTOES` em `projetos-alunos/js/app.js` (card novo = item novo na lista).
+- **Entrega:** commit `feat(PROJ.3)` · **Verificação:** `node --check projetos-alunos/js/app.js`;
+  linhas ≤ 100; caminho do link conferido (a pasta existe); sem navegador (regra).
 
 ### PROJ.4 — Aceite do usuário
 

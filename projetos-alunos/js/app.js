@@ -13,10 +13,21 @@ const ROTULO_SITE = 'Abrir site';
 const ROTULO_REPOSITORIO = 'Repositório';
 const ROTULO_LOCAL = 'Acessar Localmente';
 const PASTA_REPOSITORIOS = 'repositorios';
-const URL_PAGINA_AULAS = '../aulas/index.html';
-const TITULO_SUGESTAO = 'Sugestão Testes Frontend';
-const RESUMO_SUGESTAO = 'Orientação da Aula 03: quais projetos dos alunos testar com Vitest.';
-const ICONE_SUGESTAO = '🧪';
+/** Cards-link que vêm depois dos alunos (abrem na mesma aba); card novo = item novo aqui. */
+const SUGESTOES = [
+  {
+    endereco: '../aulas/index.html',
+    titulo: 'Sugestão Testes Frontend',
+    resumo: 'Orientação da Aula 03: quais projetos dos alunos testar com Vitest.',
+    icone: '🧪',
+  },
+  {
+    endereco: '../aulas/projeto-frontend-com-testes/index.html',
+    titulo: 'Projeto Frontend com Testes',
+    resumo: 'Projeto único que mescla os dos alunos: IMC, lâmpada, loja e tema.',
+    icone: '🧩',
+  },
+];
 
 /**
  * Cria um elemento com classe e texto opcionais.
@@ -139,16 +150,17 @@ function criarCardAluno(aluno, aoAbrir) {
 }
 
 /**
- * Cria o card que leva à página de orientação das aulas (mesma aba).
- * @returns {HTMLAnchorElement} Card-link da sugestão de testes.
+ * Cria um card-link de sugestão (mesma aba), no mesmo estilo dos cards dos alunos.
+ * @param {{endereco: string, titulo: string, resumo: string, icone: string}} sugestao - Card.
+ * @returns {HTMLAnchorElement} Card-link da sugestão.
  */
-function criarCardSugestao() {
+function criarCardSugestao(sugestao) {
   const card = criarElemento('a', { classe: 'cartao-aluno cartao-aluno--sugestao' });
-  card.href = URL_PAGINA_AULAS;
+  card.href = sugestao.endereco;
   card.append(
-    criarElemento('span', { classe: 'cartao-aluno__icone', texto: ICONE_SUGESTAO }),
-    criarElemento('h2', { classe: 'cartao-aluno__usuario', texto: TITULO_SUGESTAO }),
-    criarElemento('p', { classe: 'cartao-aluno__resumo', texto: RESUMO_SUGESTAO }),
+    criarElemento('span', { classe: 'cartao-aluno__icone', texto: sugestao.icone }),
+    criarElemento('h2', { classe: 'cartao-aluno__usuario', texto: sugestao.titulo }),
+    criarElemento('p', { classe: 'cartao-aluno__resumo', texto: sugestao.resumo }),
   );
   return card;
 }
@@ -254,7 +266,8 @@ function iniciarPagina(alunos) {
 
   const controlador = criarControladorModal(modal);
   const cardsAlunos = alunos.map((aluno) => criarCardAluno(aluno, controlador.abrir));
-  grade.replaceChildren(...cardsAlunos, criarCardSugestao());
+  const cardsSugestoes = SUGESTOES.map(criarCardSugestao);
+  grade.replaceChildren(...cardsAlunos, ...cardsSugestoes);
 
   const rodape = document.querySelector('#rodape-dados');
   rodape.textContent = `Dados levantados no GitHub em ${DATA_LEVANTAMENTO}.`;
