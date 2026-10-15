@@ -15,6 +15,8 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 
 | Tarefa | Título | Prioridade | Depende de | Status | Em uso por | Etapa |
 |---|---|---|---|---|---|---|
+| **ORIE** | **Orientação da Aula 03 (testes com Vitest)** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-006](etapas/ETAPA-006-d7b25e41-ORIENTACAO-AULA-03.md) |
+| ORIE.1 | Escrever aulas/ORIENTACAO-AULA-03.md | 🟡 Média | Nenhuma | 🔄 Em execução | Claude Code (Sonnet 5.5) (local · main) (desde 2026-10-15 09:20) | [ETAPA-006](etapas/ETAPA-006-d7b25e41-ORIENTACAO-AULA-03.md) |
 
 ## Escopo do projeto
 
@@ -31,6 +33,7 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | 003-88f3b2a5 | ALUN: vitrine dos projetos dos alunos (GitHub) | [ETAPA-003-88f3b2a5-PROJETOS-ALUNOS.md](etapas/ETAPA-003-88f3b2a5-PROJETOS-ALUNOS.md) |
 | 004-a8f31c7e | BAIX: baixar os projetos dos alunos | [ETAPA-004-a8f31c7e-BAIXAR-PROJETOS-ALUNOS.md](etapas/ETAPA-004-a8f31c7e-BAIXAR-PROJETOS-ALUNOS.md) |
 | 005-c41e9d27 | LOCAL: botão Acessar Localmente no modal | [ETAPA-005-c41e9d27-ACESSAR-LOCALMENTE.md](etapas/ETAPA-005-c41e9d27-ACESSAR-LOCALMENTE.md) |
+| 006-d7b25e41 | ORIE: orientação da Aula 03 (testes com Vitest) | [ETAPA-006-d7b25e41-ORIENTACAO-AULA-03.md](etapas/ETAPA-006-d7b25e41-ORIENTACAO-AULA-03.md) |
 
 ## Riscos
 
