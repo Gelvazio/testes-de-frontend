@@ -112,13 +112,13 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.9 — toBeDefined(): valor inicializado
 
-**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
+**Próximo passo:** nenhum — entregue.
 
 - **Nível:** LEVE — um conceito por vez.
 - **Descrição:** Conferir que as constantes de limite e o retorno de `classificarImc` estão definidos.
 - **Origem:** slide(s) 22 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
-- **Entrega:** — · **Verificação:** —
+- **Entrega:** commit feat(TEST.9) · **Verificação:** npm run test:run: 16 testes passam
 
 ### TEST.10 — toBeGreaterThan(): limites numéricos
 
