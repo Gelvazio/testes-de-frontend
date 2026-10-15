@@ -52,11 +52,11 @@ JavaScript ES6 (`let`/`const`, arrow, template string) carregado por `<script>` 
 
 ### ES6.4 — Criar `js/imc.test.js` comentado
 
-**Próximo passo:** escrever o arquivo explicando cada função da aula (AULA-03-SLIDES.md).
+**Próximo passo:** nenhum — substituída pela [ETAPA-013](ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) (1 subtarefa por conceito).
 
 - **Nível:** MEDIO — 1 arquivo, com lógica.
 - **Descrição:** testes de `calcularImc` e `classificarImc`, com comentários explicando `describe`, `it`, `expect`, AAA e matchers.
 - **Exceção à regra "nunca escrever testes":** autorizada pelo usuário no chat em 2026-10-15
   ("faca isso", depois de perguntado). Vale só para este arquivo.
-- **Entrega:** — · **Verificação:** — (Vitest não instalado: não executado)
+- **Entrega:** — (cancelada, não executada) · **Verificação:** —
 

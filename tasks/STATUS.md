@@ -28,8 +28,26 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | JSON.8 | Migrar etapas e referências (SUB-TASK-11.8) | 🟡 Média | JSON.2 | ⬜ Pendente | — | [ETAPA-011](etapas/ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md) |
 | JSON.9 | Verificação ponta a ponta e aceite (SUB-TASK-11.9) | 🟡 Média | JSON.5, JSON.6, JSON.7, JSON.8 | ⬜ Pendente | — | [ETAPA-011](etapas/ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md) |
 | **ES6** | **Projeto frontend com testes em ES6 sem módulos** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-012](etapas/ETAPA-012-88990f9e-ES6-SEM-MODULOS.md) |
-| ES6.4 | Criar imc.test.js comentado (exceção autorizada) | 🟡 Média | ES6.1 | 🔄 Em execução | Claude Code (Sonnet 5.5) (local · main) (desde 2026-10-15 10:20) | [ETAPA-012](etapas/ETAPA-012-88990f9e-ES6-SEM-MODULOS.md) |
 | ES6.3 | Aceite do usuário | 🟡 Média | ES6.2 | 👀 Aguardando o usuário | — | [ETAPA-012](etapas/ETAPA-012-88990f9e-ES6-SEM-MODULOS.md) |
+| **TEST** | **Testes da Aula 03 por conceito (imc.js)** | 🟡 Média | Nenhuma | ⬜ Pendente | — (não reservável) | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.1 | Configurar o Vitest (instalar, scripts test e test:run) | 🟡 Média | Nenhuma | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.2 | describe(): agrupar as suites do IMC | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.3 | it() e test() com BDD Given/When/Then | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.4 | expect(): a asserção | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.5 | Padrão AAA: Arrange, Act, Assert | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.6 | toBe(): igualdade estrita | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.7 | toBeCloseTo(): números decimais | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.8 | toBeNull(): entrada inválida | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.9 | toBeDefined(): valor inicializado | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.10 | toBeGreaterThan(): limites numéricos | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.11 | toEqual(): comparação profunda e a armadilha da referência | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.12 | toContain(): item numa lista | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.13 | beforeEach() e afterEach(): testes isolados | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.14 | vi.fn(): função simulada | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.15 | vi.spyOn() e vi.restoreAllMocks() | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.16 | Criar a função assíncrona obterImcDaPessoa (código novo) | 🟡 Média | TEST.1 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.17 | Mock de função assíncrona: obterImcDaPessoa | 🟡 Média | TEST.1, TEST.16 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.18 | Aceite do usuário | 🟡 Média | TEST.2 a TEST.17 | ⬜ Pendente | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 
 ## Escopo do projeto
 
@@ -53,6 +71,7 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | 010-c58e1f92 | PROJ: projeto-frontend-com-testes (mescla dos alunos) | [ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
 | 011-7f2a90bc | JSON: quadro de tarefas em JSON (plano, não executar) | [ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md](etapas/ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md) |
 | 012-88990f9e | ES6: projeto-frontend-com-testes em ES6 sem módulos | [ETAPA-012-88990f9e-ES6-SEM-MODULOS.md](etapas/ETAPA-012-88990f9e-ES6-SEM-MODULOS.md) |
+| 013-94bbd520 | TEST: testes da Aula 03 por conceito | [ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 
 ## Riscos
 
