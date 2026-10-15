@@ -29,7 +29,7 @@ documento `aulas/SUGESTAO-PROJETO.md` e um card na vitrine `projetos-alunos/inde
 
 | Data | Decisão | Quem |
 |---|---|---|
-| 2026-10-15 | Aguardando aprovação do plano | Gelvazio |
+| 2026-10-15 | Plano aprovado ("Sim, aprovado... sem arquivos de teste") às 10:50 | Gelvazio |
 
 ### PROJ.1 — Escrever `aulas/SUGESTAO-PROJETO.md`
 
