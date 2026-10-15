@@ -142,13 +142,13 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.12 — toContain(): item numa lista
 
-**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
+**Próximo passo:** nenhum — entregue.
 
 - **Nível:** LEVE — um conceito por vez.
 - **Descrição:** A lista de rótulos gerada com `map(classificarImc)` contém `'Peso normal'`.
 - **Origem:** slide(s) 22 e 23 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
-- **Entrega:** — · **Verificação:** —
+- **Entrega:** commit feat(TEST.12) · **Verificação:** npm run test:run: 24 testes passam
 
 ### TEST.13 — beforeEach() e afterEach(): testes isolados
 

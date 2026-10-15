@@ -46,3 +46,4 @@
 | TEST.9 | toBeDefined(): valor inicializado | 🟡 Média | TEST.1 | ✅ Concluído | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | TEST.10 | toBeGreaterThan(): limites numéricos | 🟡 Média | TEST.1 | ✅ Concluído | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | TEST.11 | toEqual(): comparação profunda e a armadilha da referência | 🟡 Média | TEST.1 | ✅ Concluído | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.12 | toContain(): item numa lista | 🟡 Média | TEST.1 | ✅ Concluído | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
