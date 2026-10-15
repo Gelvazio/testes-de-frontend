@@ -1,0 +1,163 @@
+.grade-materias {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--largura-minima-cartao), 1fr));
+  gap: var(--espaco-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* --cor-acento vem do modificador de cor; --mouse-x/y vêm do efeito de brilho (JS). */
+.cartao-materia {
+  --cor-acento: var(--cor-azul);
+  --mouse-x: 50%;
+  --mouse-y: 0%;
+  --atraso-entrada: 0ms;
+
+  position: relative;
+  border-radius: var(--raio-cartao);
+  animation: entrada-cartao var(--duracao-entrada) var(--curva-suave) var(--atraso-entrada) both;
+}
+
+.cartao-materia--azul {
+  --cor-acento: var(--cor-azul);
+}
+
+.cartao-materia--violeta {
+  --cor-acento: var(--cor-violeta);
+}
+
+.cartao-materia--verde {
+  --cor-acento: var(--cor-verde);
+}
+
+.cartao-materia--laranja {
+  --cor-acento: var(--cor-laranja);
+}
+
+.cartao-materia__corpo {
+  position: relative;
+  height: 100%;
+  padding: var(--espaco-4);
+  overflow: hidden;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: inherit;
+  box-shadow: 0 4px 14px var(--cor-sombra);
+  backdrop-filter: blur(12px);
+  transition:
+    transform var(--duracao-media) var(--curva-suave),
+    box-shadow var(--duracao-media) var(--curva-suave),
+    border-color var(--duracao-media) ease;
+}
+
+/* Faixa colorida no topo do cartão. */
+.cartao-materia__corpo::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: linear-gradient(90deg, var(--cor-acento), transparent);
+}
+
+/* Brilho que acompanha o cursor. */
+.cartao-materia__corpo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(
+    20rem circle at var(--mouse-x) var(--mouse-y),
+    color-mix(in srgb, var(--cor-acento) 18%, transparent),
+    transparent 60%
+  );
+  transition: opacity var(--duracao-media) ease;
+}
+
+.cartao-materia:hover .cartao-materia__corpo,
+.cartao-materia:focus-within .cartao-materia__corpo {
+  transform: translateY(var(--elevacao-cartao));
+  border-color: color-mix(in srgb, var(--cor-acento) 45%, transparent);
+  box-shadow:
+    0 18px 40px var(--cor-sombra),
+    0 0 0 1px color-mix(in srgb, var(--cor-acento) 25%, transparent);
+}
+
+.cartao-materia:hover .cartao-materia__corpo::after {
+  opacity: 1;
+}
+
+.cartao-materia__topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--espaco-3);
+}
+
+.cartao-materia__sigla {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  font-weight: 700;
+  color: var(--cor-superficie-forte);
+  background: linear-gradient(135deg, var(--cor-acento),
+    color-mix(in srgb, var(--cor-acento) 60%, var(--cor-violeta)));
+  border-radius: 14px;
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--cor-acento) 35%, transparent);
+  transition: transform var(--duracao-media) var(--curva-suave);
+}
+
+.cartao-materia:hover .cartao-materia__sigla {
+  transform: rotate(-6deg) scale(1.08);
+}
+
+.cartao-materia__situacao {
+  padding: var(--espaco-1) var(--espaco-3);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--cor-acento);
+  background: color-mix(in srgb, var(--cor-acento) 12%, transparent);
+  border-radius: var(--raio-pilula);
+}
+
+.cartao-materia__nome {
+  margin: 0 0 var(--espaco-2);
+  font-size: 1.25rem;
+}
+
+.cartao-materia__descricao {
+  margin: 0 0 var(--espaco-3);
+  color: var(--cor-texto-suave);
+}
+
+.cartao-materia__topicos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cartao-materia__topico {
+  padding: var(--espaco-1) var(--espaco-2);
+  font-size: 0.8rem;
+  color: var(--cor-texto);
+  background: var(--cor-superficie-forte);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+}
+
+@keyframes entrada-cartao {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

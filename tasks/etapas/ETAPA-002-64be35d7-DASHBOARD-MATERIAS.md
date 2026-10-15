@@ -52,17 +52,24 @@ conferido pelo usuário no navegador (`npm run dev`).
 
 ### DASH.2 — Criar o dashboard de matérias (cards, efeitos e tema claro/escuro)
 
-**Próximo passo:** criar `src/` (estilos e scripts) e preencher o `index.html`.
+**Próximo passo:** nenhum — concluída.
 
 - **Descrição:** `index.html` + `src/estilos/` (tokens, base, cards) + `src/js/` (lista de
   matérias, montagem dos cards, troca de tema).
 - **Critérios de Aceitação:** os 3 cards aparecem; botão alterna o tema e a escolha fica salva;
   sem preferência salva, segue o tema do sistema; respeita `prefers-reduced-motion`.
-- **Entrega:** — · **Verificação:** —
+- **Entrega:** commit `feat(DASH.2)` — `index.html` (cards montados por `<template>`),
+  `src/estilos/` (`tokens.css` com `light-dark()`, `base.css`, `cabecalho.css`, `cartoes.css`) e
+  `src/js/` (`materias.js` = lista única das matérias, `cartoes.js`, `tema.js`, `efeitos.js`,
+  `principal.js`, `constantes.js`). Efeitos: entrada escalonada, elevação e borda colorida no
+  hover, brilho que segue o cursor, ícone sol/lua em CSS. · **Verificação:** `npm run build` sem
+  erro; `node --check` nos 6 scripts; nenhuma linha acima de 100 caracteres; sem `style=`/
+  `onclick` no HTML; visual não conferido no navegador (regra do projeto) — fica para a DASH.3.
 
 ### DASH.3 — Aceite do usuário
 
-**Próximo passo:** aguardar DASH.2.
+**Próximo passo:** o usuário roda `npm run dev`, abre o endereço mostrado e confere os cards e a
+troca de tema.
 
 - **Descrição:** o usuário roda `npm run dev` e confere o visual e os temas.
 - **Entrega:** — · **Verificação:** —

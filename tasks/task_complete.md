@@ -12,3 +12,4 @@
 | SETUP | **Aplicar o template inicial de tarefas com IA** | 🟠 Alta | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-001](etapas/ETAPA-001-edb58c7f-APLICAR-TEMPLATE.md) |
 | SETUP.1 | Copiar o template e adaptar nome, quadro e visualizador ao projeto | 🟠 Alta | Nenhuma | ✅ Concluído | — | [ETAPA-001](etapas/ETAPA-001-edb58c7f-APLICAR-TEMPLATE.md) |
 | DASH.1 | Configurar o Vite e mover o guia para `guia/index.html` | 🟠 Alta | Nenhuma | ✅ Concluído | — | [ETAPA-002](etapas/ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md) |
+| DASH.2 | Criar o dashboard de matérias (cards, efeitos e tema claro/escuro) | 🟠 Alta | DASH.1 | ✅ Concluído | — | [ETAPA-002](etapas/ETAPA-002-64be35d7-DASHBOARD-MATERIAS.md) |

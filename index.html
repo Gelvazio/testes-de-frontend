@@ -3,11 +3,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
   <title>Técnico em Informática — Matérias</title>
+  <meta name="description" content="Painel com as matérias de frontend do Técnico em Informática.">
+  <link rel="stylesheet" href="/src/estilos/principal.css">
+  <script type="module" src="/src/js/principal.js"></script>
 </head>
 <body>
-  <main>
-    <h1>Técnico em Informática</h1>
+  <div class="fundo-decorativo" aria-hidden="true"></div>
+
+  <header class="cabecalho">
+    <div class="cabecalho__textos">
+      <p class="cabecalho__selo">Técnico em Informática</p>
+      <h1 class="cabecalho__titulo">Painel de matérias</h1>
+      <p class="cabecalho__subtitulo">
+        <span id="total-materias">0</span> matérias de frontend para estudar e praticar.
+      </p>
+    </div>
+    <button id="botao-tema" class="botao-tema" type="button" aria-label="Alternar tema">
+      <span class="botao-tema__icone" aria-hidden="true"></span>
+      <span class="botao-tema__texto">Tema</span>
+    </button>
+  </header>
+
+  <main class="conteudo">
+    <section aria-labelledby="titulo-materias">
+      <h2 id="titulo-materias" class="visualmente-oculto">Matérias</h2>
+      <ul id="lista-materias" class="grade-materias"></ul>
+    </section>
   </main>
+
+  <footer class="rodape">
+    <a class="rodape__link" href="guia/">Guia da estrutura do projeto</a>
+  </footer>
+
+  <template id="modelo-cartao">
+    <li class="cartao-materia">
+      <article class="cartao-materia__corpo">
+        <header class="cartao-materia__topo">
+          <span class="cartao-materia__sigla" aria-hidden="true"></span>
+          <span class="cartao-materia__situacao"></span>
+        </header>
+        <h3 class="cartao-materia__nome"></h3>
+        <p class="cartao-materia__descricao"></p>
+        <ul class="cartao-materia__topicos"></ul>
+      </article>
+    </li>
+  </template>
 </body>
 </html>

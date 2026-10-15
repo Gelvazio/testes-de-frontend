@@ -1,0 +1,75 @@
+.cabecalho {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--espaco-4);
+  padding-block: var(--espaco-5) var(--espaco-4);
+}
+
+.cabecalho__selo {
+  display: inline-block;
+  margin: 0 0 var(--espaco-2);
+  padding: var(--espaco-1) var(--espaco-3);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--cor-azul);
+  background: color-mix(in srgb, var(--cor-azul) 12%, transparent);
+  border-radius: var(--raio-pilula);
+}
+
+.cabecalho__titulo {
+  margin: 0;
+  font-size: clamp(2rem, 4vw + 1rem, 3rem);
+  line-height: 1.1;
+  background: linear-gradient(90deg, var(--cor-azul), var(--cor-violeta));
+  background-clip: text;
+  color: transparent;
+}
+
+.cabecalho__subtitulo {
+  margin: var(--espaco-2) 0 0;
+  color: var(--cor-texto-suave);
+}
+
+.botao-tema {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espaco-2);
+  padding: var(--espaco-2) var(--espaco-3);
+  font: inherit;
+  font-weight: 600;
+  color: var(--cor-texto);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-pilula);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition:
+    transform var(--duracao-rapida) ease,
+    box-shadow var(--duracao-rapida) ease;
+}
+
+.botao-tema:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px var(--cor-sombra);
+}
+
+/* Ícone desenhado em CSS: sol no tema claro, lua (sol "mordido") no escuro. */
+.botao-tema__icone {
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  background: var(--cor-laranja);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--cor-laranja) 30%, transparent);
+  transition:
+    background-color var(--duracao-media) ease,
+    box-shadow var(--duracao-media) ease;
+}
+
+.botao-tema--escuro .botao-tema__icone {
+  background: transparent;
+  box-shadow: inset -0.35rem -0.15rem 0 0 var(--cor-violeta);
+}

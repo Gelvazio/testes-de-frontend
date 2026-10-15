@@ -1,0 +1,5 @@
+/* Ponto de entrada dos estilos: a ordem importa (tokens → base → componentes). */
+@import "./tokens.css";
+@import "./base.css";
+@import "./cabecalho.css";
+@import "./cartoes.css";

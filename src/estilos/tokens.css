@@ -1,0 +1,46 @@
+/*
+ * Tokens de tema. Cada cor usa light-dark(claro, escuro): o tema segue o sistema e o
+ * atributo data-tema no <html> força um dos dois (escolha do botão).
+ */
+:root {
+  color-scheme: light dark;
+
+  --cor-fundo: light-dark(#f4f6fb, #0b1020);
+  --cor-superficie: light-dark(rgb(255 255 255 / 80%), rgb(22 28 48 / 72%));
+  --cor-superficie-forte: light-dark(#ffffff, #161c30);
+  --cor-borda: light-dark(rgb(15 23 42 / 10%), rgb(255 255 255 / 10%));
+  --cor-texto: light-dark(#0f172a, #e6e9f2);
+  --cor-texto-suave: light-dark(#475569, #9aa3b8);
+  --cor-sombra: light-dark(rgb(15 23 42 / 10%), rgb(0 0 0 / 45%));
+  --cor-foco: light-dark(#2563eb, #7aa2ff);
+
+  --cor-azul: light-dark(#2563eb, #6b9bff);
+  --cor-violeta: light-dark(#7c3aed, #a78bfa);
+  --cor-verde: light-dark(#059669, #34d399);
+  --cor-laranja: light-dark(#ea580c, #fb923c);
+
+  --fonte-texto: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  --raio-cartao: 18px;
+  --raio-pilula: 999px;
+  --espaco-1: 0.25rem;
+  --espaco-2: 0.5rem;
+  --espaco-3: 1rem;
+  --espaco-4: 1.5rem;
+  --espaco-5: 2.5rem;
+  --largura-maxima: 1120px;
+  --largura-minima-cartao: 280px;
+
+  --duracao-rapida: 180ms;
+  --duracao-media: 320ms;
+  --duracao-entrada: 600ms;
+  --curva-suave: cubic-bezier(0.22, 1, 0.36, 1);
+  --elevacao-cartao: -6px;
+}
+
+:root[data-tema="claro"] {
+  color-scheme: light;
+}
+
+:root[data-tema="escuro"] {
+  color-scheme: dark;
+}

@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--fonte-texto);
+  line-height: 1.5;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+  transition:
+    background-color var(--duracao-media) ease,
+    color var(--duracao-media) ease;
+}
+
+/* Manchas de cor desfocadas atrás do conteúdo. */
+.fundo-decorativo {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(40rem 30rem at 10% -10%, color-mix(in srgb, var(--cor-azul) 22%, transparent),
+      transparent 70%),
+    radial-gradient(36rem 28rem at 100% 10%,
+      color-mix(in srgb, var(--cor-violeta) 18%, transparent), transparent 70%),
+    radial-gradient(30rem 24rem at 50% 110%, color-mix(in srgb, var(--cor-verde) 14%, transparent),
+      transparent 70%);
+}
+
+.conteudo,
+.cabecalho,
+.rodape {
+  width: min(100% - 2 * var(--espaco-3), var(--largura-maxima));
+  margin-inline: auto;
+}
+
+.rodape {
+  padding-block: var(--espaco-5);
+  text-align: center;
+}
+
+.rodape__link {
+  color: var(--cor-texto-suave);
+}
+
+.rodape__link:hover {
+  color: var(--cor-texto);
+}
+
+:focus-visible {
+  outline: 3px solid var(--cor-foco);
+  outline-offset: 3px;
+}
+
+.visualmente-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 1ms !important;
+  }
+}
