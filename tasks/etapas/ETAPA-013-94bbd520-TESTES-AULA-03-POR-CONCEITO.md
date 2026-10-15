@@ -72,13 +72,13 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.5 — Padrão AAA: Arrange, Act, Assert
 
-**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
+**Próximo passo:** nenhum — entregue.
 
 - **Nível:** MEDIO — um conceito por vez.
 - **Descrição:** Separar as 3 fases nos casos de `calcularImc`, com a fase Act em uma linha.
 - **Origem:** slide(s) 16 a 19 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
-- **Entrega:** — · **Verificação:** —
+- **Entrega:** commit feat(TEST.5) · **Verificação:** npm run test:run: 5 testes passam
 
 ### TEST.6 — toBe(): igualdade estrita
 
