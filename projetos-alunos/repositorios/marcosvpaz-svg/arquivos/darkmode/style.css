@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #eafaf1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.quadrado-maior {
+    background-color: #020105;
+    border-radius: 12px;
+    padding: 30px 50px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(38, 0, 255, 0.15);
+    transition: background-color 0.3s ease;
+}
+
+.quadrado-maior h1 {
+    color: #f1f1f1;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.quadrado-maior p {
+    color: #fff9f9;
+    font-size: 1rem;
+}
+
+#darkmode {
+    background-color: #070a06;
+    color: #fafafa;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(22, 255, 1, 0.15);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.15s ease;
+}
+
+#darkmode:hover {
+    transform: translateY(-2px);
+}
+
+/* Modo escuro */
+body.dark {
+    background-color: #ffffff;
+    color: #f0f0f0;
+}
+
+body.dark .quadrado-maior {
+    background-color: #fcfcfc;
+}
+
+body.dark .quadrado-maior h1,
+body.dark .quadrado-maior p {
+    color: #f0f0f0;
+}
+
+body.dark #darkmode {
+    background-color: #310add;
+    color: #f0f0f0;
+}

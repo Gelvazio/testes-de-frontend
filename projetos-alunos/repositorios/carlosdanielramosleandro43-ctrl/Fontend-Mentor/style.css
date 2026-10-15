@@ -1,0 +1,188 @@
+@font-face {
+    font-family: "Fraunces";
+    src: url("./assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf");
+}
+
+@font-face {
+    font-family: DM Sans;
+    src: url("./assets/fonts/dm-sans/DMSans-VariableFont_opsz\,wght.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: hsl(40, 60%, 98%);
+    color: hsl(33, 15%, 15%);
+    font-family: "DM Sans", sans-derif;
+    font-size: 14px;
+}
+
+button,
+a{
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.layout{
+    min-height: 100vh;
+    display: flex;
+}
+
+.sidebar {
+    width: 255px;
+    min-height: 100vh;
+    background: hsl(36, 24%, 93%);
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid hsl(33, 17%, 86%);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Fraunces", serif;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+.brand strong {
+    display: block;
+}
+
+.sun {
+    color: hsl(42, 83%, 58%);
+    font-size: 25px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: hsl(33, 15%, 25%);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 0 12px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.nav-item:hover {
+    background: hsl(35, 24%, 88%);
+}
+
+.nav-item:active {
+    background: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-item span {
+    width: 20px;
+    text-align: center;
+}
+
+.nav-item b {
+    margin-left: auto;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsl(15, 69%, 37%);
+    color: white;
+    border-radius: 50%;
+    font-size: 10px;
+}
+
+.weather {
+    margin-top: auto;
+    padding: 20px;
+    background: hsl(45, 100%, 74%);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.weather::after {
+    content: "";
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: hsl(42, 83%, 58%);
+    border-radius: 50%;
+    right: 20px;
+    top: -20px;
+}
+
+.weather p {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.weather strong {
+    display: block;
+    font-family: "Fraunces", serif;
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.wether span {
+    font-size: 11px;
+}
+
+.sidebar-footer {
+    margin-top: 25px;
+    color: hsl(33, 15%, 41%);
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.sidebar-footer p:first-child {
+    font-family: "DM Mono", monospace;
+    margin-bottom: 4px;
+}
+
+.sidebar-footer small {
+    display: block;
+    margin-top: 7px;
+}
+
+.main {
+    flex: 1; 
+    padding: 42px 55px;
+    max-width: 1185px;
+    margin: auto;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 42px;
+}
+
+.eyebrow {
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: hsl(33, 17%, 41%);
+    margin-bottom: 5px;
+}
+

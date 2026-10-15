@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cota de Enchente - Rio do Sul/SC</title>
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    .search-input:focus {
+      outline: 2px solid #2563eb;
+      outline-offset: -1px;
+    }
+    .result-card { transition: all 0.2s; }
+    .badge-min { background-color: #dbeafe; color: #1e3a8a; }
+    .badge-max { background-color: #fee2e2; color: #991b1b; }
+    #map {
+      height: 320px;
+      width: 100%;
+      border-radius: 1rem;
+      z-index: 1;
+    }
+    .custom-marker {
+      background: #dc2626;
+      color: white;
+      border-radius: 50% 50% 50% 0;
+      width: 22px;
+      height: 22px;
+      transform: rotate(-45deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .custom-marker i {
+      transform: rotate(45deg);
+      font-size: 11px;
+    }
+    .leaflet-popup-content {
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .leaflet-popup-content strong {
+      color: #1e293b;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 font-sans antialiased">
+
+  <div id="app" class="max-w-6xl mx-auto px-4 py-6 md:py-10">
+
+    <!-- cabeçalho -->
+    <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+      <h1 class="text-2xl md:text-3xl font-bold text-slate-800 flex items-center gap-2">
+        <i class="fas fa-water text-blue-500"></i>
+        <span data-i18n="title">Cota de Enchente</span>
+        <span class="text-sm font-normal text-slate-500 bg-slate-100 px-3 py-1 rounded-full">Rio do Sul - SC</span>
+      </h1>
+      <div class="flex gap-2 bg-white rounded-xl shadow-sm p-1 border border-slate-200">
+        <button @click="setLang('pt')" 
+                :class="['px-4 py-1.5 rounded-lg text-sm font-medium transition', lang === 'pt' ? 'bg-blue-600 text-white' : 'text-slate-600 hover:bg-slate-100']">
+          <i class="fas fa-flag mr-1"></i> PT
+        </button>
+        <button @click="setLang('es')" 
+                :class="['px-4 py-1.5 rounded-lg text-sm font-medium transition', lang === 'es' ? 'bg-blue-600 text-white' : 'text-slate-600 hover:bg-slate-100']">
+          <i class="fas fa-flag mr-1"></i> ES
+        </button>
+      </div>
+    </div>
+
+    <!-- busca -->
+    <div class="bg-white rounded-2xl shadow-md p-4 md:p-6 mb-6 border border-slate-200">
+      <div class="flex flex-col sm:flex-row gap-3">
+        <div class="relative flex-1">
+          <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
+          <input type="text" 
+                 v-model="query" 
+                 @input="filterStreets"
+                 :placeholder="lang === 'pt' ? 'Digite o nome da rua...' : 'Escribe el nombre de la calle...'"
+                 class="search-input w-full pl-10 pr-4 py-3 border border-slate-300 rounded-xl bg-slate-50/80 focus:bg-white transition text-slate-700 placeholder-slate-400">
+        </div>
+        <button @click="clearSearch" 
+                class="bg-slate-200 hover:bg-slate-300 text-slate-700 px-5 py-3 rounded-xl transition flex items-center gap-1.5 whitespace-nowrap">
+          <i class="fas fa-times"></i> <span data-i18n="clear">Limpar</span>
+        </button>
+      </div>
+      <div class="mt-2 text-sm text-slate-500 flex justify-between items-center">
+        <span>
+          <span data-i18n="found">Encontradas</span> <strong>{{ filtered.length }}</strong> 
+          <span data-i18n="streets">ruas</span>
+        </span>
+        <span v-if="query && filtered.length === 0" class="text-amber-600">
+          <i class="fas fa-exclamation-circle"></i> 
+          <span data-i18n="noResults">Nenhuma rua encontrada</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- grid: mapa + lista -->
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+      <!-- Mapa -->
+      <div class="lg:col-span-3 bg-white rounded-2xl shadow-md p-4 border border-slate-200">
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="text-sm font-semibold uppercase tracking-wide text-slate-400 flex items-center gap-2">
+            <i class="fas fa-map text-red-400"></i>
+            <span data-i18n="mapLabel">Mapa da rua</span>
+          </h2>
+          <span v-if="selectedStreet" class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full font-medium truncate max-w-[200px]">
+            <i class="fas fa-location-dot mr-1"></i> {{ selectedStreet.logradouro }}
+          </span>
+        </div>
+        <div id="map"></div>
+        <div v-if="selectedStreet" class="mt-3 text-sm bg-slate-50 rounded-xl p-3 border border-slate-100 grid grid-cols-2 gap-2">
+          <div>
+            <span class="text-slate-500 text-xs" data-i18n="min">Mínima</span>
+            <span class="font-mono font-bold text-slate-700 block text-base">{{ selectedStreet.minima }} m</span>
+          </div>
+          <div>
+            <span class="text-slate-500 text-xs" data-i18n="max">Máxima</span>
+            <span class="font-mono font-bold text-slate-700 block text-base">{{ selectedStreet.maxima }} m</span>
+          </div>
+          <div class="col-span-2 text-xs text-slate-400 flex items-center gap-1 pt-1 border-t border-slate-200">
+            <i class="fas fa-info-circle"></i>
+            <span data-i18n="infoLevel">Cota de enchente em metros (nível do rio Itajaí do Sul)</span>
+          </div>
+        </div>
+        <div v-else class="mt-3 text-sm text-slate-400 text-center py-3 bg-slate-50 rounded-xl">
+          <i class="fas fa-hand-pointer mr-1"></i>
+          <span data-i18n="selectStreet">Selecione uma rua na lista para ver no mapa</span>
+        </div>
+      </div>
+
+      <!-- lista de ruas -->
+      <div class="lg:col-span-2 bg-white rounded-2xl shadow-md p-4 border border-slate-200">
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="text-sm font-semibold uppercase tracking-wide text-slate-400">
+            <i class="fas fa-list-ul mr-1"></i> 
+            <span data-i18n="streetList">Ruas</span>
+          </h2>
+          <span class="text-xs bg-slate-100 px-2.5 py-1 rounded-full text-slate-500">
+            {{ filtered.length }}
+          </span>
+        </div>
+        <div class="max-h-[420px] overflow-y-auto pr-1">
+          <ul class="space-y-1.5">
+            <li v-for="street in filtered" :key="street.logradouro"
+                @click="selectStreet(street)"
+                :class="['result-card cursor-pointer rounded-xl px-4 py-2.5 border transition flex items-center justify-between', 
+                         selectedStreet && selectedStreet.logradouro === street.logradouro ? 'border-blue-400 bg-blue-50/70 shadow-sm' : 'border-transparent hover:bg-slate-50 hover:border-slate-200']">
+              <div class="flex items-center gap-3 truncate">
+                <i class="fas fa-road text-slate-400 text-sm w-5 text-center"></i>
+                <span class="text-slate-700 font-medium text-sm truncate">{{ street.logradouro }}</span>
+              </div>
+              <div class="flex items-center gap-2 shrink-0 ml-2">
+                <span class="badge-min text-xs px-2.5 py-0.5 rounded-full font-mono">{{ street.minima }}</span>
+                <span class="badge-max text-xs px-2.5 py-0.5 rounded-full font-mono">{{ street.maxima }}</span>
+              </div>
+            </li>
+            <li v-if="filtered.length === 0" class="text-center py-10 text-slate-400">
+              <i class="fas fa-search text-3xl block mb-2"></i>
+              <span data-i18n="noMatch">Nenhuma rua corresponde à busca</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- rodapé -->
+    <div class="mt-8 text-center text-xs text-slate-400 border-t border-slate-200 pt-4 flex flex-wrap justify-center gap-4">
+      <span data-i18n="footer">Dados de cota de enchente · Rio do Sul/SC</span>
+      <span>•</span>
+      <span>Mapa: <a href="https://www.openstreetmap.org/copyright" target="_blank" class="text-blue-500 hover:underline">OpenStreetMap</a></span>
+      <span>•</span>
+      <span>Referência: <a href="https://www.riodosul.sc.gov.br" target="_blank" class="text-blue-500 hover:underline">Prefeitura de Rio do Sul</a></span>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    (function() {
+      // Dados completos (mesmo array)
+      const streetData = [
+  "1 DE MAIO","8,12","9,65","10 DE OUTUBRO","8,25","10,01","13 DE AGOSTO","10,95","20,00+","15 DE ABRIL","8,09","11,74","7 DE SETEMBRO","11,59","12,52","A DO LOTEAMENTO AG","12,33","12,63","A DO LOTEAMENTO SAO JOSE","18,92","20,00+","ABRAHAM LINCOLN","10,19","13,52","ACADEMICO NILO MARCHI","14,11","20,00+","ACARY ISMAR DALFOVO","15,63","19,44","ADEMAR OHF","17,80","20,00+","ADOLFO BECHTOLD","18,84","20,00+","ADOLFO BET","16,33","20,00+","ADOLFO BUHR","9,30","20,00+","ADOLFO FELAU","12,30","20,00+","ADOLFO KOLPING","18,01","20,00+","ADOLFO KONDER","8,93","9,83","AGNELO JOAO DA CRUZ","11,78","20,00+","AGUA DOCE","8,92","13,67","AGUAS MORNAS","10,71","13,90","AIMORES","7,29","9,01","ALBANO FRONZA","12,92","13,99","ALBERT EINSTEIN","7,23","9,11","ALDINA LEDRA FAVA","9,86","11,05","ALDO TOMIO","9,00","10,14","ALFONSO MANTOVANI","14,59","20,00+","ALFREDO BRATTING","8,78","11,78","ALFREDO FRIEDEL","9,00","11,00","ALFREDO GRUNWALD","9,70","11,78","ALFREDO PEREIRA DE MEDEIROS","10,11","20,00+","ALFREDO SATIRO DE OLIVEIRA","18,50","20,00+","ALFREDO SCHNEIDER","10,08","20,00+","ALFREDO SWAROWSKY","10,41","20,00+","ALMIRANTE TAMANDARE","7,53","9,50","ALOIS PERFOLL","8,80","9,50","ALTINO JOAO DA ROCHA","11,20","14,50","ALVARES CABRAL","9,30","9,70","ALVIN MENSLIN","9,63","11,74","AMABILIO TESTONI","12,02","12,50","AMERICA","19,30","20,00+","ANA BELLEGANTE","11,57","11,87","ANA NEGHERBON","8,28","9,06","ANA NERY","9,28","20,00+","ANDRADINA","9,71","20,00+","ANDRE LARGURA","7,35","20,00+","ANGELO CECHET","7,82","16,12","ANGELO LEDRA","9,10","10,01","ANGELO LENZI","10,93","11,81","ANGELO SLOMP","10,00","20,00+","ANGELO TOMIO","8,91","10,49","ANILDO DE OLIVEIRA","8,08","8,81","ANITA GARIBALDI","9,20","11,10","ANITAPOLIS","11,56","20,00+","ANTONIA CORDEIRO","19,78","20,00+","ANTONIO DOLZANI","18,92","20,00+","ANTONIO JOSE POLEZA","12,26","20,00+","ANTONIO PACKER","19,28","20,00+","ANTONIO SALLA","12,71","20,00+","ANTONIO SILVEIRA RAMOS","11,23","18,01","ANTONIO TONON","8,73","20,00+","ARGENTINA","17,50","20,00+","ARI ACARY DE SOUZA","10,78","20,00+","ARI LEDRA","19,36","20,00+","ARISTILIANO RAMOS","9,04","14,34","ARNOLDO HOFFMANN","12,02","13,06","ARNOLDO MOLINARI","12,36","20,00+","ARNOLDO TILLMANN","10,66","11,21","ARNOLDO WUTZOW","7,41","8,89","ARTHUR HERING","10,17","11,20","ARTUR LENZI","10,90","20,00+","ARTUR SIEWERDT","8,30","10,30","ASSIS BRASIL","8,52","10,38","ATLETA MARISTELA ROSSINI","8,60","10,40","AUGUSTO PERFOLL","16,30","19,01","AUGUSTO SOFKA","17,15","19,01","B - LOT LUIZ BIANCHET","17,50","20,00+","B DO LOTEAMENTO AG","11,50","12,00","BAGDA","10,78","20,00+","BAHIA","9,14","20,00+","BARAO DO RIO BRANCO","8,66","11,11","BASILIO CORREIA DE NEGREDO","11,60","12,11","BELA ALIANCA","9,30","12,80","BENEDITO NOVO","18,80","20,00+","BENTO DE OLIVEIRA","13,65","13,81","BENTO JOSE DA ROCHA","10,80","17,11","BENTO JOSE DAVILA","6,70","8,30","BERNARDO LANGE","13,10","20,00+","BLUMENAU","8,20","17,52","BOA ESPERANCA","12,44","20,00+","BOM PASTOR","11,00","11,50","Bonfim","8,50","20,00+","BR 470","11,80","20,00+","BRACO BELA ALIANCA","16,50","20,00+","BRASIL","10,58","20,00+","BRASILIA","9,11","20,00+","BRUSQUE","13,10","20,00+","BULCAO VIANA","8,16","10,10","CAETANO CE","9,80","20,00+","CAETANO FALETTI","16,50","20,00+","CALIFORNIA","10,15","10,40","CAMPINAS","9,67","9,86","CANDIDO NASATO","13,00","20,00+","CAPINZAL","10,11","13,11","CARLOS CHAGAS","14,90","20,00+","CARLOS EGER","8,50","11,96","CARLOS GOMES","9,80","12,50","CARLOS KNAPPMANN","10,40","20,00+","CASTRO ALVES","8,20","15,96","CEDRO","15,00","20,00+","CELSO CONZATTI","11,11","20,00+","CIPRESTE","15,41","20,00+","CLEMENTE DEMARCH","8,16","12,30","COELHO NETO","7,70","10,43","CONRADO PROBST","8,56","10,00","CONSELHEIRO WILLY HERING","8,76","18,23","CORUPA","9,21","9,70","CRISTIANO KNOLL","8,62","10,78","CRISTINA BUZZI","10,01","10,54","CURITIBANOS","8,25","10,10","CURT SCHROEDER","12,11","20,00+","DA ETERNIDADE","12,79","20,00+","DA MADEIRA","7,89","12,75","DA PENHA","15,41","20,00+","DANIEL ANDREATTA","13,77","20,00+","DECIO GIOVANE SCHLATTER","9,11","20,00+","DEMETRIO FACHINI","6,30","8,70","DEPUTADO WALTER ROUSSENQ","10,73","17,17","DESCANSO","10,00","13,70","DESIDERIO FINARDI","10,36","11,36","DO ACRE","9,78","20,00+","DO ESCULTOR","10,20","15,34","DO REDENTOR","19,32","20,00+","DOM BOSCO","10,06","12,96","DOM PEDRO II","9,22","10,68","DONA AUGUSTA DEEKE","8,59","12,19","DONA FRANCISCA","18,50","19,01","DOS CACADORES","8,90","20,00+","DOS METALURGICOS","13,00","20,00+","DOS PIONEIROS","13,70","19,69","DOS VEREADORES","12,90","20,00+","DOUGLAS MICHAEL SCHNAIDER","7,30","7,86","DR GUILHERME GEMBALLA","11,02","12,95","DR NEUMANN","9,55","18,78","DUQUE DE CAXIAS","9,01","10,59","DURVAL VICTOR DE ANDRADE","7,45","7,78","EDGAR KAESTNER","8,16","8,98","EDILSON CESAR SCHLEMPER","10,80","11,10","EDINEI DE SOUZA","8,50","15,20","ELISEU GONCALO DO NASCIMENTO","10,11","20,00+","ELIZABETH JASPER","18,77","20,00+","ELMA LENZI","10,24","12,42","ELVIRA GEORG FRIEDEL","10,28","14,30","EMANUEL KANT","7,20","10,40","EMILIO ADAMI","12,50","20,00+","EMILIO FERRARI","16,88","20,00+","EMILIO LENZ","9,51","11,79","EMILIO SCHULZE","12,98","20,00+","EMILIO TREVESANI","9,89","11,50","ENGENHEIRO BAUNGARTEN","9,11","10,57","ENGENHEIRO ODEBRECHT","7,31","10,50","ENO JOSE MATTOS","7,60","8,90","ERCILLO MARCELINO","7,87","8,89","ERICK GERMANO NAU","14,78","15,08","ERMINIO JOAO FRONZA","13,28","19,70","ERMINIO STOLF","18,00","20,00+","ERNESTO FELDMANN","12,81","20,00+","ERNESTO MICHELSON","10,50","20,00+","ERNESTO SCHOENAU","10,08","10,95","ERVIN DOLZAN","10,12","11,44","ERVINO DEBARBA","10,30","10,70","ESCRIVAO OSVALDO MARHOFER","9,06","9,78","EUCLIDES ATACLIDES DA COSTA","10,65","20,00+","EUGENIO MARCHI","9,07","20,00+","EUGENIO MASSON","17,34","18,33","EVALDIR JOSE JASPER","18,12","20,00+","EXPEDICIONARIO ALEANDRO STEDILE","10,26","20,00+","EXPEDICIONARIO GIUSEPPE VALLE","12,47","20,00+","EXPEDICIONARIO MENELAU CLAUDINO DOS SANTOS","15,82","20,00+","FERNANDINO JAHN","10,68","20,00+","FERNANDO CERUTTI","8,11","17,56","FERNANDO SILVA","9,80","11,80","FLORINDA CONINCK","9,79","11,01","FORTALEZA","10,78","20,00+","FRAIBURGO","9,21","10,76","FRANCISCO CARVALHO","8,11","13,11","FRANCISCO CAVILHA","9,58","10,48","FRANCISCO FERNANDES","9,73","10,16","FRANCISCO FERRARI","18,80","20,00+","FRANCISCO LEOPOLDINO DE SOUZA","8,11","8,20","FRANCISCO RUSSI","12,36","17,01","FREDERICO MENEGHETTI","8,11","10,60","FREI STANISLAU","8,11","11,11","FRITZ SUSSENBACH","11,26","13,26","GARUVA","13,80","20,00+","GASPAR","11,00","17,05","GENERAL OSORIO","9,23","10,47","GENESIO DA CRUZ","14,72","20,00+","GEORG LUCAS","9,62","12,01","GEORG RAUSCH","9,50","11,37","GERALDO GEISER","10,10","11,01","GERMANO AUGUSTO OTTO LADEWIG","10,00","11,81","GERMANO FRONZA","11,02","11,50","GERMANO SANDRI","8,61","13,11","GERMANO STOLF","9,88","10,11","GIOCONDO TRAVAGLIA","9,71","16,95","GONCALVES DIAS","10,78","15,78","GOVERNADOR IVO SILVEIRA","10,24","19,88","GOVERNADOR JORGE LACERDA","8,99","9,81","GUAIANAZES","7,73","8,50","GUILHERME JOOS","11,00","12,22","GUILHERME LAUBENSTEIN","9,10","20,00+","GUILHERME RICARDO BECKER","9,79","20,00+","GUILHERME WITT","11,20","20,00+","GUINO RIETER","7,30","7,50","GUSTAV HASSE","13,85","20,00+","GUSTAVO METZGER","11,96","20,00+","GUSTAVO STADNICK","10,11","17,01","HAROLDO LEOPOLDO SWAROWSKY","16,61","20,00+","HEITOR LARGURA","9,50","20,00+","HEITOR LUZ","11,80","14,32","HENRIQUE CONICK","9,69","10,00","HENRIQUE DEGENHARDT","17,80","20,00+","HENRIQUE MULLER","6,75","11,50","HENRIQUE SCHUTZE","10,68","20,00+","HERCULANO NUNES TEIXEIRA","10,81","11,14","HERMANN BREHMER","12,26","20,00+","HERMENEGILDO SILVEIRA DA COSTA","10,89","11,44","HILBERTO BRUCH","19,01","20,00+","HUBERT WARMLING","10,50","11,63","IDA LENZ","17,79","20,00+","IGONALDO MENSLIN","12,92","14,16","IMPERATRIZ LEOPOLDINA","8,11","11,03","INCONFIDENCIA","10,61","11,49","INDAIAL","9,76","11,11","INTENDENTE GUSTAVO BRANDES","10,23","17,78","INTENDENTE PEDRO CLAUDINO","7,45","8,90","ITAIPU","14,01","18,01","ITAJAÍ","11,33","14,02","ITAPEMA","14,26","14,85","ITUMBIARA","9,38","9,70","ITUPORANGA","10,50","11,63","IVO VICTOR FORBICI","11,78","13,78","JABORA","7,56","20,00+","JACARANDA","15,26","20,00+","JACO FINARDI","8,77","20,00+","JANET PABST TSCHUMI","9,16","9,35","JARAGUA","9,82","15,11","JARDIM PANORAMA","11,81","20,00+","JOACABA","8,05","10,32","JOAO BALDASSARI","12,26","20,00+","JOAO CAVILHA","13,20","20,00+","JOAO DOLZAN","9,00","18,28","JOAO EIFLER","12,81","20,00+","JOAO FRONZA","8,13","20,00+","JOAO HOFFMANN","8,50","19,01","JOAO JACINTO GADOTTI","8,30","11,70","JOAO KRIEGER","15,56","20,00+","JOAO LEDRA","14,20","20,00+","JOAO MARCHI","7,50","20,00+","JOAO NASCHENWENG","14,26","20,00+","JOAO PEDRO DIAS","17,01","20,00+","JOAO PEDRO MARCELINO","13,00","20,00+","JOAO STOLF","17,28","20,00+","JOAQUIM CERUTTI","9,70","20,00+","JOAQUIM NABUCO","14,78","20,00+","JOAQUIM PAULINO DE SOUZA","18,80","20,00+","JOHANN GUTEMBERG","9,58","11,78","JOHANN KEPLER","8,92","10,00","JOINVILLE","7,67","10,04","JORGE SCHUTZ","7,59","8,90","JOSE BONIFACIO","7,55","9,09","JOSE CIMARDI","8,30","13,50","JOSE CLEMENTE DEMARCH","10,23","20,00+","JOSE CONINCK","12,80","17,80","JOSE JOHN","14,11","20,00+","JOSE MARCHI","16,26","20,00+","JOSE PEREIRA","18,36","20,00+","JOSE STADNICK","9,11","10,19","JOSE ZANIS","9,28","10,01","JOSEF SOFKA","16,01","20,00+","JUCA THIVES","8,80","9,80","JULIO NAU","9,00","12,26","JULIO ROUSSENQ FILHO","9,62","11,30","JULIO SCHLUPP","10,50","20,00+","JUVENTUDE","10,21","16,11","LAGES","11,21","20,00+","LAURO MULLER","7,30","9,24","LEANDRO DELLAGIUSTINA","9,07","20,00+","LEANDRO FRANZOI","11,60","12,20","LEANDRO MURARA","11,11","20,00+","LEBON REGIS","7,11","7,50","LEOPOLDO ALBERTO VAISS","11,26","13,26","LEOPOLDO FUCHS","10,50","11,74","LEOPOLDO HARBS","10,43","14,26","LEOPOLDO KURTH","11,29","15,93","LEOPOLDO LEDRA","8,97","20,00+","LEOPOLDO STAHNKE","8,11","8,50","LIBERDADE","17,80","20,00+","LIDIO PIVA","8,69","9,10","LILLY BREMER","10,76","12,01","LINDOLFO DEGENHARDT","19,70","20,00+","LONDRINA","10,78","11,12","LONTRAS","12,86","20,00+","LOURIVAL PEREIRA","8,99","9,11","LUCIANA MARIA TOGGWEILER","6,41","8,82","LUCINDO FINARDI","10,50","10,99","LUIS PASTEUR","7,26","9,50","LUIZ ALVES","15,01","19,01","LUIZ FLORENTINO PORTO","18,68","20,00+","LUIZ PIAZERA","11,70","12,64","LUIZ STEDILE","8,89","10,79","MACHADO DE ASSIS","7,78","8,78","MADRE PAULINA","10,46","20,00+","MAFRA","13,80","20,00+","MAIATE","17,11","20,00+","MAJOR VIEIRA","18,01","20,00+","MALVINA BATTISTI PETRIS","8,94","9,89","MANOEL JOSE TEIXEIRA","10,58","20,00+","MANOEL ROUSSENQ","8,80","10,01","MANOEL SOARES","12,26","19,26","MARANHAO","10,67","20,00+","MARCELO NAGEL","8,50","11,46","MARCILLO DIAS","9,77","10,52","MARCONI","11,00","11,56","MARECHAL DEODORO","8,49","10,50","MARECHAL RONDON","10,08","11,77","MARIA AUXILIADORA","14,80","20,00+","MARIA BRUNO","17,01","20,00+","MARIA CECHET","8,06","8,60","MARIA CECHET LEDRA","8,50","8,90","MARIA LEITE DA SILVA","14,81","20,00+","MARIA MACHADO DOS SANTOS","11,10","12,00","MARIA MARCHI","14,00","20,00+","MARIO ANDRIANI","11,26","11,83","MARIO DALPONTE","18,50","20,00+","MAX WEHMUTH","8,80","10,90","MISSISIPE","11,00","12,50","MONDAI","12,20","20,00+","MONTE CASTELO","14,02","20,00+","MONTEIRO LOBATO","8,27","8,70","NAVEGANTES","9,00","20,00+","NELSON RICARDO SANSAO","11,50","20,00+","NESTOR LAURINDO","8,36","8,51","NITEROI","9,78","13,78","NOSSA SENHORA APARECIDA","15,71","20,00+","NOVA ERA","9,78","11,00","ODETE MERENCIO MELO","10,10","16,71","ODORICO TOMAZ FERREIRA","8,20","9,01","OLAVO BILAC","8,90","10,78","OLINTHO JORDAO MOLINARI","9,00","10,21","ORESTES LENZI","8,20","9,79","ORLANDO JOAO AMARO","6,70","9,00","OSCAR BARCELOS","8,95","14,54","OSCAR KIRSTEN","12,78","20,00+","OSCAR SCHULZE","10,11","10,63","OSCAR STREY","19,79","20,00+","OSNY GONCALVES","10,18","11,10","OSVALDO CRUZ","10,42","17,11","OSVALDO WILVERT","14,26","18,61","OTILIA F DA SILVA","16,01","19,01","OTTO ERN","9,52","10,70","OTTO KLUG","19,41","20,00+","OTTO WETZSTEIN","11,11","20,00+","PADRE ANCHIETA","7,90","20,00+","PADRE FEIJO","11,42","17,26","PALHOCA","8,66","10,11","PALMITOS","14,11","20,00+","PAPA JOAO XXIII","18,25","20,00+","PASTOR GERHOLD HOBUS","11,78","20,00+","PATRICIO NOVELETO","7,11","20,00+","PAUL FRITZ KURT BREHSAN","18,01","20,00+","PAULO CESAR TONON","8,11","9,37","PAULO LEDRA","9,77","12,36","PEDRO AMERICO","8,51","9,59","PEDRO AVELINO DOS SANTOS","5,11","13,48","PEDRO BITTENCOURT","10,06","11,62","PEDRO FRANKEMBERGER","8,91","13,24","PEDRO LEDRA","12,89","13,80","PEDRO LUCAS","10,01","11,01","PEDRO MANOEL AIROSO","6,78","9,37","PEDRO MAZZINI","5,28","13,28","PEDRO MORETTO","9,63","20,00+","PIRATUBA","15,48","20,00+","PLASIO BILK JUNIOR","8,75","20,00+","POETA DRUMMOND","9,94","18,86","PORTO UNIAO","9,64","11,49","POUSO REDONDO","3,11","7,48","PREFEITO LUIZ ADELAR SOLDATELLI","11,34","20,00+","PREFEITO RAULINO JOAO ROSAR","9,53","12,01","PREFEITO WENCESLAU BORINI","6,50","20,00+","PRESIDENTE KENNEDY","9,58","14,31","PRINCESA ISABEL","8,24","20,00+","PROFESSOR JOAO CONRADO STOLL","7,78","18,74","QUINTINO","8,81","20,00+","RADIALISTA NILTON NOVAES","9,88","10,01","RAFAEL ROSSA","18,29","20,00+","RAULINO DOLZAN","8,55","9,72","RINALDO MEZADRI","7,74","12,01","RIO DE JANEIRO","9,78","20,00+","RIO DO OESTE","7,11","11,11","RIO IGUACU","10,47","10,91","RIO NEGRINHO","17,01","20,00+","RIO PRETO","9,95","12,01","ROBERT HOLLER","12,81","20,00+","ROBERTO HENRIQUE WAGNER","11,21","20,00+","ROBERTO KOCH","16,11","20,00+","RODOLFO ANTON","9,55","11,11","RODOLFO ODEBRECHT","19,11","20,00+","RODRIGUES ALVES","10,01","20,00+","ROMAO MACANEIRO","11,29","17,01","ROQUE PONCIO","8,11","9,11","ROSA MARIA HEINZ","10,31","16,94","RUA A DO LOT RES PARQUE DAS FLORES","15,41","20,00+","RUDE MESHKER","9,93","20,00+","RUDOLF FRITSCHE","9,50","9,78","RUDOLF SCHOENINGER","12,78","20,00+","RUY BARBOSA","8,45","15,02","SALETE","15,11","17,11","SAMUEL HOFFMANN","18,01","20,00+","SANTO FINARDI","9,11","16,40","SANTOS DUMONT","12,75","13,64","SAO BENTO","17,91","20,00+","SAO DOMINGOS SAVIO","13,28","20,00+","SAO JOAO","11,92","13,01","SAO JOAQUIM","11,78","20,00+","SAO JOSE","16,36","20,00+","SAO LEOPOLDO","10,01","10,99","SAO MARCOS","10,11","11,74","SATURNINO C DOS SANTOS","9,01","10,49","SC 302","8,55","20,00+","SD 100","18,34","9,01","SD 1003","14,11","16,05","SD 1005","10,69","13,81","SD 1010","8,11","14,85","SD 1018","10,11","16,04","SD 1021","7,34","11,11","SD 1022","19,50","20,00+","SD 1025","14,11","17,11","SD 1026","15,11","20,00+","SD 104","9,07","10,11","SD 108","9,53","9,71","SD 1100","7,48","7,55","SD 1101","7,36","8,02","SD 1102","7,16","7,44","SD 1105","8,12","8,51","SD 1106","8,32","8,36","SD 111","12,48","12,84","SD 1113","12,45","20,00+","SD 1114","12,11","20,00+","SD 112","13,01","13,48","SD 1201","17,85","20,00+","SD 1203","13,96","20,00+","SD 1210","17,01","20,00+","SD 1305","19,36","20,00+","SD 1604","3,26","12,47","SD 1613","11,26","11,97","SD 1702","16,71","20,00+","SD 1801","11,51","11,54","SD 1803","8,28","11,43","SD 1902","8,03","8,41","SD 1908","14,41","20,00+","SD 1910","17,41","20,00+","SD 1912","11,24","11,32","SD 200","9,06","9,73","SD 2000","12,24","12,78","SD 2001","9,41","12,48","SD 2009","10,75","12,58","SD 202","12,01","13,01","SD 204","10,01","11,03","SD 2103","10,55","11,55","SD 2106","10,37","20,00+","SD 2501","10,59","15,50","SD 2502","9,82","12,26","SD 301","15,11","20,00+","SD 303","8,19","15,01","SD 307","8,11","8,56","SD 308","10,08","10,11","SD 311","10,11","14,11","SD 313","10,11","15,11","SD 513","12,20","20,00+","SD 600","15,11","20,00+","SD 601","10,82","12,78","SD 603","11,78","15,78","SD 604","10,27","10,55","SD 610","15,78","20,00+","SD 701","8,91","9,11","SD 706","9,11","11,46","SD 712","7,62","9,99","SD 714","10,11","13,73","SD 716","9,73","13,11","SD 717","10,37","12,11","SD 718","12,11","16,11","SD 804","10,01","18,01","SD 805","12,01","17,01","SD 810","17,55","18,98","SD 903","10,18","11,85","SD 904","10,37","15,19","SD 905","11,64","18,11","SD 908","10,77","10,79","SD 909","15,51","20,00+","SD 910","13,11","20,00+","SD 911","7,59","8,73","SD 912","6,33","7,71","SEBASTIAO DOS SANTOS","12,11","20,00+","SELESTA FRONZA","8,28","20,00+","SEVERINO LENZI","11,66","20,00+","TAIO","12,11","20,00+","TAMOIO","7,83","8,64","TANGARA","8,67","12,11","TEODORO MORASTONI","11,05","13,41","TEREZINHA MARTINS MACHADO","8,45","9,02","TIJUCAS","15,29","20,00+","TIMBO","9,21","15,86","TIRADENTES","14,01","20,00+","TOCANTINS","13,88","20,00+","TRAJANO PAMPLONA","9,11","11,11","TROMBUDO CENTRAL","12,11","20,00+","TUIUTI","10,78","20,00+","TUPI","6,88","8,01","URUBICI","15,78","20,00+","URUGUAI","16,78","17,14","VALMOR PASQUALINI","18,38","20,00+","VATICANO","9,76","20,00+","VENEZA","12,68","18,01","VERDE VALE","9,89","15,01","VEREADOR ADOLFO FRISCHKNECHT","17,32","20,00+","VEREADOR ANTONIO CAVILHA","8,28","9,92","VEREADOR JURACY ISMAEL DALFOVO","12,11","20,00+","VERGILIO CRISTOFOLINI","16,28","20,00+","VERGINIA LEDRA","9,51","12,48","VICENTE JOAO BARCELOS","14,78","20,00+","VICTOR HUGO","9,99","11,78","VICTOR KONDER","8,91","20,00+","VICTOR MEIRELLES","9,26","11,87","VIDAL RAMOS","8,89","12,63","VIDEIRA","8,43","9,11","VILA HEINZ","9,78","10,46","VILA IPIRANGA","9,01","12,01","VILA PAMPLONA","5,99","11,69","VISCONDE DE CAIRU","19,01","","VISCONDE DE MAUA","10,89","20,00+","VITORIA","10,32","12,01","VITORIO BELING","12,36","20,00+","VITORIO RAMOS DA SILVA","10,27","11,26","VITORIO ROPELATO","8,79","11,61","VOLUNTARIOS DA PATRIA","8,46","10,56","WALDEMAR BERNARDI","12,96","20,00+","WALDEMAR PABST","8,48","10,85","WALDEMIRO CANDIDO DA SILVA","9,78","11,78","WALTER HUBSCH","9,14","12,26","WASHINGTON LUIZ","8,78","20,00+","WILLAND KURTH","11,27","11,41","WILLY ODORIZZI","13,44","20,00+","XAVANTINA","15,11","20,00+","XV DE NOVEMBRO","9,50","11,81"
+];
+
+      const streets = [];
+      for (let i = 0; i < streetData.length; i += 3) {
+        if (i + 2 < streetData.length) {
+          streets.push({
+            logradouro: streetData[i],
+            minima: streetData[i+1],
+            maxima: streetData[i+2]
+          });
+        }
+      }
+
+      // Coordenadas base para Rio do Sul/SC
+      // Centro aproximado da cidade: -27.2145, -49.6430
+      function generateCoords(name) {
+        let hash = 0;
+        for (let i = 0; i < name.length; i++) {
+          hash = name.charCodeAt(i) + ((hash << 5) - hash);
+        }
+        // Rio do Sul - centro
+        const latBase = -27.2145;
+        const lonBase = -49.6430;
+        // Variação para espalhar os pontos pela cidade (~0.03 graus ≈ 3km)
+        const latOffset = ((hash % 100) / 1000) * 0.06 - 0.03;
+        const lonOffset = (((hash >> 4) % 100) / 1000) * 0.06 - 0.03;
+        return {
+          lat: latBase + latOffset + ((hash % 7) / 10000),
+          lng: lonBase + lonOffset + (((hash >> 2) % 7) / 10000)
+        };
+      }
+
+      // Adicionar coordenadas aos dados
+      streets.forEach(s => {
+        const coords = generateCoords(s.logradouro);
+        s.lat = coords.lat;
+        s.lng = coords.lng;
+      });
+
+      const { createApp, ref, watch, onMounted, nextTick } = Vue;
+
+      const app = createApp({
+        setup() {
+          const lang = ref('pt');
+          const query = ref('');
+          const filtered = ref([...streets]);
+          const selectedStreet = ref(null);
+          let map = null;
+          let marker = null;
+
+          const i18n = {
+            pt: {
+              title: 'Cota de Enchente',
+              clear: 'Limpar',
+              found: 'Encontradas',
+              streets: 'ruas',
+              noResults: 'Nenhuma rua encontrada',
+              mapLabel: 'Mapa da rua',
+              selectStreet: 'Selecione uma rua na lista para ver no mapa',
+              min: 'Mínima',
+              max: 'Máxima',
+              infoLevel: 'Cota de enchente em metros (nível do rio Itajaí do Sul)',
+              streetList: 'Ruas',
+              noMatch: 'Nenhuma rua corresponde à busca',
+              footer: 'Dados de cota de enchente · Rio do Sul/SC'
+            },
+            es: {
+              title: 'Nivel de Inundación',
+              clear: 'Limpiar',
+              found: 'Encontradas',
+              streets: 'calles',
+              noResults: 'Ninguna calle encontrada',
+              mapLabel: 'Mapa de la calle',
+              selectStreet: 'Seleccione una calle de la lista para ver en el mapa',
+              min: 'Mínima',
+              max: 'Máxima',
+              infoLevel: 'Nivel de inundación en metros (río Itajaí del Sur)',
+              streetList: 'Calles',
+              noMatch: 'Ninguna calle coincide con la búsqueda',
+              footer: 'Datos de nivel de inundación · Rio do Sul/SC'
+            }
+          };
+
+          function filterStreets() {
+            const q = query.value.trim().toLowerCase();
+            if (!q) {
+              filtered.value = [...streets];
+            } else {
+              filtered.value = streets.filter(s => 
+                s.logradouro.toLowerCase().includes(q)
+              );
+            }
+            if (selectedStreet.value && !filtered.value.some(s => s.logradouro === selectedStreet.value.logradouro)) {
+              selectedStreet.value = null;
+            }
+          }
+
+          function selectStreet(street) {
+            selectedStreet.value = street;
+            updateMap(street);
+          }
+
+          function clearSearch() {
+            query.value = '';
+            filterStreets();
+          }
+
+          function setLang(l) {
+            lang.value = l;
+          }
+
+          function updateMap(street) {
+            if (!map) return;
+            if (!street) {
+              map.setView([-27.2145, -49.6430], 13);
+              if (marker) {
+                map.removeLayer(marker);
+                marker = null;
+              }
+              return;
+            }
+            const { lat, lng } = street;
+            map.setView([lat, lng], 16);
+            if (marker) {
+              map.removeLayer(marker);
+            }
+            const icon = L.divIcon({
+              className: 'custom-marker',
+              html: `<i class="fas fa-map-pin"></i>`,
+              iconSize: [24, 24],
+              iconAnchor: [12, 24]
+            });
+            marker = L.marker([lat, lng], { icon }).addTo(map);
+            marker.bindPopup(`
+              <strong>${street.logradouro}</strong><br>
+              <span class="text-blue-600">Mín: ${street.minima} m</span> · 
+              <span class="text-red-600">Máx: ${street.maxima} m</span>
+            `).openPopup();
+          }
+
+          function initMap() {
+            if (map) return;
+            map = L.map('map', {
+              center: [-27.2145, -49.6430],
+              zoom: 13,
+              zoomControl: true
+            });
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+              maxZoom: 19
+            }).addTo(map);
+
+            if (selectedStreet.value) {
+              updateMap(selectedStreet.value);
+            }
+          }
+
+          onMounted(() => {
+            nextTick(() => {
+              initMap();
+            });
+          });
+
+          watch(selectedStreet, (newVal) => {
+            if (map) {
+              updateMap(newVal);
+            }
+          });
+
+          return {
+            lang,
+            query,
+            filtered,
+            selectedStreet,
+            filterStreets,
+            selectStreet,
+            clearSearch,
+            setLang,
+            i18n,
+            initMap
+          };
+        }
+      });
+
+      app.mount('#app');
+    })();
+  </script>
+</body>
+</html>

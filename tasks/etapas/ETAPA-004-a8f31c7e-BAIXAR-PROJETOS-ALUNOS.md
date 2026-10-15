@@ -8,11 +8,12 @@ repositórios listados em `projetos-alunos/js/dados-alunos.js`.
 
 ### BAIX.1 — Baixar os repositórios dos alunos (sem forks, sem .git)
 
-**Próximo passo:** clonar cada repositório (raso), apagar a pasta `.git` e conferir o resultado.
+**Próximo passo:** nenhum — entregue. Para atualizar, rodar o download de novo (apaga e baixa).
 
 - **Nível:** MEDIO — vários downloads e conferência do resultado, sem banco nem segurança.
 - **Descrição:** `git clone --depth 1` de cada repositório de `dados-alunos.js`, em
   `projetos-alunos/repositorios/<usuario>/<projeto>/`; ao final, remover o `.git` de cada um.
 - **Critérios de Aceitação:** forks (`eFork: true`) são **pulados** (decisão do usuário);
   repositórios vazios (`estaVazio: true`) não têm o que baixar; nenhuma pasta `.git` sobra.
-- **Entrega:** a preencher · **Verificação:** a preencher
+- **Entrega:** commit `feat(BAIX.1)` · **Verificação:** 32 repositórios em `projetos-alunos/repositorios/` (338 arquivos, 16 MB); nenhuma pasta `.git`; 3 forks e 9 vazios pulados.
+- **Anotação:** forks pulados por decisão do usuário: `meu-primeiro-site` (marialmmarcelino-blip) e `front_e_upload` (carlosdanielramosleandro43-ctrl).

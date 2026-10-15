@@ -1,0 +1,1005 @@
+@font-face {
+    font-family: "Fraunces";
+    src: url("./assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf");
+}
+
+@font-face {
+    font-family: "DM Sans";
+    src: url("./assets/fonts/dm-sans/DMSans-VariableFont_opsz,wght.ttf");
+}
+
+@font-face {
+    font-family: "DM Mono";
+    src: url("./assets/fonts/dm-mono/DMMono-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: hsl(40, 60%, 98%);
+    color: hsl(33, 15%, 15%);
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+}
+
+
+button,
+a {
+    font-family: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+.layout {
+    min-height: 100vh;
+    display: flex;
+}
+
+.sidebar {
+    width: 255px;
+    min-height: 100vh;
+
+    background: hsl(36, 24%, 93%);
+
+    padding: 32px 24px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-right: 1px solid hsl(33, 17%, 86%);
+}
+
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: "Fraunces", serif;
+
+    font-size: 18px;
+
+    margin-bottom: 45px;
+}
+
+
+.brand strong {
+    display: block;
+}
+
+
+.sun {
+    color: hsl(42, 83%, 58%);
+    font-size: 25px;
+}
+
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+
+.nav-item {
+    text-decoration: none;
+    color: hsl(33, 15%, 25%);
+
+    min-height: 44px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 0 12px;
+
+    border-radius: 8px;
+
+    transition: 0.2s;
+}
+
+
+.nav-item:hover {
+    background: hsl(35, 24%, 88%);
+}
+
+
+.nav-item.active {
+    background: white;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+.nav-item span {
+    width: 20px;
+    text-align: center;
+}
+
+
+.nav-item b {
+    margin-left: auto;
+
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: hsl(15, 69%, 37%);
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 10px;
+}
+
+.weather {
+    margin-top: auto;
+
+    padding: 20px;
+
+    background: hsl(45, 100%, 74%);
+
+    border-radius: 12px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.weather::after {
+    content: "";
+
+    position: absolute;
+
+    width: 65px;
+    height: 65px;
+
+    background: hsl(42, 83%, 58%);
+
+    border-radius: 50%;
+
+    right: -20px;
+    top: -20px;
+}
+
+
+.weather p {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+}
+
+
+.weather strong {
+    display: block;
+
+    font-family: "Fraunces", serif;
+
+    font-size: 30px;
+
+    font-weight: 400;
+
+    margin-bottom: 4px;
+}
+
+
+.weather span {
+    font-size: 11px;
+}
+
+
+.sidebar-footer {
+    margin-top: 25px;
+
+    color: hsl(33, 15%, 41%);
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+.sidebar-footer p:first-child {
+    font-family: "DM Mono", monospace;
+
+    margin-bottom: 4px;
+}
+
+
+.sidebar-footer small {
+    display: block;
+
+    margin-top: 7px;
+}
+
+.main {
+    flex: 1;
+
+    padding: 42px 55px;
+
+    max-width: 1185px;
+
+    margin: auto;
+}
+
+.header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 42px;
+}
+
+
+.eyebrow {
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    color: hsl(33, 17%, 41%);
+
+    margin-bottom: 5px;
+}
+
+
+h1 {
+    font-family: "Fraunces", serif;
+
+    font-size: 40px;
+
+    font-weight: 400;
+}
+
+
+h1 em {
+    font-style: italic;
+}
+
+
+.header-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.header-buttons button {
+    border: 0;
+
+    background: transparent;
+
+    color: hsl(33, 15%, 29%);
+
+    font-size: 12px;
+}
+
+
+.calendar {
+    background: hsl(33, 15%, 15%) !important;
+
+    color: white !important;
+
+    padding: 11px 18px;
+
+    border-radius: 25px;
+}
+
+
+.print:hover {
+    text-decoration: underline;
+}
+
+.booking-area {
+    position: relative;
+
+    min-height: 410px;
+
+    margin-left: 105px;
+}
+
+.receipt {
+    position: relative;
+
+    z-index: 1;
+
+    width: 66%;
+
+    min-height: 395px;
+
+    background: white;
+
+    padding: 38px 45px;
+
+    box-shadow:
+        0 12px 35px rgba(33, 27, 20, 0.08);
+
+    border: 1px solid hsl(35, 20%, 91%);
+}
+
+
+.receipt-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+
+.receipt-header span,
+.prices span,
+.total span {
+    display: block;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 1.2px;
+
+    color: hsl(33, 17%, 50%);
+}
+
+
+.receipt-header strong {
+    display: block;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 11px;
+
+    margin-top: 5px;
+}
+
+
+.receipt-number {
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    color: hsl(33, 17%, 50%);
+}
+
+
+.receipt h2 {
+    font-family: "Fraunces", serif;
+
+    font-size: 25px;
+
+    font-weight: 400;
+
+    margin-bottom: 25px;
+}
+
+.dates {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+
+    margin-bottom: 28px;
+}
+
+
+.dates span {
+    display: block;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    color: hsl(33, 17%, 50%);
+
+    letter-spacing: 1px;
+
+    margin-bottom: 5px;
+}
+
+
+.dates strong {
+    display: block;
+
+    font-family: "Fraunces", serif;
+
+    font-size: 25px;
+
+    font-weight: 400;
+}
+
+
+.dates small {
+    display: block;
+
+    font-size: 10px;
+
+    color: hsl(33, 17%, 50%);
+
+    margin-top: 3px;
+}
+
+.prices {
+    border-top: 1px solid hsl(35, 20%, 90%);
+
+    padding-top: 17px;
+}
+
+
+.prices div {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+
+.prices strong {
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    font-weight: 400;
+}
+
+.total {
+    border-top: 1px solid hsl(35, 20%, 90%);
+
+    margin-top: 16px;
+
+    padding-top: 15px;
+}
+
+
+.total div {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.total strong {
+    font-family: "Fraunces", serif;
+
+    font-size: 20px;
+
+    font-weight: 400;
+}
+
+
+.paid {
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    color: hsl(33, 17%, 50%);
+
+    margin-top: 8px;
+}
+
+.barcode {
+    position: absolute;
+
+    right: 45px;
+    bottom: 30px;
+
+    height: 28px;
+
+    display: flex;
+
+    gap: 2px;
+
+    align-items: stretch;
+}
+
+
+.barcode span {
+    width: 2px;
+
+    background: hsl(33, 15%, 20%);
+}
+
+
+.barcode span:nth-child(2n) {
+    width: 4px;
+}
+
+
+.barcode span:nth-child(3n) {
+    width: 1px;
+}
+
+.host-card {
+    position: absolute;
+
+    z-index: 2;
+
+    width: 315px;
+
+    height: 345px;
+
+    right: 5%;
+
+    top: -5px;
+
+    background: hsl(15, 69%, 37%);
+
+    color: white;
+
+    padding: 30px;
+
+    border-radius: 13px;
+
+    transform: rotate(4deg);
+
+    box-shadow:
+        0 18px 35px rgba(0, 0, 0, 0.15);
+}
+
+
+.host-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+    opacity: 0.8;
+}
+
+
+.host-card h2 {
+    font-family: "Fraunces", serif;
+
+    font-size: 30px;
+
+    font-weight: 400;
+
+    margin-top: 75px;
+
+    margin-bottom: 15px;
+}
+
+
+.host-card p {
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    opacity: 0.85;
+}
+
+
+.host-bottom {
+    position: absolute;
+
+    left: 30px;
+    right: 30px;
+    bottom: 27px;
+
+    border-top: 1px solid rgba(255,255,255,0.3);
+
+    padding-top: 14px;
+}
+
+
+.host-bottom span {
+    display: block;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+    opacity: 0.7;
+}
+
+
+.host-bottom strong {
+    display: block;
+
+    font-family: "Fraunces", serif;
+
+    font-size: 14px;
+
+    margin-top: 4px;
+}
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1.25fr
+        1.25fr;
+
+    gap: 15px;
+
+    margin-left: 105px;
+
+    margin-top: 22px;
+}
+
+
+.info-card {
+    min-height: 195px;
+
+    background: white;
+
+    padding: 25px;
+
+    border: 1px solid hsl(35, 20%, 92%);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.03);
+}
+
+
+.info-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 20px;
+}
+
+
+.info-header span {
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    color: hsl(33, 17%, 48%);
+}
+
+
+.info-header b {
+    margin-left: auto;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    color: hsl(33, 17%, 55%);
+}
+
+
+.icon {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    color: white;
+}
+
+
+.icon.terracotta {
+    background: hsl(15, 69%, 37%);
+}
+
+
+.icon.blue {
+    background: hsl(225, 55%, 58%);
+}
+
+
+.icon.rose {
+    background: hsl(340, 48%, 52%);
+}
+
+
+.info-card h3 {
+    font-family: "Fraunces", serif;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    margin-bottom: 4px;
+}
+
+
+.info-card > small {
+    color: hsl(33, 17%, 52%);
+
+    font-size: 10px;
+}
+
+
+.info-card > p {
+    color: hsl(33, 17%, 45%);
+
+    font-size: 11px;
+
+    line-height: 1.55;
+
+    margin-top: 16px;
+}
+
+.wifi {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+
+.wifi div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.wifi span {
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    color: hsl(33, 17%, 55%);
+}
+
+
+.wifi strong {
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    font-weight: 400;
+}
+
+
+.wifi button {
+    grid-column: 1 / -1;
+
+    justify-self: start;
+
+    border: 1px solid hsl(33, 17%, 82%);
+
+    background: transparent;
+
+    padding: 5px 12px;
+
+    border-radius: 4px;
+
+    font-size: 9px;
+}
+
+
+.wifi button:hover {
+    background: hsl(35, 24%, 94%);
+}
+
+footer {
+    text-align: center;
+
+    margin-top: 35px;
+
+    color: hsl(33, 17%, 60%);
+
+    font-size: 10px;
+}
+
+
+footer a {
+    color: hsl(15, 69%, 37%);
+}
+
+@media (max-width: 1000px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .main {
+        padding: 35px 30px;
+    }
+
+    .booking-area,
+    .info-grid {
+        margin-left: 30px;
+    }
+
+    .host-card {
+        width: 280px;
+    }
+
+    .receipt {
+        width: 70%;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .layout {
+        display: block;
+    }
+
+
+    .sidebar {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 18px;
+
+        border-right: 0;
+        border-bottom: 1px solid hsl(33, 17%, 86%);
+    }
+
+
+    .brand {
+        margin-bottom: 20px;
+    }
+
+
+    .navigation {
+        display: none;
+    }
+
+
+    .weather {
+        display: none;
+    }
+
+
+    .sidebar-footer {
+        display: none;
+    }
+
+
+    .main {
+        padding: 28px 18px;
+    }
+
+
+    .header {
+        display: block;
+
+        margin-bottom: 30px;
+    }
+
+
+    h1 {
+        font-size: 31px;
+    }
+
+
+    .header-buttons {
+        margin-top: 20px;
+
+        justify-content: space-between;
+    }
+
+
+    .booking-area {
+        margin-left: 0;
+
+        min-height: auto;
+    }
+
+
+    .receipt {
+        width: 100%;
+
+        padding: 25px;
+
+        min-height: 430px;
+    }
+
+
+    .host-card {
+        position: relative;
+
+        width: 92%;
+
+        height: 310px;
+
+        right: auto;
+        top: auto;
+
+        margin: -35px auto 30px;
+
+        transform: rotate(2deg);
+    }
+
+
+    .info-grid {
+        margin-left: 0;
+
+        grid-template-columns: 1fr;
+
+        margin-top: 10px;
+    }
+
+
+    .info-card {
+        min-height: 190px;
+    }
+
+
+    .dates {
+        gap: 15px;
+    }
+
+
+    .dates strong {
+        font-size: 22px;
+    }
+
+
+    .prices div {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .receipt {
+        padding: 20px;
+    }
+
+
+    .receipt h2 {
+        font-size: 23px;
+    }
+
+
+    .dates {
+        gap: 10px;
+    }
+
+
+    .host-card {
+        width: 95%;
+    }
+
+
+    .header-buttons {
+        gap: 10px;
+    }
+}

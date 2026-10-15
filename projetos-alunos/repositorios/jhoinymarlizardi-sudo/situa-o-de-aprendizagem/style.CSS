@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: hsl(235, 18%, 26%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    background: hsl(0, 0%, 100%);
+    width: 900px;
+    display: flex;
+    padding: 24px;
+    border-radius: 30px;
+    gap: 20px;
+}
+.left{
+    flex: 1;
+    padding: 30px;
+}
+.left h1{
+    font-size: 60px;
+    font-weight: 700;
+    color: hsl(234, 29%, 20%);
+    margin-bottom: 25px;
+    line-height: 1;
+}
+.left p{
+    font-size: 16px;
+    color: hsl(234, 29%, 20%);
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+ul{
+    list-style: none;
+    margin-bottom: 25px;
+}
+ul li{
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 10px;
+}
+ul li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    display: grid;
+    background: url("./assets/images/icon-list.svg");
+    background-size: contain;
+}
+label{
+    font-size: 12px;
+    font-weight: 700;
+    color: hsl(234, 29%, 20%);
+}
+input{
+    width: 100%;
+    padding: 17px 20px;
+    border: 1px solid hsl(0, 0%, 58%);
+    border-radius: 8px;
+    margin: 8px 0 22px 0;
+    font-size: 16px;
+    font-family: 'Roboto';
+}
+button{
+    width: 100%;
+    padding: 18px;
+    border: none;
+    border-radius: 8px;
+    background: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+}
+button:hover{
+    background: linear-gradient(90deg hsl(4, 100%, 67%), #FF6A3A);
+    box-shadow: 0 10px 25px hsl(4, 100%, 67%, 0.5) ;
+}
+.right{
+    flex: 1;
+}
+.right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

@@ -1,0 +1,144 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e0f1e7;
+    font-family: Arial, sans-serif;
+    color: #193b35;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.formulario {
+    background-color: white;
+    width: 100%;
+    max-width: 700px;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.linha {
+    display: flex;
+    gap: 20px;
+}
+
+.campo {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+span {
+    color: #0b7a5c;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    border: 1px solid #9ba9a5;
+    border-radius: 7px;
+    padding: 12px;
+    font-size: 15px;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border: 2px solid #0b7a5c;
+}
+
+.opcoes {
+    display: flex;
+    gap: 20px;
+}
+
+.opcao {
+    width: 50%;
+    border: 1px solid #9ba9a5;
+    border-radius: 7px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.opcao input {
+    margin-right: 8px;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+.check {
+    display: block;
+    font-size: 14px;
+    margin: 10px 0 25px;
+}
+
+.check input {
+    margin-right: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 7px;
+    background-color: #087f5b;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #056b4c;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    .formulario {
+        padding: 25px;
+    }
+
+    .linha {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .opcoes {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .opcao {
+        width: 100%;
+    }
+}
