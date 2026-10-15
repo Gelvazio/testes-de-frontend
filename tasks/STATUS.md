@@ -27,6 +27,10 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | JSON.7 | Atualizar as regras e o AGENTS.md (SUB-TASK-11.7) | 🟡 Média | JSON.3 | ⬜ Pendente | — | [ETAPA-011](etapas/ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md) |
 | JSON.8 | Migrar etapas e referências (SUB-TASK-11.8) | 🟡 Média | JSON.2 | ⬜ Pendente | — | [ETAPA-011](etapas/ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md) |
 | JSON.9 | Verificação ponta a ponta e aceite (SUB-TASK-11.9) | 🟡 Média | JSON.5, JSON.6, JSON.7, JSON.8 | ⬜ Pendente | — | [ETAPA-011](etapas/ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md) |
+| **ES6** | **Projeto frontend com testes em ES6 sem módulos** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-012](etapas/ETAPA-012-88990f9e-ES6-SEM-MODULOS.md) |
+| ES6.1 | Converter index.html e js/*.js | 🟡 Média | Nenhuma | 🔄 Em execução | Claude Code (Sonnet 5.5) (local · main) (desde 2026-10-15 09:45) | [ETAPA-012](etapas/ETAPA-012-88990f9e-ES6-SEM-MODULOS.md) |
+| ES6.2 | Atualizar o README.md | 🟡 Média | ES6.1 | ⬜ Pendente | — | [ETAPA-012](etapas/ETAPA-012-88990f9e-ES6-SEM-MODULOS.md) |
+| ES6.3 | Aceite do usuário | 🟡 Média | ES6.2 | ⬜ Pendente | — | [ETAPA-012](etapas/ETAPA-012-88990f9e-ES6-SEM-MODULOS.md) |
 
 ## Escopo do projeto
 
@@ -49,6 +53,7 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | 009-b17d4e60 | LEGI: legibilidade dos títulos da página das aulas | [ETAPA-009-b17d4e60-LEGIBILIDADE-TITULOS.md](etapas/ETAPA-009-b17d4e60-LEGIBILIDADE-TITULOS.md) |
 | 010-c58e1f92 | PROJ: projeto-frontend-com-testes (mescla dos alunos) | [ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
 | 011-7f2a90bc | JSON: quadro de tarefas em JSON (plano, não executar) | [ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md](etapas/ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md) |
+| 012-88990f9e | ES6: projeto-frontend-com-testes em ES6 sem módulos | [ETAPA-012-88990f9e-ES6-SEM-MODULOS.md](etapas/ETAPA-012-88990f9e-ES6-SEM-MODULOS.md) |
 
 ## Riscos
 
