@@ -17,6 +17,16 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 |---|---|---|---|---|---|---|
 | **PROJ** | **Projeto frontend com testes (mescla dos alunos)** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
 | PROJ.4 | Aceite do usuário | 🟡 Média | PROJ.3 | 👀 Aguardando o usuário | — | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
+| **JSON** | **Quadro de tarefas em JSON (status.json) com STATUS.md gerado — SÓ PLANO, não executar** | 🟡 Média | Nenhuma | ⬜ Pendente | — (não reservável) | [ETAPA-011](etapas/ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md) |
+| JSON.1 | Aprovar o plano (TASK-11 / SUB-TASK-11.1) | 🟡 Média | Nenhuma | 👀 Aguardando o usuário | — | [ETAPA-011](etapas/ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md) |
+| JSON.2 | Esquema e tasks/status.json (SUB-TASK-11.2) | 🟡 Média | JSON.1 | ⬜ Pendente | — | [ETAPA-011](etapas/ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md) |
+| JSON.3 | Script de operações scripts/quadro.mjs (SUB-TASK-11.3) | 🟡 Média | JSON.2 | ⬜ Pendente | — | [ETAPA-011](etapas/ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md) |
+| JSON.4 | Gerador de STATUS.md e task_complete.md (SUB-TASK-11.4) | 🟡 Média | JSON.2 | ⬜ Pendente | — | [ETAPA-011](etapas/ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md) |
+| JSON.5 | Adaptar hooks e hooks de git (SUB-TASK-11.5) | 🟡 Média | JSON.3, JSON.4 | ⬜ Pendente | — | [ETAPA-011](etapas/ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md) |
+| JSON.6 | Adaptar skills, agentes e visualizador (SUB-TASK-11.6) | 🟡 Média | JSON.3 | ⬜ Pendente | — | [ETAPA-011](etapas/ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md) |
+| JSON.7 | Atualizar as regras e o AGENTS.md (SUB-TASK-11.7) | 🟡 Média | JSON.3 | ⬜ Pendente | — | [ETAPA-011](etapas/ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md) |
+| JSON.8 | Migrar etapas e referências (SUB-TASK-11.8) | 🟡 Média | JSON.2 | ⬜ Pendente | — | [ETAPA-011](etapas/ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md) |
+| JSON.9 | Verificação ponta a ponta e aceite (SUB-TASK-11.9) | 🟡 Média | JSON.5, JSON.6, JSON.7, JSON.8 | ⬜ Pendente | — | [ETAPA-011](etapas/ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md) |
 
 ## Escopo do projeto
 
@@ -38,6 +48,7 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | 008-f26c8d03 | CARD: card da Aula 03 na vitrine dos alunos | [ETAPA-008-f26c8d03-CARD-AULA.md](etapas/ETAPA-008-f26c8d03-CARD-AULA.md) |
 | 009-b17d4e60 | LEGI: legibilidade dos títulos da página das aulas | [ETAPA-009-b17d4e60-LEGIBILIDADE-TITULOS.md](etapas/ETAPA-009-b17d4e60-LEGIBILIDADE-TITULOS.md) |
 | 010-c58e1f92 | PROJ: projeto-frontend-com-testes (mescla dos alunos) | [ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
+| 011-7f2a90bc | JSON: quadro de tarefas em JSON (plano, não executar) | [ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md](etapas/ETAPA-011-7f2a90bc-QUADRO-EM-JSON.md) |
 
 ## Riscos
 
