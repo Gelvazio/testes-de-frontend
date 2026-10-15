@@ -82,13 +82,13 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.6 — toBe(): igualdade estrita
 
-**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
+**Próximo passo:** nenhum — entregue.
 
 - **Nível:** LEVE — um conceito por vez.
 - **Descrição:** `classificarImc(17)` devolve `'Abaixo do peso'`; `calcularImc(100, 2)` devolve `25`.
 - **Origem:** slide(s) 20 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
-- **Entrega:** — · **Verificação:** —
+- **Entrega:** commit feat(TEST.6) · **Verificação:** npm run test:run: 8 testes passam
 
 ### TEST.7 — toBeCloseTo(): números decimais
 
