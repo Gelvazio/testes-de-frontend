@@ -38,3 +38,4 @@
 | TEST.1 | Configurar o Vitest (instalar, scripts test e test:run) | 🟡 Média | Nenhuma | ✅ Concluído | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | TEST.2 | describe(): agrupar as suites do IMC | 🟡 Média | TEST.1 | ✅ Concluído | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | TEST.3 | it() e test() com BDD Given/When/Then | 🟡 Média | TEST.1 | ✅ Concluído | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| TEST.4 | expect(): a asserção | 🟡 Média | TEST.1 | ✅ Concluído | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |

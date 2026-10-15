@@ -62,13 +62,13 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.4 — expect(): a asserção
 
-**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
+**Próximo passo:** nenhum — entregue.
 
 - **Nível:** LEVE — um conceito por vez.
 - **Descrição:** Usar `expect()` em cada caso e explicar o diff mostrado quando o teste falha.
 - **Origem:** slide(s) 15 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
-- **Entrega:** — · **Verificação:** —
+- **Entrega:** commit feat(TEST.4) · **Verificação:** npm run test:run: 3 testes passam
 
 ### TEST.5 — Padrão AAA: Arrange, Act, Assert
 
