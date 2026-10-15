@@ -192,13 +192,13 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.17 — Mock de função assíncrona: obterImcDaPessoa
 
-**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
+**Próximo passo:** nenhum — entregue.
 
 - **Nível:** PESADO — um conceito por vez.
 - **Descrição:** Testar `obterImcDaPessoa` com `vi.fn()` e `mockResolvedValue` (caminho feliz) e `mockRejectedValue` (servidor recusa), conferindo o erro com `rejects`. Nenhuma chamada de rede.
 - **Origem:** slide(s) 32 e 33 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
-- **Entrega:** — · **Verificação:** —
+- **Entrega:** commit feat(TEST.17), arquivo js/imc-servico.test.js (ao lado do codigo testado) · **Verificação:** npm run test:run: 6 testes novos passam (suite total verde)
 
 ### TEST.18 — Aceite do usuário
 
