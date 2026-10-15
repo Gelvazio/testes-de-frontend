@@ -32,7 +32,6 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | **TEST** | **Testes da Aula 03 por conceito (imc.js)** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | TEST.18 | Aceite do usuário | 🟡 Média | TEST.2 a TEST.17 | 👀 Aguardando o usuário | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | **REL** | **Relatório HTML dos testes com cobertura** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-014](etapas/ETAPA-014-191f595d-RELATORIO-HTML-COBERTURA.md) |
-| REL.1 | Configurar os relatórios HTML de testes e de cobertura | 🟡 Média | TEST.1 | 🔄 Em execução | Claude Code (Opus 5.5) (local · main) (desde 2026-10-15 10:28) | [ETAPA-014](etapas/ETAPA-014-191f595d-RELATORIO-HTML-COBERTURA.md) |
 
 ## Escopo do projeto
 

@@ -9,7 +9,7 @@ dos testes em HTML (`html/index.html`) do `aulas/projeto-frontend-com-testes/`.
 
 ### REL.1 — Configurar os relatórios HTML de testes e de cobertura
 
-**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
+**Próximo passo:** nenhum — entregue.
 
 - **Nível:** MEDIO — dependências novas e scripts (2 a 4 arquivos).
 - **Descrição:** instalar `@vitest/coverage-v8` e `@vitest/ui` na mesma versão do `vitest`;
@@ -17,4 +17,4 @@ dos testes em HTML (`html/index.html`) do `aulas/projeto-frontend-com-testes/`.
   módulos ainda sem teste); `coverage/` e `html/` no `.gitignore`; seção no README.
 - **Critérios de Aceitação:** os dois comandos rodam sem erro e geram `coverage/index.html` e
   `html/index.html`; nada gerado vai para o Git.
-- **Entrega:** — · **Verificação:** —
+- **Entrega:** commit feat(REL.1) · **Verificação:** test:run sem gerar pastas; test:coverage gera coverage/index.html (todos os js, 15% total, imc.js 100%); test:report gera html/index.html arquivo unico (singleFile) e html/coverage; pastas geradas ignoradas pelo git; 39 testes passam
