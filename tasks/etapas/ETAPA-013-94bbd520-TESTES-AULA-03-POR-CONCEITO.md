@@ -162,13 +162,13 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.14 — vi.fn(): função simulada
 
-**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
+**Próximo passo:** nenhum — entregue.
 
 - **Nível:** MEDIO — um conceito por vez.
 - **Descrição:** `const espiao = vi.fn(classificarImc)`, chamar e conferir `toHaveBeenCalled` e `toHaveBeenCalledWith(22.86)`.
 - **Origem:** slide(s) 26 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
-- **Entrega:** — · **Verificação:** —
+- **Entrega:** commit feat(TEST.14) · **Verificação:** npm run test:run: 30 testes passam
 
 ### TEST.15 — vi.spyOn() e vi.restoreAllMocks()
 
