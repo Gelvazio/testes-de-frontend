@@ -1,3 +1,4 @@
+# STATUS — Testes de Frontend
 
 **Objetivo:** projetos de frontend, organizados pelo quadro de tarefas com IA.
 **Partes interessadas:** Gelvazio (decide, aprova e usa) · agentes de IA executam pelo quadro.
@@ -15,8 +16,7 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | Tarefa | Título | Prioridade | Depende de | Status | Em uso por | Etapa |
 |---|---|---|---|---|---|---|
 | **PROJ** | **Projeto frontend com testes (mescla dos alunos)** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
-| PROJ.1 | Escrever aulas/SUGESTAO-PROJETO.md | 🟡 Média | Aprovação | 🔄 Em execução | Claude Code (Sonnet 5.5) (local · main) (desde 2026-10-15 10:50) | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
-| PROJ.2 | Criar aulas/projeto-frontend-com-testes/ | 🟡 Média | PROJ.1 | 🔄 Em execução | Claude Code (Sonnet 5.5) (local · main) (desde 2026-10-15 11:00) | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
+| PROJ.2 | Criar aulas/projeto-frontend-com-testes/ | 🟡 Média | PROJ.1 | 🔄 Em execução | Claude Code (Opus 5.5) (local · main) (desde 2026-10-15 09:20) | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
 | PROJ.3 | Card do projeto na vitrine dos alunos | 🟡 Média | PROJ.2 | ⬜ Pendente | — | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
 | PROJ.4 | Aceite do usuário | 🟡 Média | PROJ.3 | ⬜ Pendente | — | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |
 

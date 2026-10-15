@@ -30,4 +30,4 @@
 | **CARD** | **Card da Aula 03 na vitrine dos alunos** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-008](etapas/ETAPA-008-f26c8d03-CARD-AULA.md) |
 | LEGI.1 | Trocar cor/brilho dos H2 em aulas/css/estilo.css | 🟡 Média | Nenhuma | ✅ Concluído | — | [ETAPA-009](etapas/ETAPA-009-b17d4e60-LEGIBILIDADE-TITULOS.md) |
 | **LEGI** | **Legibilidade dos títulos da página das aulas** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-009](etapas/ETAPA-009-b17d4e60-LEGIBILIDADE-TITULOS.md) |
-# STATUS — Testes de Frontend||||| ✅ Concluído | — 
+| PROJ.1 | Escrever aulas/SUGESTAO-PROJETO.md | 🟡 Média | Aprovação | ✅ Concluído | — | [ETAPA-010](etapas/ETAPA-010-c58e1f92-PROJETO-FRONTEND-COM-TESTES.md) |

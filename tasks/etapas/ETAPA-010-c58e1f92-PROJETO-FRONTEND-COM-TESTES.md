@@ -41,7 +41,9 @@ documento `aulas/SUGESTAO-PROJETO.md` e um card na vitrine `projetos-alunos/inde
 
 ### PROJ.2 — Criar `aulas/projeto-frontend-com-testes/`
 
-**Próximo passo:** aguardando aprovação.
+**Próximo passo:** conferir os 9 arquivos já criados (sem commit) pela frente anterior, rodar `node --check` e entregar.
+
+- **Anotação:** retomada em 2026-10-15 09:20 por Claude Code (Opus 5.5) (local · main), a pedido do usuário ("sim, retome a PROJ.2"); a reserva era de Claude Code (Sonnet 5.5) (local · main), que deixou os arquivos criados sem commit.
 
 - **Nível:** MEDIO — vários arquivos pequenos, sem banco nem segurança.
 - **Descrição:** `index.html`, `css/estilo.css`, `js/imc.js`, `js/lampada.js`, `js/tema.js`,
