@@ -52,7 +52,7 @@ conceito da Aula 03 (Vitest).
 
 ### TEST.3 — it() e test() com BDD Given/When/Then
 
-**Próximo passo:** aguardando o usuário mandar executar esta subtarefa.
+**Próximo passo:** em execução por Claude Code (Opus 5.5) (local · main).
 
 - **Nível:** LEVE — um conceito por vez.
 - **Descrição:** Escrever os casos de `calcularImc` como `it`, ligados a Given/When/Then, explicando `it` × `test`.
