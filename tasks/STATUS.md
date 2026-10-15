@@ -31,7 +31,6 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | ES6.3 | Aceite do usuário | 🟡 Média | ES6.2 | 👀 Aguardando o usuário | — | [ETAPA-012](etapas/ETAPA-012-88990f9e-ES6-SEM-MODULOS.md) |
 | **TEST** | **Testes da Aula 03 por conceito (imc.js)** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | TEST.18 | Aceite do usuário | 🟡 Média | TEST.2 a TEST.17 | 👀 Aguardando o usuário | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
-| **REL** | **Relatório HTML dos testes com cobertura** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-014](etapas/ETAPA-014-191f595d-RELATORIO-HTML-COBERTURA.md) |
 
 ## Escopo do projeto
 

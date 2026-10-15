@@ -54,3 +54,4 @@
 | TEST.17 | Mock de função assíncrona: obterImcDaPessoa | 🟡 Média | TEST.1, TEST.16 | ✅ Concluído | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | TEST.19 | Explicação detalhada de cada exemplo (TEST.2 a TEST.11) | 🟡 Média | TEST.11 | ✅ Concluído | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | REL.1 | Configurar os relatórios HTML de testes e de cobertura | 🟡 Média | TEST.1 | ✅ Concluído | — | [ETAPA-014](etapas/ETAPA-014-191f595d-RELATORIO-HTML-COBERTURA.md) |
+| **REL** | **Relatório HTML dos testes com cobertura** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-014](etapas/ETAPA-014-191f595d-RELATORIO-HTML-COBERTURA.md) |
