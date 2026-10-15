@@ -8,11 +8,11 @@ visual futurista neon.
 
 ### AULAS.1 — Criar `aulas/index.html` com CSS e JS separados
 
-**Próximo passo:** criar `index.html`, `css/estilo.css`, `js/markdown.js` e `js/app.js`.
+**Próximo passo:** nenhum — entregue. O visual fica para o usuário conferir no navegador (por servidor).
 
 - **Nível:** MEDIO — conversor de Markdown próprio + estilo, 4 arquivos.
 - **Descrição:** `fetch` do `.md` e conversão para HTML por um conversor pequeno (sem CDN):
   títulos, tabelas, listas, código, citações, negrito, código inline e links.
 - **Critérios de Aceitação:** HTML sem `style=`/`onclick`; tokens neon em `:root`; mensagem
   clara se o `fetch` falhar (abrir por `file://`); nenhum teste criado.
-- **Entrega:** a preencher · **Verificação:** a preencher
+- **Entrega:** commit `feat(AULAS.1)` · **Verificação:** `node --check` nos JS; linhas ≤ 100; conversor rodado em Node contra `ORIENTACAO-AULA-03.md` (4 tabelas, 1 bloco de código, 7 h2, sem marcação sobrando). Visual não aberto (regra: sem navegador). Precisa de servidor (`npm run dev` → `/aulas/`): por `file://` o `fetch` é bloqueado e a página mostra aviso.

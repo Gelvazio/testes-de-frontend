@@ -1,0 +1,304 @@
+/* Tema futurista neon — tokens em :root, componentes usam só os tokens. */
+:root {
+  --cor-fundo: #05060f;
+  --cor-superficie: #0b0f24;
+  --cor-superficie-alta: #111737;
+  --cor-texto: #d9e2ff;
+  --cor-texto-suave: #8a97c4;
+  --cor-ciano: #00f0ff;
+  --cor-magenta: #ff2bd6;
+  --cor-verde: #39ff88;
+  --cor-amarelo: #ffe14d;
+  --cor-borda: rgba(0, 240, 255, 0.28);
+  --brilho-ciano: 0 0 6px rgba(0, 240, 255, 0.75), 0 0 22px rgba(0, 240, 255, 0.35);
+  --brilho-magenta: 0 0 6px rgba(255, 43, 214, 0.75), 0 0 22px rgba(255, 43, 214, 0.35);
+  --fonte-texto: "Segoe UI", system-ui, sans-serif;
+  --fonte-codigo: "Cascadia Code", Consolas, "Courier New", monospace;
+  --largura-leitura: 62rem;
+  --raio: 0.6rem;
+  --espaco: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte-texto);
+  line-height: 1.65;
+}
+
+.fundo-grade {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(255, 43, 214, 0.16), transparent 45%),
+    radial-gradient(circle at 85% 90%, rgba(0, 240, 255, 0.16), transparent 45%),
+    linear-gradient(rgba(0, 240, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.06) 1px, transparent 1px);
+  background-size: auto, auto, 44px 44px, 44px 44px;
+}
+
+/* ---------- Topo ---------- */
+.topo {
+  padding: 3rem var(--espaco) 1.5rem;
+  text-align: center;
+}
+
+.topo__etiqueta {
+  margin: 0 0 0.5rem;
+  color: var(--cor-magenta);
+  font-family: var(--fonte-codigo);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  text-shadow: var(--brilho-magenta);
+}
+
+.topo__titulo {
+  margin: 0;
+  color: var(--cor-ciano);
+  font-size: clamp(2rem, 6vw, 3.6rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: var(--brilho-ciano);
+  animation: pulso-neon 3.2s ease-in-out infinite;
+}
+
+@keyframes pulso-neon {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.82; }
+}
+
+/* ---------- Layout ---------- */
+.palco {
+  display: grid;
+  grid-template-columns: minmax(12rem, 16rem) minmax(0, 1fr);
+  gap: 1.5rem;
+  max-width: calc(var(--largura-leitura) + 18rem);
+  margin: 0 auto;
+  padding: 1rem var(--espaco) 3rem;
+}
+
+.indice {
+  position: sticky;
+  top: 1rem;
+  align-self: start;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  padding: var(--espaco);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  box-shadow: var(--brilho-ciano);
+}
+
+.indice__titulo {
+  margin: 0 0 0.6rem;
+  color: var(--cor-magenta);
+  font-family: var(--fonte-codigo);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.indice__lista {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.indice__link {
+  display: block;
+  padding: 0.25rem 0.5rem;
+  color: var(--cor-texto-suave);
+  font-size: 0.88rem;
+  text-decoration: none;
+  border-left: 2px solid transparent;
+}
+
+.indice__link:hover,
+.indice__link:focus-visible {
+  color: var(--cor-ciano);
+  border-left-color: var(--cor-ciano);
+  outline: none;
+}
+
+.indice__link--sub {
+  padding-left: 1.25rem;
+  font-size: 0.82rem;
+}
+
+/* ---------- Documento ---------- */
+.documento {
+  min-width: 0;
+  padding: clamp(1rem, 3vw, 2.2rem);
+  background: linear-gradient(160deg, var(--cor-superficie), var(--cor-superficie-alta));
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  box-shadow: var(--brilho-ciano);
+}
+
+.documento h1,
+.documento h2,
+.documento h3 {
+  line-height: 1.25;
+  scroll-margin-top: 1rem;
+}
+
+.documento h1 {
+  margin-top: 0;
+  color: var(--cor-ciano);
+  text-shadow: var(--brilho-ciano);
+}
+
+.documento h2 {
+  margin-top: 2.2rem;
+  padding-bottom: 0.4rem;
+  color: var(--cor-magenta);
+  border-bottom: 1px solid var(--cor-magenta);
+  text-shadow: var(--brilho-magenta);
+}
+
+.documento h3 {
+  margin-top: 1.6rem;
+  color: var(--cor-verde);
+}
+
+.documento a {
+  color: var(--cor-ciano);
+  text-decoration-color: rgba(0, 240, 255, 0.5);
+}
+
+.documento a:hover {
+  color: var(--cor-amarelo);
+}
+
+.documento strong {
+  color: var(--cor-amarelo);
+}
+
+.documento hr {
+  height: 1px;
+  margin: 2rem 0;
+  background: linear-gradient(90deg, transparent, var(--cor-ciano), transparent);
+  border: 0;
+}
+
+.documento blockquote {
+  margin: 1.2rem 0;
+  padding: 0.7rem 1rem;
+  color: var(--cor-texto);
+  background: rgba(255, 225, 77, 0.07);
+  border-left: 3px solid var(--cor-amarelo);
+  border-radius: 0 var(--raio) var(--raio) 0;
+}
+
+.documento code {
+  padding: 0.1rem 0.4rem;
+  color: var(--cor-verde);
+  font-family: var(--fonte-codigo);
+  font-size: 0.9em;
+  background: rgba(57, 255, 136, 0.09);
+  border-radius: 0.3rem;
+}
+
+.documento pre {
+  overflow-x: auto;
+  padding: 1rem;
+  background: #02030a;
+  border: 1px solid rgba(57, 255, 136, 0.35);
+  border-radius: var(--raio);
+}
+
+.documento pre code {
+  padding: 0;
+  background: none;
+}
+
+.documento ul,
+.documento ol {
+  padding-left: 1.4rem;
+}
+
+.documento li::marker {
+  color: var(--cor-ciano);
+}
+
+/* ---------- Tabelas ---------- */
+.tabela-rolagem {
+  overflow-x: auto;
+  margin: 1.2rem 0;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+}
+
+.documento table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.documento th {
+  padding: 0.6rem 0.8rem;
+  color: var(--cor-ciano);
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(0, 240, 255, 0.1);
+}
+
+.documento td {
+  padding: 0.55rem 0.8rem;
+  vertical-align: top;
+  border-top: 1px solid rgba(0, 240, 255, 0.15);
+}
+
+.documento tbody tr:hover {
+  background: rgba(255, 43, 214, 0.08);
+}
+
+/* ---------- Estados e rodapé ---------- */
+.estado {
+  color: var(--cor-ciano);
+  font-family: var(--fonte-codigo);
+}
+
+.estado--erro {
+  color: var(--cor-magenta);
+}
+
+.rodape {
+  padding: 1.5rem var(--espaco);
+  color: var(--cor-texto-suave);
+  font-family: var(--fonte-codigo);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+@media (max-width: 52rem) {
+  .palco {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .indice {
+    position: static;
+    max-height: 14rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .topo__titulo { animation: none; }
+}
