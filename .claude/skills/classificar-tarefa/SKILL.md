@@ -38,13 +38,15 @@ decisões" do `tasks/STATUS.md`). `⛔` = não pega.
 | **Gemini CLI** | modelo Flash | modelo Pro | ⛔ |
 | **Antigravity** | Gemini Flash | ⛔ | ⛔ |
 | **Grok** | modelo rápido | modelo principal | ⛔ |
-| **DeepSeek** | modelo Flash | modelo de raciocínio | ⛔ |
+| **DeepSeek** | DeepSeek V4.1 Flash | modelo de raciocínio | ✅ |
+| **OpenCode** | DeepSeek V4.1 Flash (`deepseek-flash`) | DeepSeek V4.1 Flash com thinking (`deepseek-flash`) | **DeepSeek V4 Pro (`deepseek-v4-pro`)** |
 | **Codex** | ✅ | ✅ | ⛔ |
 | **Cursor** | ✅ | ✅ | ⛔ |
+| **Qoder** | ✅ | ✅ | ⛔ |
 | **Devin** | ✅ | ⛔ | ⛔ |
 
-- **`PESADO` é só do Claude Code com Opus 5.5 ou superior, ou Fable.** Nenhuma outra ferramenta
-  pega.
+- **`PESADO` é só do Claude Code com Opus 5.5 ou superior, Fable, ou DeepSeek** (C35) — no OpenCode,
+  com `deepseek-v4-pro` (C37). Nenhuma outra ferramenta pega.
 - Cada agente se identifica como **ferramenta + modelo** (o nome da frente) e só pega subtarefa com
   nível **igual ou abaixo** do máximo da sua linha.
 - Modelo forte pega subtarefa mais leve **só se** não houver nenhuma livre do seu nível (a fila não
