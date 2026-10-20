@@ -1,6 +1,6 @@
 ---
 name: classificar-tarefa
-description: Classifica uma subtarefa do quadro (tasks/STATUS.md + etapa) no nível LEVE (fácil), MEDIO (média) ou PESADO (difícil) pelos sinais desta skill, e diz qual ferramenta e modelo de IA pode pegá-la (matriz ferramenta × modelo × nível). Use ao criar ou dividir subtarefa, quando perguntarem "qual o nível desta tarefa?", "quem pode pegar?", "esta tarefa é para mim?" ou "/classificar-tarefa".
+description: Classifica uma subtarefa do quadro (tasks/STATUS.md + etapa) no nível LEVE (fácil), MEDIO (média) ou PESADO (difícil) pelo Jev ou pelos sinais desta skill, e diz qual ferramenta e modelo de IA pode pegá-la (matriz ferramenta × modelo × nível). Use ao criar ou dividir subtarefa, quando perguntarem "qual o nível desta tarefa?", "quem pode pegar?", "esta tarefa é para mim?" ou "/classificar-tarefa".
 ---
 
 # Classificar tarefa (classificar-tarefa)
@@ -26,6 +26,28 @@ Fonte das regras do quadro: `AGENTS.md` → `.claude/rules/tasks/`. Esta skill s
 2. **Na dúvida, sobe o nível** (`LEVE` → `MEDIO` → `PESADO`).
 3. Se dois critérios discordarem (ex.: quantidade de arquivos × assunto), **vale o nível mais
    alto**.
+4. **Pergunte ao Jev** (abaixo). Confiança abaixo de 0,60 ou Jev fora → decida pelos sinais da tabela.
+5. Se o Jev e os sinais discordarem, **vale o nível mais alto dos dois**.
+
+### Pergunta ao Jev
+
+Antes de decidir só pelos sinais, tente o **Jev** (C39, C42, C43; regra em
+`C:/fontes/rules-ai/regras/jev.md`). Somente leitura: não grava no quadro e não reserva.
+
+```bash
+node C:/fontes/rules-ai/scripts/jev.mjs classificar --id <ID> --quadro tasks/STATUS.md --json
+```
+
+- A chave `TYPESAFE_API_KEY` fica **só** no `rules-ai` (ambiente ou `.env` da raiz dele). ⛔ Nunca
+  copiar a chave para este projeto.
+- Leia `nivel_final_proposto`, `confianca` e `acao` da saída.
+- `confianca` **abaixo de 0,60** (ou `acao: humano`) → decida pelos sinais e peça a conferência
+  do usuário.
+- Se o Jev e os sinais discordarem, **vale o nível mais alto** dos dois. O Jev nunca rebaixa nível.
+- Falhou (código 1 sem chave, 2 com `JEV_MODO=off`, 5 Jev indisponível) → **só os sinais** desta
+  skill; na dúvida, sobe o nível. Nunca há outro servidor de reserva.
+- Mensagem do usuário: o gancho do Jev (C43) já põe a sugestão de nível e modelo no contexto da
+  IA; para **subtarefa do quadro**, a sugestão continua sendo só conselho.
 
 ## Matriz ferramenta × modelo × nível
 
@@ -70,10 +92,10 @@ Na **seção da subtarefa** dentro da etapa (`tasks/etapas/…`), como primeiro 
 prioridade fica na linha do `STATUS.md`):
 
 ```markdown
-- **Nível:** MEDIO — código com lógica em 1 arquivo de `src/`, sem chave
+- **Nível:** MEDIO — código com lógica em 1 arquivo de `src/`, sem chave (Jev 0,91)
 ```
 
-A justificativa é curta: o sinal que decidiu. Gravar o nível segue o ciclo normal (commit com o
+A justificativa é curta: o sinal que decidiu e, se usou o Jev, a confiança. Gravar o nível segue o ciclo normal (commit com o
 quadro; `docs(board): …` se for só classificar).
 
 ## Proibido
