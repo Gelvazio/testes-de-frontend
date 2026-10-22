@@ -14,7 +14,10 @@
           Mescla dos projetos dos alunos: IMC, lâmpada, loja e tema.
         </p>
       </div>
-      <button class="botao" id="botao-tema" type="button">Dark Mode</button>
+      <nav class="acoes" aria-label="Menu">
+        <button class="botao" id="botao-coverage" type="button">COVERAGE</button>
+        <button class="botao" id="botao-tema" type="button">Dark Mode</button>
+      </nav>
     </header>
 
     <main class="conteudo">
@@ -67,6 +70,17 @@
         </div>
       </section>
     </main>
+
+    <dialog class="modal" id="modal-coverage" aria-labelledby="titulo-coverage">
+      <header class="modal__cabecalho">
+        <h2 id="titulo-coverage">Coverage</h2>
+        <button class="botao botao--secundario" id="modal-coverage-fechar" type="button">
+          Fechar
+        </button>
+      </header>
+      <iframe class="modal__conteudo" id="modal-coverage-quadro" title="Relatório de coverage">
+      </iframe>
+    </dialog>
 
     <footer class="rodape">
       <p>A lógica está em js/imc.js, lampada.js, carrinho.js e tema.js (funções puras).</p>

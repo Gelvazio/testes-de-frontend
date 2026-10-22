@@ -56,6 +56,8 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | 012-88990f9e | ES6: projeto-frontend-com-testes em ES6 sem módulos | [ETAPA-012-88990f9e-ES6-SEM-MODULOS.md](etapas/ETAPA-012-88990f9e-ES6-SEM-MODULOS.md) |
 | 013-94bbd520 | TEST: testes da Aula 03 por conceito | [ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | 014-191f595d | REL: relatório HTML dos testes com cobertura | [ETAPA-014-191f595d-RELATORIO-HTML-COBERTURA.md](etapas/ETAPA-014-191f595d-RELATORIO-HTML-COBERTURA.md) |
+| 015-3b9e61d4 | CRM: atividade SA com projeto Vite de CRM | [ETAPA-015-3b9e61d4-CRM-ATIVIDADE.md](etapas/ETAPA-015-3b9e61d4-CRM-ATIVIDADE.md) |
+| 016-5d7a2c80 | MENU: botão COVERAGE com modal | [ETAPA-016-5d7a2c80-MENU-COVERAGE.md](etapas/ETAPA-016-5d7a2c80-MENU-COVERAGE.md) |
 
 ## Riscos
 

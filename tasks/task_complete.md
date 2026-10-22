@@ -55,3 +55,7 @@
 | TEST.19 | Explicação detalhada de cada exemplo (TEST.2 a TEST.11) | 🟡 Média | TEST.11 | ✅ Concluído | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | REL.1 | Configurar os relatórios HTML de testes e de cobertura | 🟡 Média | TEST.1 | ✅ Concluído | — | [ETAPA-014](etapas/ETAPA-014-191f595d-RELATORIO-HTML-COBERTURA.md) |
 | **REL** | **Relatório HTML dos testes com cobertura** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-014](etapas/ETAPA-014-191f595d-RELATORIO-HTML-COBERTURA.md) |
+| MENU.1 | Botão COVERAGE com modal (dialog + iframe) | 🟡 Média | Nenhuma | ✅ Concluído | — | [ETAPA-016](etapas/ETAPA-016-5d7a2c80-MENU-COVERAGE.md) |
+| **MENU** | **Botão COVERAGE no projeto-frontend-com-testes** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-016](etapas/ETAPA-016-5d7a2c80-MENU-COVERAGE.md) |
+| CRM.1 | Projeto Vite do CRM, testes por arquivo e atividade SA | 🟡 Média | Nenhuma | ✅ Concluído | — | [ETAPA-015](etapas/ETAPA-015-3b9e61d4-CRM-ATIVIDADE.md) |
+| **CRM** | **Atividade SA com projeto Vite de CRM** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-015](etapas/ETAPA-015-3b9e61d4-CRM-ATIVIDADE.md) |
