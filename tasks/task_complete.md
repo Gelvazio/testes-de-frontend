@@ -59,3 +59,5 @@
 | **MENU** | **Botão COVERAGE no projeto-frontend-com-testes** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-016](etapas/ETAPA-016-5d7a2c80-MENU-COVERAGE.md) |
 | CRM.1 | Projeto Vite do CRM, testes por arquivo e atividade SA | 🟡 Média | Nenhuma | ✅ Concluído | — | [ETAPA-015](etapas/ETAPA-015-3b9e61d4-CRM-ATIVIDADE.md) |
 | **CRM** | **Atividade SA com projeto Vite de CRM** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-015](etapas/ETAPA-015-3b9e61d4-CRM-ATIVIDADE.md) |
+| **COMMIT.INICIAL.RULES-AI** | **Commit e push inicial do quadro com a tarefa COMMIT.INICIAL.RULES-AI (mudança em massa em 5 repositórios)** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-017](etapas/ETAPA-017-e2c843ff-COMMIT-INICIAL-RULES-AI.md) |
+| COMMIT.INICIAL.RULES-AI.1 | Registrar a tarefa no quadro, commit e push na `main` · `PESADO · effort high` | 🟡 Média | Nenhuma | ✅ Concluído | — | [ETAPA-017](etapas/ETAPA-017-e2c843ff-COMMIT-INICIAL-RULES-AI.md) |
