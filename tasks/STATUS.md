@@ -31,6 +31,8 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | ES6.3 | Aceite do usuário | 🟡 Média | ES6.2 | 👀 Aguardando o usuário | — | [ETAPA-012](etapas/ETAPA-012-88990f9e-ES6-SEM-MODULOS.md) |
 | **TEST** | **Testes da Aula 03 por conceito (imc.js)** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | TEST.18 | Aceite do usuário | 🟡 Média | TEST.2 a TEST.17 | 👀 Aguardando o usuário | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| **COMMIT.INICIAL.RULES-AI** | **Commit e push inicial do quadro com a tarefa COMMIT.INICIAL.RULES-AI (mudança em massa em 5 repositórios)** | 🟡 Média | Nenhuma | ⬜ Pendente | — (não reservável) | [ETAPA-017](etapas/ETAPA-017-e2c843ff-COMMIT-INICIAL-RULES-AI.md) |
+| COMMIT.INICIAL.RULES-AI.1 | Registrar a tarefa no quadro, commit e push na `main` · `PESADO · effort high` | 🟡 Média | Nenhuma | ⬜ Pendente | — | [ETAPA-017](etapas/ETAPA-017-e2c843ff-COMMIT-INICIAL-RULES-AI.md) |
 
 ## Escopo do projeto
 
@@ -58,6 +60,7 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | 014-191f595d | REL: relatório HTML dos testes com cobertura | [ETAPA-014-191f595d-RELATORIO-HTML-COBERTURA.md](etapas/ETAPA-014-191f595d-RELATORIO-HTML-COBERTURA.md) |
 | 015-3b9e61d4 | CRM: atividade SA com projeto Vite de CRM | [ETAPA-015-3b9e61d4-CRM-ATIVIDADE.md](etapas/ETAPA-015-3b9e61d4-CRM-ATIVIDADE.md) |
 | 016-5d7a2c80 | MENU: botão COVERAGE com modal | [ETAPA-016-5d7a2c80-MENU-COVERAGE.md](etapas/ETAPA-016-5d7a2c80-MENU-COVERAGE.md) |
+| 017-e2c843ff | COMMIT.INICIAL.RULES-AI: commit e push inicial do quadro | [ETAPA-017-e2c843ff-COMMIT-INICIAL-RULES-AI.md](etapas/ETAPA-017-e2c843ff-COMMIT-INICIAL-RULES-AI.md) |
 
 ## Riscos
 
