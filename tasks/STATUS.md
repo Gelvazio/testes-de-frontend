@@ -31,6 +31,8 @@ tarefas **abertas ou em andamento**: linha que vira ✅ é movida para o [`task_
 | ES6.3 | Aceite do usuário | 🟡 Média | ES6.2 | 👀 Aguardando o usuário | — | [ETAPA-012](etapas/ETAPA-012-88990f9e-ES6-SEM-MODULOS.md) |
 | **TEST** | **Testes da Aula 03 por conceito (imc.js)** | 🟡 Média | Nenhuma | 🔄 Em progresso | — (não reservável) | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
 | TEST.18 | Aceite do usuário | 🟡 Média | TEST.2 a TEST.17 | 👀 Aguardando o usuário | — | [ETAPA-013](etapas/ETAPA-013-94bbd520-TESTES-AULA-03-POR-CONCEITO.md) |
+| **RL-4F19D945-NIVEIS-E-MODELOS** | **Ajustar o projeto à regra niveis-e-modelos.md (rules-local 2026-10-23-4f19d945)** | 🟡 Média | Nenhuma | ⬜ Pendente (mãe: pegue uma subtarefa) | — (não reservável) | [ETAPA-018](etapas/ETAPA-018-adf01f57-RL-4F19D945-NIVEIS-E-MODELOS.md) |
+| RL-4F19D945-NIVEIS-E-MODELOS.1 | Alinhar a matriz de níveis do projeto à C48 · `LEVE · effort low` | 🟡 Média | Nenhuma | ⬜ Pendente | — | [ETAPA-018](etapas/ETAPA-018-adf01f57-RL-4F19D945-NIVEIS-E-MODELOS.md) |
 
 ## Escopo do projeto
 
