@@ -44,6 +44,7 @@ conferido pelo usuário no navegador (`npm run dev`).
 **Próximo passo:** nenhum — concluída.
 
 - **Descrição:** `vite` como devDependency; scripts `dev`, `build` e `preview`; `vite.config.js`
+- **JEV-AI-SUGGESTION:** NAO
   com as entradas `index.html` e `guia/index.html`; guia movido com links ajustados.
 - **Critérios de Aceitação:** `npm run build` gera `dist/` com as duas páginas.
 - **Entrega:** commit `feat(DASH.1)` (Vite 8.3.4, `vite.config.js`, guia em `guia/`, `index.html`
@@ -55,6 +56,7 @@ conferido pelo usuário no navegador (`npm run dev`).
 **Próximo passo:** nenhum — concluída.
 
 - **Descrição:** `index.html` + `src/estilos/` (tokens, base, cards) + `src/js/` (lista de
+- **JEV-AI-SUGGESTION:** NAO
   matérias, montagem dos cards, troca de tema).
 - **Critérios de Aceitação:** os 3 cards aparecem; botão alterna o tema e a escolha fica salva;
   sem preferência salva, segue o tema do sistema; respeita `prefers-reduced-motion`.
@@ -72,4 +74,5 @@ conferido pelo usuário no navegador (`npm run dev`).
 
 - **Descrição:** o usuário roda `npm run dev` e confere o visual e os temas.
 - **Entrega:** aceite registrado no quadro · **Verificação:** Gelvazio, 2026-10-15 08:42, no
+- **JEV-AI-SUGGESTION:** NAO
   chat: "tarefa dash aceita".

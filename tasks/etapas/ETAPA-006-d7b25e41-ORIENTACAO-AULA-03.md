@@ -13,6 +13,7 @@ alunos, o que é bom candidato para demonstrar testes unitários com Vitest.
 
 - **Nível:** LEVE — 1 documento, sem código nem testes.
 - **Descrição:** roteiro da aula (slides → passos), candidatos entre os repositórios dos alunos
+- **JEV-AI-SUGGESTION:** NAO
   (lógica do IMC, lâmpada, dark mode, carrinho) e como extrair a lógica para ficar testável.
 - **Critérios de Aceitação:** caminhos reais dos repositórios; matchers/mocks da aula ligados a
   exemplos; nenhum teste criado nesta tarefa (regra do projeto).

@@ -12,6 +12,7 @@ repositórios listados em `projetos-alunos/js/dados-alunos.js`.
 
 - **Nível:** MEDIO — vários downloads e conferência do resultado, sem banco nem segurança.
 - **Descrição:** `git clone --depth 1` de cada repositório de `dados-alunos.js`, em
+- **JEV-AI-SUGGESTION:** NAO
   `projetos-alunos/repositorios/<usuario>/<projeto>/`; ao final, remover o `.git` de cada um.
 - **Critérios de Aceitação:** forks (`eFork: true`) são **pulados** (decisão do usuário);
   repositórios vazios (`estaVazio: true`) não têm o que baixar; nenhuma pasta `.git` sobra.

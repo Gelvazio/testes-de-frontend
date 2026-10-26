@@ -12,6 +12,7 @@ abrir em nova pagina a pasta do repositorio referente"
 
 - **Nível:** LEVE — 1 arquivo, mudança pontual.
 - **Descrição:** botão ao lado de "Repositório", link relativo `repositorios/<usuario>/<projeto>/`
+- **JEV-AI-SUGGESTION:** NAO
   com `target="_blank"`. Só aparece para projetos baixados (sem fork e sem `estaVazio`).
 - **Critérios de Aceitação:** botão com o texto "Acessar Localmente"; abre a pasta em nova aba;
   não aparece em fork nem em vazio (a pasta não existe).

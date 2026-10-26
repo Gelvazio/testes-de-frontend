@@ -11,6 +11,7 @@ ambiente" em magenta com brilho, em `aulas/index.html`)
 
 - **Nível:** LEVE — 1 arquivo, só CSS.
 - **Descrição:** o brilho (`text-shadow`) magenta borra o texto; trocar por cor clara de alto
+- **JEV-AI-SUGGESTION:** NAO
   contraste e deixar o neon só na borda inferior.
 - **Critérios de Aceitação:** texto do H2 nítido sobre o fundo escuro; contraste ≥ 7:1.
 - **Entrega:** commit `fix(LEGI.1)` · **Verificação:** H2 passa a `#ffe3fa` sem `text-shadow` (contraste ≈ 15:1 sobre o fundo `#0b0f24`); visual não aberto (regra: sem navegador).

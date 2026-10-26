@@ -61,3 +61,5 @@
 | **CRM** | **Atividade SA com projeto Vite de CRM** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-015](etapas/ETAPA-015-3b9e61d4-CRM-ATIVIDADE.md) |
 | **COMMIT.INICIAL.RULES-AI** | **Commit e push inicial do quadro com a tarefa COMMIT.INICIAL.RULES-AI (mudança em massa em 5 repositórios)** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-017](etapas/ETAPA-017-e2c843ff-COMMIT-INICIAL-RULES-AI.md) |
 | COMMIT.INICIAL.RULES-AI.1 | Registrar a tarefa no quadro, commit e push na `main` · `PESADO · effort high` | 🟡 Média | Nenhuma | ✅ Concluído | — | [ETAPA-017](etapas/ETAPA-017-e2c843ff-COMMIT-INICIAL-RULES-AI.md) |
+| **JEV-NAO** | **Marcar JEV-AI-SUGGESTION: NAO nas etapas do projeto (C47)** | 🟡 Média | Nenhuma | ✅ Concluído | — (não reservável) | [ETAPA-019](etapas/ETAPA-019-f14ed99c-JEV-NAO-MARCAR-SUGESTAO.md) |
+| JEV-NAO.1 | Rodar o script que marca JEV-AI-SUGGESTION: NAO nas subtarefas · `LEVE · effort low` | 🟡 Média | Nenhuma | ✅ Concluído | — | [ETAPA-019](etapas/ETAPA-019-f14ed99c-JEV-NAO-MARCAR-SUGESTAO.md) |

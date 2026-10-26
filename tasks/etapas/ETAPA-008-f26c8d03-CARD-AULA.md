@@ -11,6 +11,7 @@ REDIRECIONAMENTO PRA ESTE ARQUIVO aulas\index.html"
 
 - **Nível:** LEVE — 2 arquivos, mudança pontual.
 - **Descrição:** card-link (mesmo estilo dos cards) depois dos alunos, apontando para
+- **JEV-AI-SUGGESTION:** NAO
   `../aulas/index.html`, na mesma aba.
 - **Critérios de Aceitação:** card visível na grade; clique redireciona; teclado (Enter) funciona
   por ser `<a>`; segue o tema claro/escuro.

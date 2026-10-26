@@ -38,12 +38,14 @@ documento `aulas/SUGESTAO-PROJETO.md` e um card na vitrine `projetos-alunos/inde
 - **Nível:** LEVE — 1 documento.
 - **Descrição:** mapa "aluno → módulo do projeto", o que foi aproveitado e o que foi corrigido.
 - **Entrega:** commit `docs(PROJ.1)` · **Verificação:** documento escrito com base no código lido dos repositórios dos alunos; caminhos conferidos.
+- **JEV-AI-SUGGESTION:** NAO
 
 ### PROJ.2 — Criar `aulas/projeto-frontend-com-testes/`
 
 **Próximo passo:** nenhum — entregue.
 
 - **Anotação:** retomada em 2026-10-15 09:20 por Claude Code (Opus 5.5) (local · main), a pedido do usuário ("sim, retome a PROJ.2"); a reserva era de Claude Code (Sonnet 5.5) (local · main), que deixou os arquivos criados sem commit.
+- **JEV-AI-SUGGESTION:** NAO
 
 - **Nível:** MEDIO — vários arquivos pequenos, sem banco nem segurança.
 - **Descrição:** `index.html`, `css/estilo.css`, `js/imc.js`, `js/lampada.js`, `js/tema.js`,
@@ -59,11 +61,13 @@ documento `aulas/SUGESTAO-PROJETO.md` e um card na vitrine `projetos-alunos/inde
 
 - **Nível:** LEVE — reaproveita o card de sugestão.
 - **Descrição:** card-link "Projeto Frontend com Testes" (🧩) depois do card da Aula 03, apontando
+- **JEV-AI-SUGGESTION:** NAO
   para `../aulas/projeto-frontend-com-testes/index.html`, na mesma aba. Os cards de sugestão viraram
   a lista `SUGESTOES` em `projetos-alunos/js/app.js` (card novo = item novo na lista).
 - **Entrega:** commit `feat(PROJ.3)` · **Verificação:** `node --check projetos-alunos/js/app.js`;
   linhas ≤ 100; caminho do link conferido (a pasta existe); sem navegador (regra).
 
 ### PROJ.4 — Aceite do usuário
+- **JEV-AI-SUGGESTION:** NAO
 
 **Próximo passo:** 👀 o usuário confere o projeto no navegador.

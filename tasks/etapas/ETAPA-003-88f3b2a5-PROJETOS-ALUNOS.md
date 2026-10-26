@@ -13,6 +13,7 @@ explica cada projeto publicado no GitHub do aluno.
 **Próximo passo:** nenhum — entregue. O visual fica para o usuário conferir abrindo `projetos-alunos/index.html` no navegador.
 
 - **Descrição:** ler perfis e repositórios dos 5 alunos (API do GitHub via `gh`), resumir o que
+- **JEV-AI-SUGGESTION:** NAO
   cada projeto faz e montar a página estática: `index.html` (estrutura), `css/estilo.css`
   (tokens claro/escuro), `js/dados-alunos.js` (dados dos alunos e projetos, fonte única) e
   `js/app.js` (cards e modal). Abre direto no navegador, sem servidor.
@@ -31,6 +32,7 @@ explica cada projeto publicado no GitHub do aluno.
 
 - **Pedido:** "deve ter tema claro e escuro tambem" (2026-10-15 08:41).
 - **Descrição:** botão no cabeçalho alterna entre claro e escuro; começa pela preferência do
+- **JEV-AI-SUGGESTION:** NAO
   sistema e lembra a escolha no navegador (`localStorage`). Script próprio `js/tema.js`.
 - **Critérios de Aceitação:** botão acessível (rótulo muda conforme o tema); cores só por tokens
   no `:root`; modal e cards seguem o tema escolhido.

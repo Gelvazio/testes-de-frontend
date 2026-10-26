@@ -13,6 +13,7 @@ dos testes em HTML (`html/index.html`) do `aulas/projeto-frontend-com-testes/`.
 
 - **Nível:** MEDIO — dependências novas e scripts (2 a 4 arquivos).
 - **Descrição:** instalar `@vitest/coverage-v8` e `@vitest/ui` na mesma versão do `vitest`;
+- **JEV-AI-SUGGESTION:** NAO
   scripts `test:coverage` e `test:report`; cobertura de todos os `js/**/*.js` (mostra também os
   módulos ainda sem teste); `coverage/` e `html/` no `.gitignore`; seção no README.
 - **Critérios de Aceitação:** os dois comandos rodam sem erro e geram `coverage/index.html` e

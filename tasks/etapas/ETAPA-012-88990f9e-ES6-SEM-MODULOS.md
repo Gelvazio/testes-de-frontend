@@ -33,6 +33,7 @@ JavaScript ES6 (`let`/`const`, arrow, template string) carregado por `<script>` 
 - **Descrição:** sem módulos; globais por `<script>`; ES6 puro; `module.exports` condicional no fim.
 - **Critérios de Aceitação:** nenhum `import`/`export`; `node --check` passa; scripts em ordem.
 - **Entrega:** commit `feat(ES6.1)` · **Verificação:** `node --check` nos 6 JS; `require` das funções no Node (IMC, carrinho, lâmpada) devolveu os valores esperados; sem `import`/`export`, sem spread de objeto, sem `Array.includes`, sem vírgula final em chamada. Acrescentado `package.json` (commonjs) na pasta do projeto por causa do `type: module` da raiz.
+- **JEV-AI-SUGGESTION:** NAO
 
 ### ES6.2 — Atualizar o `README.md`
 
@@ -41,6 +42,7 @@ JavaScript ES6 (`let`/`const`, arrow, template string) carregado por `<script>` 
 - **Nível:** LEVE — só `.md`.
 - **Descrição:** sem servidor obrigatório; como os testes acessam as funções.
 - **Entrega:** commit `docs(ES6.2)` · **Verificação:** README relido; descreve ES6 sem módulos, abertura sem servidor e `require` nos testes.
+- **JEV-AI-SUGGESTION:** NAO
 
 ### ES6.3 — Aceite do usuário
 
@@ -49,6 +51,7 @@ JavaScript ES6 (`let`/`const`, arrow, template string) carregado por `<script>` 
 - **Nível:** LEVE — aceite.
 - **Descrição:** usuário abre a página e confirma que IMC, lâmpada, tema e loja funcionam.
 - **Entrega:** — · **Verificação:** —
+- **JEV-AI-SUGGESTION:** NAO
 
 ### ES6.4 — Criar `js/imc.test.js` comentado
 
@@ -57,6 +60,7 @@ JavaScript ES6 (`let`/`const`, arrow, template string) carregado por `<script>` 
 - **Nível:** MEDIO — 1 arquivo, com lógica.
 - **Descrição:** testes de `calcularImc` e `classificarImc`, com comentários explicando `describe`, `it`, `expect`, AAA e matchers.
 - **Exceção à regra "nunca escrever testes":** autorizada pelo usuário no chat em 2026-10-15
+- **JEV-AI-SUGGESTION:** NAO
   ("faca isso", depois de perguntado). Vale só para este arquivo.
 - **Entrega:** — (cancelada, não executada) · **Verificação:** —
 

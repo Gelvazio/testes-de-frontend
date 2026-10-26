@@ -10,6 +10,7 @@
 
 - **Nível:** MEDIO — cópia de estrutura, sem banco nem segredo
 - **Descrição:** cópia de regras, quadro, skills, agentes, hooks, visualizador e guia; histórico
+- **JEV-AI-SUGGESTION:** NAO
   do template zerado; `STATUS.md`, `task_complete.md`, `package.json`, `README.md` e
   `fonte.js` (`REPOSITORIO`) adaptados ao projeto; hooks do Git instalados.
 - **Critérios de Aceitação:** estrutura igual à do template; nenhuma referência ao repositório

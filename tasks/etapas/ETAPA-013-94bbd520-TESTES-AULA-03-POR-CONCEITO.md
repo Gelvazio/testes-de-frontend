@@ -39,6 +39,7 @@ conceito da Aula 03 (Vitest).
 - **Origem:** slide(s) 11 e 12 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
 - **Entrega:** commit `feat(TEST.1)` · **Verificação:** `npx vitest --version` = 5.0.4; teste-sonda temporário com `import` de `imc.js` passou (apagado depois)
+- **JEV-AI-SUGGESTION:** NAO
 
 ### TEST.2 — describe(): agrupar as suites do IMC
 
@@ -49,6 +50,7 @@ conceito da Aula 03 (Vitest).
 - **Origem:** slide(s) 14 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
 - **Entrega:** commit feat(TEST.2) · **Verificação:** npm run test:run sem falhas (casos it.todo listados)
+- **JEV-AI-SUGGESTION:** NAO
 
 ### TEST.3 — it() e test() com BDD Given/When/Then
 
@@ -59,6 +61,7 @@ conceito da Aula 03 (Vitest).
 - **Origem:** slide(s) 6 e 14 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
 - **Entrega:** commit feat(TEST.3) · **Verificação:** npm run test:run: 2 testes passam
+- **JEV-AI-SUGGESTION:** NAO
 
 ### TEST.4 — expect(): a asserção
 
@@ -69,6 +72,7 @@ conceito da Aula 03 (Vitest).
 - **Origem:** slide(s) 15 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
 - **Entrega:** commit feat(TEST.4) · **Verificação:** npm run test:run: 3 testes passam
+- **JEV-AI-SUGGESTION:** NAO
 
 ### TEST.5 — Padrão AAA: Arrange, Act, Assert
 
@@ -79,6 +83,7 @@ conceito da Aula 03 (Vitest).
 - **Origem:** slide(s) 16 a 19 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
 - **Entrega:** commit feat(TEST.5) · **Verificação:** npm run test:run: 5 testes passam
+- **JEV-AI-SUGGESTION:** NAO
 
 ### TEST.6 — toBe(): igualdade estrita
 
@@ -89,6 +94,7 @@ conceito da Aula 03 (Vitest).
 - **Origem:** slide(s) 20 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
 - **Entrega:** commit feat(TEST.6) · **Verificação:** npm run test:run: 8 testes passam
+- **JEV-AI-SUGGESTION:** NAO
 
 ### TEST.7 — toBeCloseTo(): números decimais
 
@@ -99,6 +105,7 @@ conceito da Aula 03 (Vitest).
 - **Origem:** slide(s) 20 e 22 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
 - **Entrega:** commit feat(TEST.7) · **Verificação:** npm run test:run: 10 testes passam
+- **JEV-AI-SUGGESTION:** NAO
 
 ### TEST.8 — toBeNull(): entrada inválida
 
@@ -109,6 +116,7 @@ conceito da Aula 03 (Vitest).
 - **Origem:** slide(s) 22 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
 - **Entrega:** commit feat(TEST.8) · **Verificação:** npm run test:run: 14 testes passam
+- **JEV-AI-SUGGESTION:** NAO
 
 ### TEST.9 — toBeDefined(): valor inicializado
 
@@ -119,6 +127,7 @@ conceito da Aula 03 (Vitest).
 - **Origem:** slide(s) 22 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
 - **Entrega:** commit feat(TEST.9) · **Verificação:** npm run test:run: 16 testes passam
+- **JEV-AI-SUGGESTION:** NAO
 
 ### TEST.10 — toBeGreaterThan(): limites numéricos
 
@@ -129,6 +138,7 @@ conceito da Aula 03 (Vitest).
 - **Origem:** slide(s) 22 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
 - **Entrega:** commit feat(TEST.10) · **Verificação:** npm run test:run: 18 testes passam
+- **JEV-AI-SUGGESTION:** NAO
 
 ### TEST.11 — toEqual(): comparação profunda e a armadilha da referência
 
@@ -139,6 +149,7 @@ conceito da Aula 03 (Vitest).
 - **Origem:** slide(s) 20 e 21 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
 - **Entrega:** commit feat(TEST.11) · **Verificação:** npm run test:run: 21 testes passam
+- **JEV-AI-SUGGESTION:** NAO
 
 ### TEST.12 — toContain(): item numa lista
 
@@ -149,6 +160,7 @@ conceito da Aula 03 (Vitest).
 - **Origem:** slide(s) 22 e 23 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
 - **Entrega:** commit feat(TEST.12) · **Verificação:** npm run test:run: 24 testes passam
+- **JEV-AI-SUGGESTION:** NAO
 
 ### TEST.13 — beforeEach() e afterEach(): testes isolados
 
@@ -159,6 +171,7 @@ conceito da Aula 03 (Vitest).
 - **Origem:** slide(s) 34 a 37 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
 - **Entrega:** commit feat(TEST.13) · **Verificação:** npm run test:run: 27 testes passam
+- **JEV-AI-SUGGESTION:** NAO
 
 ### TEST.14 — vi.fn(): função simulada
 
@@ -169,6 +182,7 @@ conceito da Aula 03 (Vitest).
 - **Origem:** slide(s) 26 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
 - **Entrega:** commit feat(TEST.14) · **Verificação:** npm run test:run: 30 testes passam
+- **JEV-AI-SUGGESTION:** NAO
 
 ### TEST.15 — vi.spyOn() e vi.restoreAllMocks()
 
@@ -179,6 +193,7 @@ conceito da Aula 03 (Vitest).
 - **Origem:** slide(s) 27 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
 - **Entrega:** commit feat(TEST.15) · **Verificação:** npm run test:run: 33 testes passam
+- **JEV-AI-SUGGESTION:** NAO
 
 ### TEST.16 — Criar a função assíncrona obterImcDaPessoa (código novo)
 
@@ -189,6 +204,7 @@ conceito da Aula 03 (Vitest).
 - **Origem:** slide(s) 32 e 33 (preparação) de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** a função existe, está documentada e funciona no Node.
 - **Entrega:** commit feat(TEST.16) · **Verificação:** node --check; no Node devolveu 25, erro de pessoa nao encontrada e TypeError; teste-sonda no Vitest passou (apagado)
+- **JEV-AI-SUGGESTION:** NAO
 
 ### TEST.17 — Mock de função assíncrona: obterImcDaPessoa
 
@@ -199,6 +215,7 @@ conceito da Aula 03 (Vitest).
 - **Origem:** slide(s) 32 e 33 de `AULA-03-SLIDES.md`.
 - **Critérios de Aceitação:** o teste comenta o conceito em linguagem simples e passa.
 - **Entrega:** commit feat(TEST.17), arquivo js/imc-servico.test.js (ao lado do codigo testado) · **Verificação:** npm run test:run: 6 testes novos passam (suite total verde)
+- **JEV-AI-SUGGESTION:** NAO
 
 ### TEST.18 — Aceite do usuário
 
@@ -207,6 +224,7 @@ conceito da Aula 03 (Vitest).
 - **Nível:** LEVE — aceite.
 - **Descrição:** usuário roda `npm run test:run` e confirma que os testes passam e os comentários estão claros.
 - **Entrega:** — · **Verificação:** —
+- **JEV-AI-SUGGESTION:** NAO
 
 ### TEST.19 — Explicação detalhada de cada exemplo (TEST.2 a TEST.11)
 
@@ -216,3 +234,4 @@ conceito da Aula 03 (Vitest).
 - **Descrição:** pedido do usuário no meio da execução ("criasse 1 explicacao detalhada de cada exemplo, na descricao do uso?"): cada `it` das TEST.2 a TEST.11 ganha comentário com O que faz, Por quê e Esperado, no padrão adotado a partir da TEST.12.
 - **Critérios de Aceitação:** todos os exemplos comentados; suíte continua verde.
 - **Entrega:** commit feat(TEST.19) · **Verificação:** 23 exemplos comentados (O que faz, Por que, Esperado); npm run test:run: 39 passam
+- **JEV-AI-SUGGESTION:** NAO

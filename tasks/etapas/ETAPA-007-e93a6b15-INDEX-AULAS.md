@@ -12,6 +12,7 @@ visual futurista neon.
 
 - **Nível:** MEDIO — conversor de Markdown próprio + estilo, 4 arquivos.
 - **Descrição:** `fetch` do `.md` e conversão para HTML por um conversor pequeno (sem CDN):
+- **JEV-AI-SUGGESTION:** NAO
   títulos, tabelas, listas, código, citações, negrito, código inline e links.
 - **Critérios de Aceitação:** HTML sem `style=`/`onclick`; tokens neon em `:root`; mensagem
   clara se o `fetch` falhar (abrir por `file://`); nenhum teste criado.
